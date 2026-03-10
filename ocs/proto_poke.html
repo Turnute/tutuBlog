@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OC Pokémon — Aster Virelane</title>
+
+  <!-- CSS du bandeau global -->
+  <link rel="stylesheet" href="../.assets/css/header.css" />
+  <link rel="stylesheet" href="../.assets/css/global-header-pokewiki.css" />
+
+  <!-- CSS propre à la page OC -->
+  <link rel="stylesheet" href="../.assets/css/pokewiki-oc.css" />
+
+  <style>
+    :root{
+      /* --accent: #84b93f; */
+      /* --hover-bar: #2a4b8d; */
+    }
+  </style>
+
+  <!-- JS de la page -->
+  <script src="../.assets/js/pokewiki-oc.js" defer></script>
+
+  <!-- JS du bandeau global -->
+  <script src="../.assets/js/header.js" defer></script>
+</head>
+
+<body
+  data-nav-theme="ocs"
+  data-global-header-style="pokewiki"
+  data-site-title="TUTUPEDIA"
+  data-site-logo="" 
+  data-site-tagline="The Turnute-driven Pokémon Encyclopedia"
+>
+  <!-- Bandeau global injecté ici -->
+  <div id="site-header"></div>
+
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Barre latérale">
+      <section class="side-card">
+        <h2>Navigation</h2>
+        <div class="content">
+          <ul class="wiki-links">
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#bio">Biographie</a></li>
+            <li><a href="#team">Équipe</a></li>
+            <li><a href="#relations">Relations</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#trivia">Anecdotes</a></li>
+            <li><a href="#refs">Références</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="side-card">
+        <h2>Catégories</h2>
+        <div class="content">
+          <div class="meta-badges">
+            <span class="badge">OC Pokémon</span>
+            <span class="badge">Dresseur</span>
+            <span class="badge">Paldea</span>
+            <span class="badge">Fanlore</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="side-card">
+        <h2>À adapter</h2>
+        <div class="content">
+          <p style="margin-top:0;">Change le nom, l’image, la région et les blocs de données pour chaque OC.</p>
+          <p style="margin-bottom:0;">La structure est pensée pour être dupliquée facilement.</p>
+        </div>
+      </section>
+    </aside>
+
+    <main class="page">
+      <div class="page-tabs" aria-label="Onglets de page">
+        <a class="tab-link active" href="#">Article</a>
+        <a class="tab-link" href="#">Notes</a>
+        <a class="tab-link" href="#">Galerie</a>
+        <a class="tab-link" href="#">Historique</a>
+      </div>
+
+      <article class="article">
+        <div class="mobile-tools">
+          <button class="mini-btn" id="sidebarToggle" type="button">Afficher la barre latérale</button>
+          <button class="mini-btn" id="expandAll" type="button">Tout ouvrir</button>
+        </div>
+
+        <div class="breadcrumbs">Accueil &gt; OCs Pokémon &gt; Dresseurs &gt; <strong>Aster Virelane</strong></div>
+
+        <header class="article-header" id="intro">
+          <h1>Aster Virelane</h1>
+          <div class="subtitle">De PokéArchives OC, l’encyclopédie collaborative des personnages originaux</div>
+        </header>
+
+        <div class="lead-grid">
+          <section class="lead">
+            <p><b>Aster Virelane</b> est un <a href="#">personnage original</a> de l’univers <a href="#">Pokémon</a>.
+              Il s’agit d’un dresseur issu de <a href="#">Paldea</a>, connu pour son intérêt obsessionnel pour les ruines
+              et les phénomènes anciens.</p>
+
+            <p>Cette page adopte une présentation inspirée des encyclopédies communautaires Pokémon :
+              infobox, sections, équipe, galerie, anecdotes et mini-interactions.</p>
+
+            <div class="notice">
+              <strong>Note :</strong> ce prototype est rempli avec du faux contenu pour servir de base.
+            </div>
+
+            <div class="quote-box">
+              « Les ruines ne gardent pas le silence. Elles attendent juste quelqu’un capable d’écouter ce qu’elles ont perdu. »
+            </div>
+          </section>
+
+          <!-- Colonne droite : infobox + sommaire (déplacé ici) -->
+          <div class="right-column">
+            <aside class="infobox" aria-label="Infobox personnage">
+              <div class="  -title">Aster Virelane</div>
+              <div class="infobox-subtitle">Dresseur / Archiviste itinérant</div>
+              <div class="portrait">
+                <div class="portrait-frame">
+                  Illustration du personnage
+                  <small>Remplace ce bloc par une image</small>
+                </div>
+              </div>
+              <table class="ibox-table">
+                <tr><th>Nom japonais</th><td>アスター</td></tr>
+                <tr><th>Région</th><td>Paldea</td></tr>
+                <tr><th>Âge</th><td>21 ans</td></tr>
+                <tr><th>Rôle</th><td>Explorateur, archiviste, dresseur érudit</td></tr>
+                <tr>
+                  <th>Spécialité</th>
+                  <td>
+                    <div class="type-row">
+                      <span class="type-chip" data-type="Psy">Psy</span>
+                      <span class="type-chip" data-type="Plante">Plante</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr><th>Premier Pokémon</th><td>Floragato</td></tr>
+                <tr><th>Statut</th><td>Actif</td></tr>
+                <tr><th>Design</th><td>Capeline sombre, sac d’expédition, carnet, pendentif fossile</td></tr>
+                <tr>
+                  <th>Tags</th>
+                  <td>
+                    <div class="meta-badges">
+                      <span class="tag">found family</span>
+                      <span class="tag">ruines</span>
+                      <span class="tag">lore</span>
+                      <span class="tag">trauma léger</span>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </aside>
+
+            <!-- Sommaire (TOC) : maintenant sous l’infobox -->
+            <nav class="toc toc-right" id="toc">
+              <div class="toc-header">
+                <h2>Sommaire</h2>
+                <button class="toc-toggle" type="button" aria-expanded="true">masquer</button>
+              </div>
+              <div class="toc-body">
+                <ol>
+                  <li><a href="#bio">Biographie</a></li>
+                  <li><a href="#appearance">Apparence</a></li>
+                  <li><a href="#personality">Personnalité</a></li>
+                  <li><a href="#team">Équipe Pokémon</a></li>
+                  <li><a href="#relations">Relations</a></li>
+                  <li><a href="#gallery">Galerie</a></li>
+                  <li><a href="#trivia">Anecdotes</a></li>
+                  <li><a href="#refs">Références</a></li>
+                </ol>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <section class="section" id="bio">
+          <h2 class="section-title">Biographie</h2>
+
+          <div class="tab-controls" aria-label="Onglets biographie">
+            <button class="tab-btn active" data-tab="past" type="button">Passé</button>
+            <button class="tab-btn" data-tab="journey" type="button">Voyage</button>
+            <button class="tab-btn" data-tab="current" type="button">Situation actuelle</button>
+          </div>
+
+          <div class="tab-panel active" data-panel="past">
+            <p>Aster a grandi près de ruines envahies par la végétation. Très jeune, il a développé une fascination
+              pour les inscriptions effacées et les récits inachevés.</p>
+            <p>Cette curiosité est devenue une vocation lorsqu’il a trouvé une tablette fissurée portant un motif
+              rappelant un Pokémon ancien.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="journey">
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>Départ de Paldea</h3>
+                <p>Aster quitte sa région avec Floragato et un carnet presque vide.</p>
+              </div>
+              <div class="timeline-item">
+                <h3>Expédition à Sinnoh</h3>
+                <p>Un séjour dans les bibliothèques et sites anciens de Sinnoh affine son regard d’archiviste.</p>
+              </div>
+              <div class="timeline-item">
+                <h3>Rencontre déterminante</h3>
+                <p>Une rencontre avec un autre chercheur l’oblige à confronter ses propres émotions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="current">
+            <p>Aster documente les histoires de Pokémon et de dresseurs oubliés. Il ne cherche pas la célébrité,
+              mais une forme de réparation symbolique.</p>
+          </div>
+        </section>
+
+        <section class="section" id="appearance">
+          <h2 class="section-title">Apparence</h2>
+          <div class="columns-2">
+            <div class="data-card">
+              <h3>Design général</h3>
+              <p>Vêtements de terrain élégants : bottes renforcées, manteau court, multiples poches, carnets.</p>
+            </div>
+            <div class="data-card">
+              <h3>Motifs visuels</h3>
+              <p>Poussière, cartes, symboles de ruines, verts de vieux manuscrits, accents dorés de reliques.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="personality">
+          <h2 class="section-title">Personnalité</h2>
+          <p>Calme, observateur, il semble distant. En réalité, il s’attache profondément, mais exprime mal ses émotions.</p>
+          <p>Il note presque tout, écoute plus qu’il ne parle, et a tendance à intellectualiser ses peurs.</p>
+        </section>
+
+        <section class="section" id="team">
+          <h2 class="section-title">Équipe Pokémon</h2>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="team-head">
+                <div>
+                  <h3>Floragato</h3>
+                  <div class="team-role">Partenaire principal</div>
+                </div>
+                <div class="type-row">
+                  <span class="type-chip" data-type="Plante">Plante</span>
+                </div>
+              </div>
+              <div class="team-body">
+                <p>Vif et fier, Floragato pousse Aster à sortir de sa tête et à réagir plus spontanément.</p>
+                <div class="moves">
+                  <span class="badge">Tranch’Herbe</span>
+                  <span class="badge">Vive-Attaque</span>
+                  <span class="badge">Balle Graine</span>
+                  <span class="badge">Acrobatie</span>
+                </div>
+                <button class="toggle-details" type="button">Afficher les détails</button>
+                <div class="hidden-details">
+                  Leur relation repose sur un contraste fort : Aster observe, Floragato agit.
+                </div>
+              </div>
+            </article>
+
+            <!-- ... autres Pokémon ... -->
+          </div>
+        </section>
+
+        <section class="section" id="relations">
+          <h2 class="section-title">Relations</h2>
+          <div class="columns-2">
+            <div class="data-card">
+              <h3>Alliés</h3>
+              <p><strong>Mira</strong>, photographe itinérante, sert de contrepoint vivant à son tempérament.</p>
+            </div>
+            <div class="data-card">
+              <h3>Rivalité</h3>
+              <p><strong>Caelum</strong> voit dans les ruines des outils à exploiter plutôt que des mémoires à protéger.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="gallery">
+          <h2 class="section-title">Galerie</h2>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <div class="gallery-thumb">Portrait officiel<br />placeholder</div>
+              <p>Concept principal.</p>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-thumb">Version voyage<br />placeholder</div>
+              <p>Tenue d’exploration.</p>
+            </figure>
+            <figure class="gallery-item">
+              <div class="gallery-thumb">Illustration d’équipe<br />placeholder</div>
+              <p>Aster et ses Pokémon.</p>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="trivia">
+          <h2 class="section-title">Anecdotes</h2>
+          <ul>
+            <li>Le prototype imite une mise en page wiki classique.</li>
+            <li>Les interactions JS sont légères et faciles à modifier.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="refs">
+          <h2 class="section-title">Références</h2>
+          <ol class="refs">
+            <li>Fiche originale de l’OC (à remplacer).</li>
+            <li>Notes de design / lore.</li>
+          </ol>
+        </section>
+
+        <div class="footer-note">
+          Prototype HTML/CSS/JS original, pensé pour évoquer une fiche encyclopédique Pokémon.
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* S'applique UNIQUEMENT sur les pages qui demandent ce style */
+body[data-global-header-style="pokewiki"] .global-site-header {
+  background: #fff !important;        /* annule les gradients */
+  color: #1f1f1f;
+  border-bottom: 1px solid #dadce0;
+  padding: 18px 16px 16px;
+}
+
+/* Colonne gauche : logo + texte façon ton header local */
+body[data-global-header-style="pokewiki"] .global-site-brand {
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Logo -> Pokéball en CSS */
+body[data-global-header-style="pokewiki"] .global-site-logo {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom,
+    #f94b55 0 47%,
+    #1f1f1f 47% 53%,
+    #ffffff 53% 100%
+  );
+  border: 3px solid #1f1f1f;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+body[data-global-header-style="pokewiki"] .global-site-logo::before {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid #1f1f1f;
+  border-radius: 50%;
+}
+
+/* Titre + tagline (la tagline vient de data-site-tagline) */
+body[data-global-header-style="pokewiki"] .global-site-title {
+  font-family: 'Linux Libertine', serif;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #2b3b13;
+  display: block;
+}
+
+body[data-global-header-style="pokewiki"] .global-site-title::after {
+  content: attr(data-site-tagline);
+  display: block;
+  margin-top: 2px;
+  font-family: 'Linux Libertine', serif;
+  font-size: .96rem;
+  font-weight: 400;
+  color: var(--muted, #6b7280);
+}
+
+/* Si pas de tagline, on cache la ligne */
+body[data-global-header-style="pokewiki"] .global-site-title[data-site-tagline=""]::after {
+  content: "";
+  display: none;
+}
+
+/* Nav à droite, version fond blanc */
+body[data-global-header-style="pokewiki"] .global-site-nav a {
+  color: #0645ad;
+}
+
+body[data-global-header-style="pokewiki"] .global-site-nav a:hover {
+  background: rgba(6, 69, 173, 0.08);
+  transform: none; /* plus “wiki”, moins “app” */
+}
+
+body[data-global-header-style="pokewiki"] .global-site-nav a.active {
+  background: rgba(6, 69, 173, 0.14);
+  font-weight: 700;
+}
