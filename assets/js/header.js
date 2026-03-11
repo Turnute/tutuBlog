@@ -6,7 +6,7 @@ if (headerContainer) {
     // Valeurs globales par défaut
     const DEFAULTS = {
         siteTitle: "L'Atelier des Rêves",
-        siteLogo: "★",
+        siteLogo: "𖤓",
         navTheme: "default"
     };
 

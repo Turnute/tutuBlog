@@ -6,37 +6,34 @@ body[data-global-header-style="pokewiki"] .global-site-header {
   padding: 18px 16px 16px;
 }
 
-/* Colonne gauche : logo + texte façon ton header local */
+/* Colonne gauche : logo + texte */
 body[data-global-header-style="pokewiki"] .global-site-brand {
   gap: 14px;
   min-width: 0;
 }
 
-/* Logo -> Pokéball en CSS */
+/* Logo */
 body[data-global-header-style="pokewiki"] .global-site-logo {
   width: 54px;
   height: 54px;
-  border-radius: 50%;
-  background: linear-gradient(to bottom,
-    #f94b55 0 47%,
-    #1f1f1f 47% 53%,
-    #ffffff 53% 100%
-  );
-  border: 3px solid #1f1f1f;
-  position: relative;
   flex: 0 0 auto;
+
+  background-image: url("../images/tutupedia_logo.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  border: none;
+  border-radius: 0;
+  position: relative;
+
+  font-size: 0;      /* cache le symbole injecté par JS */
+  overflow: hidden;
 }
 
 body[data-global-header-style="pokewiki"] .global-site-logo::before {
-  content: "";
-  position: absolute;
-  inset: 50% auto auto 50%;
-  transform: translate(-50%, -50%);
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border: 3px solid #1f1f1f;
-  border-radius: 50%;
+  content: none;
 }
 
 /* Titre + tagline (la tagline vient de data-site-tagline) */
