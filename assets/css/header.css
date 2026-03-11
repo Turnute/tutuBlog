@@ -89,6 +89,14 @@ body[data-nav-theme="music"] .global-site-header {
     background: linear-gradient(90deg, #5a2230, #a63b5c);
 }
 
+body[data-nav-theme="games"] .global-site-header {
+    background: linear-gradient(90deg, #18033f, #160161);
+}
+
+body[data-nav-theme="works"] .global-site-header {
+    background: linear-gradient(90deg, #4b0101, #880000);
+}
+
 @media (max-width: 800px) {
     .global-site-header {
         flex-direction: column;
