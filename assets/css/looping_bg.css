@@ -1,10 +1,14 @@
 body {
-    background: url("https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png") repeat 0 0;
-    animation: animate-bg 2.30s infinite linear;
+    /* background: url("https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png") repeat 0 0; */
+    background: url("../images/checkerboard-cross.webp") repeat 0 0;
+    animation: animate-bg 6.3s linear infinite;
 }
 
-@keyframes  animate-bg {
-    100% {
-        background-position: 50px 50px;
+@keyframes animate-bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 400px 400px;
     }
 }
