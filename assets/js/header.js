@@ -18,9 +18,9 @@ if (headerContainer) {
 
     const links = [
         { label: "Blog", href: new URL("blog/index.html", siteRoot).href, key: "blog" },
-        { label: "Games", href: new URL("games/index.html", siteRoot).href, key: "games" },
-        { label: "Music", href: new URL("music/index.html", siteRoot).href, key: "music" },
-        { label: "Works", href: new URL("works/index.html", siteRoot).href, key: "works" },
+        { label: "Jeux", href: new URL("games/index.html", siteRoot).href, key: "games" },
+        { label: "Musique", href: new URL("music/index.html", siteRoot).href, key: "music" },
+        { label: "Écrits", href: new URL("works/index.html", siteRoot).href, key: "works" },
         { label: "OCs", href: new URL("ocs/index.html", siteRoot).href, key: "ocs" }
     ];
 
