@@ -6,20 +6,152 @@
     <title>L'Atelier des Rêves</title>
 
     <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/looping_bg.css">
+    <link rel="stylesheet" href="../assets/css/index_oc.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 
 <body data-nav-theme="ocs" data-site-logo="OCs">
     <div id="site-header"></div>
 
-    <main class="page-content">
+    <main class="page-content layout">
         <div class="cadre">
-            <h1>WIP</h1>
-            <p>En travaux ! Du balais ! >:[</p>
+            <h2>Qu'est-ce qu'un OC ?</h2>
+            <p>
+                "OC" est l'abréviation de l'anglais <em>Original Character</em>, signifiant "personnage original".
+                Le terme désigne un personnage créé par un auteur indépendant, souvent dans le cadre de la fan-création.<br>
+                Un OC permet de réexplorer un monde, une histoire ou une ambiance à travers un regard différent de celui de l'œuvre d'origine.
+            </p>
+            <p>
+                Cette galerie rassemble mes propres OCs, répartis entre plusieurs univers.
+            </p>
         </div>
+
+        <section class="oc-browser">
+            <div class="oc-browser__divider"></div>
+
+            <div class="oc-browser__rail">
+                <div class="oc-browser__label" aria-hidden="true">
+                    <span>DOSSIERS</span>
+                </div>
+
+                <div class="oc-browser__viewport">
+                    <div class="oc-browser__track">
+                        <article class="oc-folder" data-folder="monsterhunter">
+                            <button class="oc-folder__card" type="button" aria-expanded="false">
+                                <img class="oc-card__illu" src="../assets/images/MHW-Rathalos_Icon.webp" alt="Illustration de Monster Hunter">
+                                <span class="oc-card__title">Monster Hunter</span>
+                            </button>
+
+                            <div class="oc-folder__files" aria-label="OCs Monster Hunter">
+                                <a class="oc-file" href="games/monsterhunter/tulnute.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Tul'nute Rhyis</span>
+                                </a>
+
+                                <a class="oc-file" href="games/monsterhunter/freyja.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Freyja Ironheart</span>
+                                </a>
+
+                                <a class="oc-file" href="games/monsterhunter/neferti.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Neferti</span>
+                                </a>
+
+                                <a class="oc-file" href="games/monsterhunter/garrick.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Garrick Striker</span>
+                                </a>
+
+                                <a class="oc-file" href="games/monsterhunter/vendredi.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Vendredi</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="oc-folder" data-folder="pokemon">
+                            <button class="oc-folder__card" type="button" aria-expanded="false">
+                                <img class="oc-card__illu" src="../assets/images/Pokeball.png" alt="Illustration de Pokémon">
+                                <span class="oc-card__title">Pokémon</span>
+                            </button>
+
+                            <div class="oc-folder__files" aria-label="OCs Pokémon">
+                                <a class="oc-file" href="games/pokemon/alex.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Alex</span>
+                                </a>
+
+                                <a class="oc-file" href="games/pokemon/juliana.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Juliana</span>
+                                </a>
+
+                                <a class="oc-file" href="games/pokemon/morgane.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Morgane</span>
+                                </a>
+
+                                <a class="oc-file" href="games/pokemon/proto_poke.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Proto Poke</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="oc-folder" data-folder="autres">
+                            <button class="oc-folder__card" type="button" aria-expanded="false">
+                                <img class="oc-card__illu" src="../assets/images/mc_bookshelf.jpg" alt="Illustration d'Autres OCs">
+                                <span class="oc-card__title">Autres</span>
+                            </button>
+
+                            <div class="oc-folder__files" aria-label="Autres OCs">
+                                <a class="oc-file" href="games/alice.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Alice<br><em>Minecraft</em></span>
+                                </a>
+
+                                <a class="oc-file" href="games/kai.html">
+                                    <span class="oc-card__illu">&lt;illustration&gt;</span>
+                                    <span class="oc-card__title">Kai<br><em>Splatoon</em></span>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="../assets/js/header.js"></script>
+    <script>
+        const folders = document.querySelectorAll(".oc-folder");
+
+        folders.forEach((folder) => {
+            const button = folder.querySelector(".oc-folder__card");
+
+            button.addEventListener("click", () => {
+                const wasOpen = folder.classList.contains("is-open");
+
+                folders.forEach((item) => {
+                    item.classList.remove("is-open");
+                    item.querySelector(".oc-folder__card").setAttribute("aria-expanded", "false");
+                });
+
+                if (!wasOpen) {
+                    folder.classList.add("is-open");
+                    button.setAttribute("aria-expanded", "true");
+
+                    folder.scrollIntoView({
+                        behavior: "smooth",
+                        inline: "start",
+                        block: "nearest"
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
