@@ -54,22 +54,10 @@
       </section>
 
       <section class="side-card">
-        <h2>Catégories</h2>
+        <h2>Side Content</h2>
         <div class="content">
-          <div class="meta-badges">
-            <span class="badge">OC Pokémon</span>
-            <span class="badge">Dresseur</span>
-            <span class="badge">Paldea</span>
-            <span class="badge">Fanlore</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="side-card">
-        <h2>À adapter</h2>
-        <div class="content">
-          <p style="margin-top:0;">Change le nom, l’image, la région et les blocs de données pour chaque OC.</p>
-          <p style="margin-bottom:0;">La structure est pensée pour être dupliquée facilement.</p>
+          <p style="margin-top:0;">Utilise cet espace pour des éléments secondaires : citations, anecdotes, mini-interactions, etc.</p>
+          <p style="margin-bottom:0;">L’idée est d’avoir une section facilement adaptable pour enrichir la page sans alourdir le contenu principal.</p>
         </div>
       </section>
     </aside>
@@ -77,9 +65,8 @@
     <main class="page">
       <div class="page-tabs" aria-label="Onglets de page">
         <a class="tab-link active" href="#">Article</a>
-        <a class="tab-link" href="#">Notes</a>
+        <a class="tab-link" href="#">English</a>
         <a class="tab-link" href="#">Galerie</a>
-        <a class="tab-link" href="#">Historique</a>
       </div>
 
       <article class="article">
@@ -87,8 +74,6 @@
           <button class="mini-btn" id="sidebarToggle" type="button">Afficher la barre latérale</button>
           <button class="mini-btn" id="expandAll" type="button">Tout ouvrir</button>
         </div>
-
-        <div class="breadcrumbs">Accueil &gt; OCs Pokémon &gt; Dresseurs &gt; <strong>Aster Virelane</strong></div>
 
         <header class="article-header" id="intro">
           <h1>Aster Virelane</h1>
@@ -111,19 +96,40 @@
             <div class="quote-box">
               « Les ruines ne gardent pas le silence. Elles attendent juste quelqu’un capable d’écouter ce qu’elles ont perdu. »
             </div>
+
+            <!-- Sommaire (TOC) -->
+            <nav class="toc" id="toc">
+              <div class="toc-header">
+                <h2>Sommaire</h2>
+              </div>
+              <div class="toc-body">
+                <ol>
+                  <li><a href="#bio">Biographie</a></li>
+                  <li><a href="#appearance">Apparence</a></li>
+                  <li><a href="#personality">Personnalité</a></li>
+                  <li><a href="#team">Équipe Pokémon</a></li>
+                  <li><a href="#relations">Relations</a></li>
+                  <li><a href="#gallery">Galerie</a></li>
+                  <li><a href="#trivia">Anecdotes</a></li>
+                  <li><a href="#refs">Références</a></li>
+                </ol>
+              </div>
+            </nav>
           </section>
 
-          <!-- Colonne droite : infobox + sommaire (déplacé ici) -->
+          <!-- Infobox (Colonne Droite) -->
           <div class="right-column">
             <aside class="infobox" aria-label="Infobox personnage">
-              <div class="  -title">Aster Virelane</div>
+              <div class="infobox-title">Aster Virelane</div>
               <div class="infobox-subtitle">Dresseur / Archiviste itinérant</div>
-              <div class="portrait">
-                <div class="portrait-frame">
-                  Illustration du personnage
-                  <small>Remplace ce bloc par une image</small>
+                <div class="portrait">
+                  <div class="portrait-frame">
+                    <img 
+                      src="../../../assets/images/oc-gallery/morgane/IMG_1010.JPG"
+                      alt="Placeholder"
+                    />
+                  </div>
                 </div>
-              </div>
               <table class="ibox-table">
                 <tr><th>Nom japonais</th><td>アスター</td></tr>
                 <tr><th>Région</th><td>Paldea</td></tr>
@@ -139,7 +145,6 @@
                   </td>
                 </tr>
                 <tr><th>Premier Pokémon</th><td>Floragato</td></tr>
-                <tr><th>Statut</th><td>Actif</td></tr>
                 <tr><th>Design</th><td>Capeline sombre, sac d’expédition, carnet, pendentif fossile</td></tr>
                 <tr>
                   <th>Tags</th>
@@ -155,25 +160,6 @@
               </table>
             </aside>
 
-            <!-- Sommaire (TOC) : maintenant sous l’infobox -->
-            <nav class="toc toc-right" id="toc">
-              <div class="toc-header">
-                <h2>Sommaire</h2>
-                <button class="toc-toggle" type="button" aria-expanded="true">masquer</button>
-              </div>
-              <div class="toc-body">
-                <ol>
-                  <li><a href="#bio">Biographie</a></li>
-                  <li><a href="#appearance">Apparence</a></li>
-                  <li><a href="#personality">Personnalité</a></li>
-                  <li><a href="#team">Équipe Pokémon</a></li>
-                  <li><a href="#relations">Relations</a></li>
-                  <li><a href="#gallery">Galerie</a></li>
-                  <li><a href="#trivia">Anecdotes</a></li>
-                  <li><a href="#refs">Références</a></li>
-                </ol>
-              </div>
-            </nav>
           </div>
         </div>
 

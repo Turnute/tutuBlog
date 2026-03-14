@@ -16,6 +16,8 @@
   --wiki-border: #c8ccd1;
   --team-bg: #fbfcf5;
   --badge: #eef6da;
+  --toc-bg: #f8f9fa;
+  --toc-border: #A1CF31;
 
   /* barre bleue au survol des paragraphes */
   --hover-bar: #2a4b8d;
@@ -45,7 +47,7 @@ a:hover{ color: var(--link-hover); text-decoration:underline; }
 }
 
 .topbar-inner,.site-header,.page-shell{
-  max-width:1360px;
+  max-width:1560px;
   margin:0 auto;
   padding:0 16px;
 }
@@ -117,30 +119,6 @@ a:hover{ color: var(--link-hover); text-decoration:underline; }
     font-size:.96rem;
 }
 
-.searchbox{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  flex:1;
-  max-width:420px;
-  margin-left:auto;
-}
-.searchbox input{
-  width:100%;
-  padding:10px 12px;
-  border:1px solid var(--wiki-border);
-  border-radius:4px;
-  background:#fff;
-  font:inherit;
-}
-.searchbox button,.mini-btn,.toc-toggle,.tab-btn{ font:inherit; cursor:pointer; }
-.searchbox button,.mini-btn,.toc-toggle{
-  border:1px solid var(--wiki-border);
-  background: linear-gradient(#ffffff, #f1f2f3);
-  padding:10px 12px;
-  border-radius:4px;
-}
-
 .page-shell{
   display:grid;
   grid-template-columns:230px minmax(0,1fr);
@@ -186,6 +164,7 @@ aside.sidebar{
   gap:4px;
   margin-top:4px;
 }
+
 .tab-link{
   display:inline-block;
   padding:9px 12px;
@@ -197,6 +176,7 @@ aside.sidebar{
   color:#202122;
   font-size:.95rem;
 }
+
 .tab-link.active{
   background:#fff;
   position:relative;
@@ -231,12 +211,6 @@ aside.sidebar{
   background: var(--hover-bar);
 }
 
-.breadcrumbs{
-  color:var(--muted);
-  font-size:.92rem;
-  margin-bottom:8px;
-}
-
 .article-header{
   border-bottom:1px solid #eaecf0;
   padding-bottom:10px;
@@ -248,6 +222,7 @@ aside.sidebar{
   font-weight:400;
   font-family: Georgia, "Times New Roman", serif;
 }
+
 .subtitle{
   margin-top:6px;
   color:var(--muted);
@@ -256,14 +231,14 @@ aside.sidebar{
 
 .lead-grid{
   display:grid;
-  grid-template-columns: minmax(0,1fr) 320px;
+  grid-template-columns: minmax(0,1fr) minmax(0,450px);
   gap:20px;
   align-items:start;
 }
 
-.right-column{
+.right-column {
   display:flex;
-  flex-direction:column;
+  grid-template-columns: 220px minmax(0,1fr);
   gap:14px;
 }
 
@@ -284,18 +259,26 @@ aside.sidebar{
   font-style:italic;
 }
 
-.toc{
-  border:1px solid var(--wiki-border);
-  background:#f8f9fa;
+.lead .toc{
+  width:fit-content;
+  max-width:100%;
+  margin-top:18px;
+  border-radius: 14px;
 }
-.toc-right{ margin:0; } /* sommaire dans colonne droite */
+
+.toc{
+  border:1px solid var(--toc-border);
+  background: var(--toc-bg);
+}
+
 .toc-header{
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
+  text-align: center;
   gap:12px;
   padding:10px 12px;
-  border-bottom:1px solid var(--wiki-border);
+
 }
 .toc h2{ margin:0; font-size:1rem; font-weight:700; }
 .toc-body{ padding:10px 12px; }
@@ -304,12 +287,15 @@ aside.sidebar{
 .toc.hidden .toc-body{ display:none; }
 
 .infobox{
+  margin:0;
+  min-width:0;
   border:1px solid var(--line);
   background:#fbfff3;
   box-shadow:0 2px 10px rgba(84,119,34,.08);
   overflow:hidden;
   font-size:.94rem;
 }
+
 .infobox-title{
   text-align:center;
   padding:11px 12px;
@@ -332,9 +318,11 @@ aside.sidebar{
   padding:14px;
   border-bottom:1px solid var(--line);
   background: radial-gradient(circle at top, #ffffff, #eff8dc 70%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .portrait-frame{
-  aspect-ratio:4/5;
   border:1px solid #b9c99d;
   background:
     linear-gradient(135deg, rgba(255,255,255,.7), rgba(221,242,182,.9)),
@@ -345,7 +333,16 @@ aside.sidebar{
   padding:16px;
   color:#3e4b2b;
   font-weight:700;
+  width:min(100%, 400px);
+  overflow:hidden;
 }
+
+.portrait-frame img {
+  width:100%;
+  height:auto;
+  display:block;
+}
+
 .portrait-frame small{
   display:block;
   font-weight:400;
@@ -545,9 +542,23 @@ aside.sidebar{
 }
 
 @media (max-width:900px){
-  .lead-grid,.columns-2,.team-grid,.gallery-grid{ grid-template-columns:1fr; }
-  .site-header{ flex-direction:column; align-items:stretch; }
-  .searchbox{ max-width:none; margin-left:0; }
+  .lead-grid,
+  .right-column,
+  .columns-2,
+  .team-grid,
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .site-header{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .searchbox{
+    max-width:none;
+    margin-left:0;
+  }
 }
 
 @media (max-width:640px){
