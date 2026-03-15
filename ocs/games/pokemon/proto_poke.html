@@ -12,6 +12,9 @@
   <!-- CSS propre à la page OC -->
   <link rel="stylesheet" href="../../../assets/css/pokewiki-oc.css" />
 
+  <!-- CSS de la fonctionnalité audio YouTube -->
+  <link rel="stylesheet" href="../../../assets/css/youtube-audio.css" />
+
   <style>
     :root{
       /* --accent: #84b93f; */
@@ -24,6 +27,9 @@
 
   <!-- JS du bandeau global -->
   <script src="../../../assets/js/header.js" defer></script>
+
+  <!-- JS de la fonctionnalité audio YouTube -->
+  <script src="../../../assets/js/youtube-audio.js" defer></script>
 </head>
 
 <body
@@ -50,6 +56,27 @@
             <li><a href="#trivia">Anecdotes</a></li>
             <li><a href="#refs">Références</a></li>
           </ul>
+        </div>
+      </section>
+
+      <section class="side-card">
+        <h2>Bande Son</h2>
+        <div class="content">
+          <button class="yt-audio-trigger"
+            data-youtube="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            style="margin-top:0;"
+          >
+            Écouter la playlist d’Aster
+          </button>
+          <div class="yt-audio-trigger card"
+            data-youtube="https://youtu.be/3JZ_D3ELwOQ"
+            tabindex="0"
+            role="button"
+            style="margin-bottom:0;"
+          >
+            <img src="../../../assets/images/oc-icons/morgane.webp" alt="Cover" />
+            <p>Lancer cette piste</p>
+          </div>
         </div>
       </section>
 
