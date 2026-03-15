@@ -41,6 +41,8 @@ if (headerContainer) {
             currentPage = "home";
         } else if (currentPath.includes("/blog/")) {
             currentPage = "blog";
+        } else if (currentPath.includes("/games/") && currentPath.includes("/ocs/")) {
+            currentPage = "ocs"; // Priorise OCs si les deux sont présents
         } else if (currentPath.includes("/games/")) {
             currentPage = "games";
         } else if (currentPath.includes("/music/")) {
