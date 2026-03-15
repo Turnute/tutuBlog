@@ -27,6 +27,7 @@
 .card.yt-audio-trigger img {
   max-width: 120px;
   display: block;
+  margin: 0 auto;
   border-radius: 8px;
 }
 

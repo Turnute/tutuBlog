@@ -49,6 +49,8 @@
         <div class="content">
           <ul class="wiki-links">
             <li><a href="#intro">Introduction</a></li>
+            <li><a href="#personality">Personnalité</a></li>
+            <li><a href="#appearance">Apparence</a></li>
             <li><a href="#bio">Biographie</a></li>
             <li><a href="#team">Équipe</a></li>
             <li><a href="#relations">Relations</a></li>
@@ -91,7 +93,6 @@
         <!-- Outils mobiles -->
         <div class="mobile-tools">
           <button class="mini-btn" id="sidebarToggle" type="button">Afficher la barre latérale</button>
-          <button class="mini-btn" id="expandAll" type="button">Tout ouvrir</button>
         </div>
 
         <!-- Contenu de l'article -->
@@ -209,9 +210,9 @@
             </div>
             <div class="toc-body">
               <ol>
-                <li><a href="#bio">Biographie</a></li>
-                <li><a href="#appearance">Apparence</a></li>
                 <li><a href="#personality">Personnalité</a></li>
+                <li><a href="#appearance">Apparence</a></li>
+                <li><a href="#bio">Biographie</a></li>
                 <li><a href="#team">Équipe Pokémon</a></li>
                 <li><a href="#relations">Relations</a></li>
                 <li><a href="#gallery">Galerie</a></li>
@@ -223,6 +224,65 @@
         </section>
 
         <!-- Sections principales -->
+        <!-- Personnalité -->
+        <section class="section" id="personality">
+            <h2 class="section-title">Personnalité</h2>
+
+            <div class="traits-grid">
+                <article class="trait-card positive">
+                <h3>Positifs</h3>
+                <ul>
+                    <li>Observateur</li>
+                    <li>Patient</li>
+                    <li>Loyal</li>
+                </ul>
+                </article>
+
+                <article class="trait-card neutral">
+                <h3>Neutres</h3>
+                <ul>
+                    <li>Réservé</li>
+                    <li>Taquin</li>
+                    <li>Méthodique</li>
+                </ul>
+                </article>
+
+                <article class="trait-card negative">
+                <h3>Négatifs</h3>
+                <ul>
+                    <li>Distant</li>
+                    <li>Trop dans sa tête</li>
+                    <li>Exprime mal ses émotions</li>
+                </ul>
+                </article>
+            </div>
+
+            <p>Calme, observateur, il semble distant. En réalité, il s’attache profondément, mais exprime mal ses émotions.</p>
+            <p>Il note presque tout, écoute plus qu’il ne parle, et a tendance à intellectualiser ses peurs.</p>
+        </section>
+
+        <!-- Apparence -->
+        <section class="section" id="appearance">
+          <h2 class="section-title">Apparence</h2>
+          <div class="color-palette">
+            <div style="background-color: #AACEF3;" title="#AACEF3"></div>
+            <div style="background-color: #FFFFFF;" title="#FFFFFF"></div>
+            <div style="background-color: #FCE089;" title="#FCE089"></div>
+            <div style="background-color: #EBA54A;" title="#EBA54A"></div>
+            <div style="background-color: #68413B;" title="#68413B"></div>
+          </div> 
+          <div class="columns-2">
+            <div class="data-card">
+              <h3>Design général</h3>
+              <p>Vêtements de terrain élégants : bottes renforcées, manteau court, multiples poches, carnets.</p>
+            </div>
+            <div class="data-card">
+              <h3>Motifs visuels</h3>
+              <p>Poussière, cartes, symboles de ruines, verts de vieux manuscrits, accents dorés de reliques.</p>
+            </div>
+          </div>
+        </section>
+
         <!-- Bio -->
         <section class="section" id="bio">
           <h2 class="section-title">Biographie</h2>
@@ -261,35 +321,6 @@
             <p>Aster documente les histoires de Pokémon et de dresseurs oubliés. Il ne cherche pas la célébrité,
               mais une forme de réparation symbolique.</p>
           </div>
-        </section>
-
-        <!-- Apparence -->
-        <section class="section" id="appearance">
-          <h2 class="section-title">Apparence</h2>
-          <div class="color-palette">
-            <div style="background-color: #AACEF3;" title="#AACEF3"></div>
-            <div style="background-color: #FFFFFF;" title="#FFFFFF"></div>
-            <div style="background-color: #FCE089;" title="#FCE089"></div>
-            <div style="background-color: #EBA54A;" title="#EBA54A"></div>
-            <div style="background-color: #68413B;" title="#68413B"></div>
-          </div> 
-          <div class="columns-2">
-            <div class="data-card">
-              <h3>Design général</h3>
-              <p>Vêtements de terrain élégants : bottes renforcées, manteau court, multiples poches, carnets.</p>
-            </div>
-            <div class="data-card">
-              <h3>Motifs visuels</h3>
-              <p>Poussière, cartes, symboles de ruines, verts de vieux manuscrits, accents dorés de reliques.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Personnalité -->
-        <section class="section" id="personality">
-          <h2 class="section-title">Personnalité</h2>
-          <p>Calme, observateur, il semble distant. En réalité, il s’attache profondément, mais exprime mal ses émotions.</p>
-          <p>Il note presque tout, écoute plus qu’il ne parle, et a tendance à intellectualiser ses peurs.</p>
         </section>
 
         <!-- Équipe Pokémon -->
@@ -541,16 +572,24 @@
           <h2 class="section-title">Galerie</h2>
           <div class="gallery-grid">
             <figure class="gallery-item">
-              <div class="gallery-thumb">Portrait officiel<br />placeholder</div>
+              <div class="gallery-thumb">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1010.JPG" target="_blank" rel="noopener">
+                  <img 
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1010.JPG" 
+                    alt="Concept art">
+                </a>
+              </div>
               <p>Concept principal.</p>
             </figure>
             <figure class="gallery-item">
-              <div class="gallery-thumb">Version voyage<br />placeholder</div>
+              <div class="gallery-thumb">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1723.JPG" target="_blank" rel="noopener">
+                  <img 
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1723.JPG" 
+                    alt="Version voyage">
+                </a>
+              </div>
               <p>Tenue d’exploration.</p>
-            </figure>
-            <figure class="gallery-item">
-              <div class="gallery-thumb">Illustration d’équipe<br />placeholder</div>
-              <p>Aster et ses Pokémon.</p>
             </figure>
           </div>
         </section>
@@ -577,7 +616,7 @@
         <div class="footer-note">
           L'Atelier des Rêves ouvre ses portes à tout le monde. Explorez, créez, partagez.
         </div>
-        
+
       </article>
     </main>
   </div>

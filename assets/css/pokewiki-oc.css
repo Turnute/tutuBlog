@@ -570,13 +570,24 @@ aside.sidebar {
   border-radius: 999px;
 }
 
-.type-chip[data-type="Plante"] { background: #d9f0c1; }
-.type-chip[data-type="Psy"] { background: #ffd2dc; }
+.type-chip[data-type="Normal"] { background: #e6e0d4; }
 .type-chip[data-type="Feu"] { background: #ffd8ba; }
 .type-chip[data-type="Eau"] { background: #d2e7ff; }
+.type-chip[data-type="Plante"] { background: #d9f0c1; }
+.type-chip[data-type="Électrik"] { background: #fff1b8; }
+.type-chip[data-type="Glace"] { background: #d8f7f3; }
+.type-chip[data-type="Combat"] { background: #f2c6c6; }
+.type-chip[data-type="Poison"] { background: #e4d2f7; }
+.type-chip[data-type="Sol"] { background: #ead7b7; }
+.type-chip[data-type="Vol"] { background: #dde4ff; }
+.type-chip[data-type="Psy"] { background: #ffd2dc; }
+.type-chip[data-type="Insecte"] { background: #e2edb8; }
+.type-chip[data-type="Roche"] { background: #ddd1b8; }
+.type-chip[data-type="Spectre"] { background: #d8d2e8; }
 .type-chip[data-type="Dragon"] { background: #d8d2ff; }
 .type-chip[data-type="Ténèbres"] { background: #d8d3cf; }
-
+.type-chip[data-type="Acier"] { background: #d9e1e8; }
+.type-chip[data-type="Fée"] { background: #ffe0f0; }
 
 /* =========================================================
    SECTIONS D'ARTICLE
@@ -837,19 +848,20 @@ aside.sidebar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  align-items: start;
 }
 
 .gallery-item {
-  padding: 10px;
+  padding: 5px;
   background: #fcfef8;
   border: 1px solid #d7e1c5;
 }
 
 .gallery-thumb {
-  display: grid;
-  place-items: center;
+  position: relative;
   aspect-ratio: 4 / 3;
-  padding: 12px;
+  overflow: hidden;
+  padding: 5px;
   font-size: 0.95rem;
   text-align: center;
   color: #526149;
@@ -860,6 +872,17 @@ aside.sidebar {
 .gallery-item p {
   margin: 8px 0 0;
   font-size: 0.92rem;
+}
+
+.gallery-thumb img {
+  position: absolute;
+  inset: 12px;
+  margin: auto;
+  max-width: calc(100% - 24px);
+  max-height: calc(100% - 24px);
+  width: auto;
+  height: auto;
+  display: block;
 }
 
 
@@ -958,5 +981,78 @@ aside.sidebar {
   .tab-controls,
   .page-tools {
     gap: 8px;
+  }
+}
+
+
+
+#personality .traits-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(160px, 200px));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+#personality .trait-card {
+  border: 1px solid var(--toc-border);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  background: #fff;
+}
+
+#personality .trait-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+#personality .trait-card h3::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+#personality .trait-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#personality .trait-card li {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+#personality .trait-card li + li {
+  margin-top: 0.35rem;
+}
+
+#personality .positive h3::before {
+  font-size: large;
+  content: "+";
+}
+
+#personality .neutral h3::before {
+  font-size: large;
+  content: "•";
+}
+
+#personality .negative h3::before {
+  font-size: large;
+  content: "−";
+}
+
+@media (max-width: 900px) {
+  #personality .traits-grid {
+    grid-template-columns: 1fr;
   }
 }
