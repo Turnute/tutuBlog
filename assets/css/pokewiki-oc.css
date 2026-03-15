@@ -651,10 +651,35 @@ aside.sidebar {
   color: #2f3f14;
 }
 
+.color-palette {
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 16px;
+  width: 50%;
+  height: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.color-palette > div {
+  flex: 1;
+  height: 100%;
+}
+
 
 /* =========================================================
    ÉQUIPE POKÉMON
    ========================================================= */
+
+.team-icons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.team-icons img {
+  height: 50px;
+}
 
 .team-grid {
   display: grid;
@@ -691,32 +716,33 @@ aside.sidebar {
 }
 
 .team-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 12px;
 }
 
-.toggle-details {
-  margin-top: 10px;
-  padding: 7px 10px;
-  font: inherit;
-  cursor: pointer;
-  background: linear-gradient(#fff, #f3f4f5);
-  border: 1px solid var(--wiki-border);
-  border-radius: 4px;
+.team-body img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
 }
 
-.hidden-details {
-  display: none;
-  margin-top: 10px;
-  padding-top: 10px;
-  font-size: 0.94rem;
-  color: #3b4230;
-  border-top: 1px dashed #cad6b8;
+.team-body p {
+  margin: 0;
 }
 
-.hidden-details.open {
-  display: block;
+.team-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+.team-content p {
+  margin: 0;
+}
 
 /* =========================================================
    TIMELINE
