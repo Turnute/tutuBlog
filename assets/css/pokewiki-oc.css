@@ -588,6 +588,16 @@ aside.sidebar {
 .type-chip[data-type="Ténèbres"] { background: #d8d3cf; }
 .type-chip[data-type="Acier"] { background: #d9e1e8; }
 .type-chip[data-type="Fée"] { background: #ffe0f0; }
+.type-chip[data-type="Tera"] { background: linear-gradient(
+      135deg,
+    #ff9bd2 0%,
+    #ffe28a 25%,
+    #9be7ff 50%,
+    #c6b3ff 75%,
+    #ffb3c6 100%
+  );
+  color: #2b2b2b;
+}
 
 /* =========================================================
    SECTIONS D'ARTICLE
