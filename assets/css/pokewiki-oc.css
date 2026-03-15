@@ -25,6 +25,8 @@
   --team-bg: #fbfcf5;
   --badge: #eef6da;
 
+  --tag-bg: #eeeded;
+
   --toc-bg: #f8f9fa;
   --toc-border: #a1cf31;
 
@@ -666,6 +668,54 @@ aside.sidebar {
   height: 100%;
 }
 
+.relation-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+}
+
+.relation-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.relation-head .tag {
+  font-size: 0.76rem;
+  color: var(--muted);
+  background: var(--tag-bg);
+  border: 1px solid #c8d4b2;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.relation-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+.relation-body img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.relation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.relation-body p {
+  margin: 0;
+  text-justify: inter-word;
+}
 
 /* =========================================================
    ÉQUIPE POKÉMON
