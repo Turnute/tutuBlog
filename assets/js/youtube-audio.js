@@ -1,19 +1,17 @@
 (() => {
-  let apiReady = false;
-  let apiLoading = false;
+  let apiPromise = null;
   let player = null;
   let playerReady = false;
   let currentVideoId = null;
   let currentTrigger = null;
-  let pendingVideoId = null;
-  let pendingTrigger = null;
 
   function extractYouTubeVideoId(input) {
     if (!input) return null;
 
-    // Si on donne directement un ID
-    const directIdMatch = input.match(/^[a-zA-Z0-9_-]{11}$/);
-    if (directIdMatch) return input;
+    // ID direct
+    if (/^[a-zA-Z0-9_-]{11}$/.test(input)) {
+      return input;
+    }
 
     try {
       const url = new URL(input);
@@ -35,22 +33,13 @@
       // youtu.be/...
       if (url.hostname.includes("youtu.be")) {
         const shortId = url.pathname.slice(1);
-        if (shortId) return shortId;
+        if (/^[a-zA-Z0-9_-]{11}$/.test(shortId)) return shortId;
       }
     } catch (e) {
       return null;
     }
 
     return null;
-  }
-
-  function loadYouTubeAPI() {
-    if (apiReady || apiLoading) return;
-    apiLoading = true;
-
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.head.appendChild(tag);
   }
 
   function ensureHiddenPlayerContainer() {
@@ -70,8 +59,7 @@
 
   function updateTriggerStates(activeTrigger = null, isPlaying = false) {
     document.querySelectorAll(".yt-audio-trigger").forEach(el => {
-      el.classList.remove("is-playing");
-      el.classList.remove("is-paused");
+      el.classList.remove("is-playing", "is-paused");
       el.setAttribute("aria-pressed", "false");
     });
 
@@ -81,89 +69,91 @@
     }
   }
 
-  function createPlayer(videoId) {
-    ensureHiddenPlayerContainer();
+  function loadYouTubeAPI() {
+    if (window.YT && window.YT.Player) {
+      return Promise.resolve(window.YT);
+    }
 
-    player = new YT.Player("yt-audio-player", {
-      height: "1",
-      width: "1",
-      videoId,
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        modestbranding: 1,
-        rel: 0
-      },
-      events: {
-        onReady: () => {
-          playerReady = true;
+    if (apiPromise) {
+      return apiPromise;
+    }
 
-          if (pendingVideoId) {
-            const vid = pendingVideoId;
-            const trig = pendingTrigger;
-            pendingVideoId = null;
-            pendingTrigger = null;
-            playVideo(vid, trig);
-          }
-        },
-        onStateChange: (event) => {
-          if (event.data === YT.PlayerState.PLAYING) {
-            updateTriggerStates(currentTrigger, true);
-          } else if (
-            event.data === YT.PlayerState.PAUSED ||
-            event.data === YT.PlayerState.ENDED
-          ) {
-            updateTriggerStates(currentTrigger, false);
-          }
-        }
+    apiPromise = new Promise((resolve) => {
+      const previous = window.onYouTubeIframeAPIReady;
+
+      window.onYouTubeIframeAPIReady = function () {
+        if (typeof previous === "function") previous();
+        resolve(window.YT);
+      };
+
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(tag);
       }
+    });
+
+    return apiPromise;
+  }
+
+  function getFirstValidVideoId() {
+    const triggers = document.querySelectorAll(".yt-audio-trigger");
+
+    for (const trigger of triggers) {
+      const rawValue = trigger.dataset.youtube || trigger.dataset.audioSrc;
+      const videoId = extractYouTubeVideoId(rawValue);
+      if (videoId) return videoId;
+    }
+
+    return null;
+  }
+
+  function ensurePlayer(initialVideoId = null) {
+    if (player && playerReady) {
+      return Promise.resolve(player);
+    }
+
+    return loadYouTubeAPI().then(() => {
+      if (player && playerReady) {
+        return player;
+      }
+
+      ensureHiddenPlayerContainer();
+
+      return new Promise((resolve) => {
+        player = new YT.Player("yt-audio-player", {
+          height: "1",
+          width: "1",
+          videoId: initialVideoId || undefined,
+          playerVars: {
+            controls: 0,
+            modestbranding: 1,
+            rel: 0,
+            playsinline: 1
+          },
+          events: {
+            onReady: () => {
+              playerReady = true;
+              resolve(player);
+            },
+            onStateChange: (event) => {
+              if (event.data === YT.PlayerState.PLAYING) {
+                updateTriggerStates(currentTrigger, true);
+              } else if (
+                event.data === YT.PlayerState.PAUSED ||
+                event.data === YT.PlayerState.ENDED
+              ) {
+                updateTriggerStates(currentTrigger, false);
+              }
+            }
+          }
+        });
+      });
     });
   }
 
-  function playVideo(videoId, triggerEl) {
-    if (!apiReady) {
-      pendingVideoId = videoId;
-      pendingTrigger = triggerEl;
-      loadYouTubeAPI();
-      return;
-    }
-
-    if (!player) {
-      pendingVideoId = videoId;
-      pendingTrigger = triggerEl;
-      createPlayer(videoId);
-      return;
-    }
-
-    if (!playerReady) {
-      pendingVideoId = videoId;
-      pendingTrigger = triggerEl;
-      return;
-    }
-
-    if (currentVideoId === videoId) {
-      const state = player.getPlayerState();
-
-      if (state === YT.PlayerState.PLAYING) {
-        player.pauseVideo();
-        updateTriggerStates(triggerEl, false);
-      } else {
-        player.playVideo();
-        updateTriggerStates(triggerEl, true);
-      }
-      return;
-    }
-
-    currentVideoId = videoId;
-    currentTrigger = triggerEl;
-
-    player.loadVideoById(videoId);
-    player.playVideo();
-    updateTriggerStates(triggerEl, true);
-  }
-
-  function handleTriggerClick(triggerEl) {
-    const rawValue = triggerEl.dataset.youtube;
+  async function handleTriggerClick(triggerEl) {
+    const rawValue = triggerEl.dataset.youtube || triggerEl.dataset.audioSrc;
     const videoId = extractYouTubeVideoId(rawValue);
 
     if (!videoId) {
@@ -171,12 +161,45 @@
       return;
     }
 
-    currentVideoId = videoId;
-    currentTrigger = triggerEl;
-    playVideo(videoId, triggerEl);
+    try {
+      await ensurePlayer(videoId);
+
+      const sameVideo = currentVideoId === videoId;
+
+      if (sameVideo) {
+        const state = player.getPlayerState();
+
+        if (state === YT.PlayerState.PLAYING) {
+          player.pauseVideo();
+          updateTriggerStates(triggerEl, false);
+        } else {
+          player.playVideo();
+          currentTrigger = triggerEl;
+          updateTriggerStates(triggerEl, true);
+        }
+        return;
+      }
+
+      currentVideoId = videoId;
+      currentTrigger = triggerEl;
+
+      player.loadVideoById(videoId);
+      player.playVideo();
+      updateTriggerStates(triggerEl, true);
+    } catch (error) {
+      console.error("Impossible d'initialiser le player YouTube :", error);
+    }
   }
 
   function initYouTubeAudioTriggers() {
+    // Précharge l’API dès le chargement de la page
+    loadYouTubeAPI().then(() => {
+      const firstVideoId = getFirstValidVideoId();
+      if (firstVideoId) {
+        ensurePlayer(firstVideoId);
+      }
+    });
+
     document.addEventListener("click", (event) => {
       const trigger = event.target.closest(".yt-audio-trigger");
       if (!trigger) return;
@@ -194,10 +217,6 @@
       }
     });
   }
-
-  window.onYouTubeIframeAPIReady = function () {
-    apiReady = true;
-  };
 
   document.addEventListener("DOMContentLoaded", initYouTubeAudioTriggers);
 })();
