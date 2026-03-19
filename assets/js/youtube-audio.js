@@ -134,7 +134,7 @@
           events: {
             onReady: () => {
               playerReady = true;
-              player.setVolume(50);
+              player.setVolume(25);
               resolve(player);
             },
             onStateChange: (event) => {
