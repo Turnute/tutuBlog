@@ -616,6 +616,9 @@ aside.sidebar {
   border-bottom: 1px solid #a2a9b1;
 }
 
+.section li {
+  margin-bottom: 10px;
+}
 
 /* =========================================================
    ONGLETS INTERNES
