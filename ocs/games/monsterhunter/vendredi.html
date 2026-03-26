@@ -7,75 +7,47 @@
 
     <link rel="stylesheet" href="../../../assets/css/header.css">
     <link rel="stylesheet" href="../../../assets/css/index.css">
+    <link rel="stylesheet" href="../../../assets/css/mh-guild-card.css">
 
-    <style>
-        .guild-card {
-        position: relative;
-        width: 420px;
-        height: 260px;
-        padding: 20px;
-        background: linear-gradient(135deg, #d8c29a, #b8915f);
-        border-radius: 18px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        overflow: hidden;
-        }
+    <link rel="stylesheet" href="../../../assets/css/youtube-audio.css" />
+    <script src="../../../assets/js/youtube-audio.js" defer></script>
 
-        /* La "photo" posée sur la carte */
-        .photo {
-        position: absolute;
-        top: 25px;
-        right: 30px;
-
-        width: 140px;
-        padding: 10px 10px 24px 10px; /* bas plus grand = effet photo imprimée */
-        background: #f8f6f1;
-        border: 1px solid rgba(0,0,0,0.08);
-
-        transform: rotate(-6deg);
-        box-shadow:
-            0 10px 18px rgba(0,0,0,0.25),
-            0 2px 4px rgba(0,0,0,0.12);
-
-        z-index: 2;
-
-
-        }
-
-        /* L'image du personnage */
-        .photo img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        }
-
-        .photo::before {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%) rotate(3deg);
-
-        width: 60px;
-        height: 20px;
-        background: rgba(255,255,220,0.55);
-        border: 1px solid rgba(180,180,140,0.25);
-        box-shadow: 0 1px 2px rgba(0,0,0,0.08);
-        }
-    </style>
 </head>
 
-<body>
+<body
+  data-nav-theme="ocs"
+  data-global-header-style="mh-guild-card"
+>
     <div id="site-header"></div>
 
     <main class="page-content">
+        <section class="main-content">
 
-    </main>
-        <div class="guild-card">
-            <div class="photo">
-                <img src="../../../assets/images/oc-gallery/morgane/IMG_1010.JPG" alt="Illustration du personnage">
+            <div class="guild-card">
+                <img 
+                class="bg"
+                src="../../../assets/images/oc-gallery/vendredi/background.jpg"
+                alt="background"
+                />
+                <div class="photo">
+                    <img src="../../../assets/images/oc-gallery/vendredi/0000001474.png" alt="Illustration du personnage">
+                    <p>Préférerais-tu être défini par la perte, ou par le souvenir de ce qui fut autrefois ?</p>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="music-player">
+            <div class="yt-audio-trigger card"
+                data-youtube="https://www.youtube.com/watch?v=Ys8XmMGFX6c"
+                tabindex="0"
+                role="button"
+            >
+                <img src="../../../assets/images/oc-gallery/vendredi/cover.jpg" alt="Cover" />
+                <p><a href="https://www.youtube.com/watch?v=Ys8XmMGFX6c" target="_blank" rel="noopener">Could Have Been Me<br><em>The Struts</em></a></p>
+            </div>
+        </section>
+    </main>
+
     <script src="../../../assets/js/header.js"></script>
 </body>
 </html>
