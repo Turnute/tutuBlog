@@ -251,8 +251,9 @@ body {
 }
 
 .infobox-weapons {
-    border: 1px solid #ffffff;
-    border-radius: 4px;
+    padding: 20px;
+    background-color: #00000021;
+    border-radius: 32px;
 }
 
 .infobox-weapons table {
@@ -261,6 +262,7 @@ body {
 
 .infobox-weapons td {
     text-align: center;
+    position: relative;
 }
 
 .infobox-weapons img {
@@ -269,6 +271,20 @@ body {
     background-color: #000000d3;
     margin: 5px 10px 5px 10px;
 }
+
+[class^="rank-"]::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(204, 204, 204);
+}
+
+.rank-1::after { content: "★"; }
+.rank-2::after { content: "★★"; }
+.rank-3::after { content: "★★★"; }
 
 /* ========================= PHOTO ========================= */
 .photo {
