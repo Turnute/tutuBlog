@@ -24,6 +24,7 @@ body {
     height: 100%;
     object-fit: cover;
     filter: blur(4px);
+    border-bottom: 10px solid #000000f6;
 }
 
 /* ========================= INFOBOX ========================= */
@@ -37,7 +38,7 @@ body {
     min-width: 50%;
     max-width: 50%;
     min-height: 100%;
-    height: auto;
+    height: 100.75%;
     box-sizing: border-box;
     overflow: visible;
 
@@ -285,6 +286,68 @@ body {
 .rank-1::after { content: "★"; }
 .rank-2::after { content: "★★"; }
 .rank-3::after { content: "★★★"; }
+
+/* ========================= APPARENCE ========================= */
+.appearance {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    gap: 40px;
+}
+
+.card {
+    border: 3px solid #ffffff;
+    border-radius: 32px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.card h3 {
+    text-align: center;
+    position: relative;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e9e7e3;
+
+}
+
+.details {
+}
+/* ========================= ARMURE ========================= */
+
+.armor img {
+    width: 50px;
+}
+
+.armor {
+    padding: 0 20px 20px 20px;
+    background-color: #00000021;
+}
+
+.armor table {
+    margin: 0 10px 0 0;
+}
+
+.armor td {
+    text-align: justify;
+    position: relative;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #f5e2bd;
+}
+
+.armor tr {
+
+}
+
+.armor img {
+    border-radius: 16px;
+    background-color: #00000063;
+    margin: 5px 10px 5px 10px;
+}
 
 /* ========================= PHOTO ========================= */
 .photo {
