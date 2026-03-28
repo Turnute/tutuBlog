@@ -7,6 +7,9 @@ body[data-global-header-style="mh-guild-card"] .global-site-header {
 body {
     background-color: #080808;
     margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
 }
 
 /* ========================= CARTE ========================= */
@@ -438,4 +441,25 @@ body {
 
 .music-player .card a:hover {
     text-decoration: none;
+}
+
+/* ========================= FOOTER ========================= */
+.footer-note div {
+    border-top: 1px dashed rgba(230, 210, 170, 0.5);
+    margin-top: 15px;
+}
+.footer-note p {
+    text-align: justify;
+    position: relative;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #dadada;
+    
+    margin: 15px 30px;
+}
+
+.footer-note a {
+    color: #ffffff;
 }
