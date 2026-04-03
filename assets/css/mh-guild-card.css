@@ -786,6 +786,42 @@ h3 {
   padding-right: 5px;
 }
 
+.litterature {
+    padding-bottom: 20px;
+}
+
+.litterature h3 {
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.litterature a {
+    text-align: justify;
+    margin-left: 50px;
+    
+    margin: 0 6px 0;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    font-style: italic;
+    font-family: "Cormorant Garamond", serif;
+    color: #ebeaea;
+
+    padding-left: 1em;
+    text-indent: -1em;
+
+    background-color: #00000028;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.litterature p {
+    margin-left: 0px;
+    padding-left: 60px;
+    padding-right: 12.5%;
+    font-family: "Cormorant Garamond", serif;
+}
+
 /* ========================= FOOTER ========================= */
 .footer-note div {
     border-top: 1px dashed rgba(230, 210, 170, 0.5);
