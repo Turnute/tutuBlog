@@ -17,28 +17,55 @@
     <aside class="sidebar">
         <nav>
             <ul class="navbar-list">
-            <li>Nav item 1</li>
-            <li>Nav item 2</li>
-            <li>Nav item 3</li>
-            <li>Nav item 4</li>
-            <li>Nav item 5</li>
-            <li>Nav item 6</li>
-            <li>Nav item 7</li>
-            <li>Nav item 8</li>
+                <li>Nav item 1</li>
+                <li>Nav item 2</li>
+                <li>Nav item 3</li>
+                <li>Nav item 4</li>
+                <li>Nav item 5</li>
+                <li>Nav item 6</li>
+                <li>Nav item 7</li>
+                <li>Nav item 8</li>
             </ul>
         </nav>
     </aside>
+
     <main class="page-content">
-        <div class="animated-bg">
-            <img src="../../assets/images/oc-gallery/alice/loop_bg.png" alt="Background">
+        <div class="animated-bg" aria-hidden="true">
+            <img src="../../assets/images/oc-gallery/alice/loop_bg.png" alt="">
         </div>
-        <div class="book-bg">
-            <img src="../../assets/images/oc-gallery/alice/book_bg.png" alt="Book Cover">
-        </div>
+
+        <section class="book" aria-label="Book">
+            <img
+                class="book-image"
+                src="../../assets/images/oc-gallery/alice/book_bg.png"
+                alt=""
+            >
+
+            <article class="book-page book-page-left">
+                <h1>Alice</h1>
+                <p>
+                    Ici ton texte de page gauche. Tu peux mettre une présentation,
+                    des infos de lore, une citation, ce que tu veux.
+                </p>
+                <p>
+                    Le texte restera placé sur la page même si la fenêtre change
+                    de taille.
+                </p>
+            </article>
+
+            <article class="book-page book-page-right">
+                <h2>Détails</h2>
+                <p>
+                    Âge, rôle, relations, anecdotes, playlist, esthétique…
+                </p>
+                <p>
+                    Si le contenu est trop long, cette zone pourra scroller
+                    indépendamment.
+                </p>
+            </article>
+        </section>
     </main>
 
     <script src="../../assets/js/header.js"></script>
-    
 </body>
-
 </html>
