@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/index.css">
     <link rel="stylesheet" href="../../assets/css/mc-card.css">
+
+    <script src="../../assets/js/youtube-audio.js" defer></script>
 </head>
 
 <body data-global-header-style="minecraft-card">
@@ -16,22 +18,30 @@
 
     <aside class="sidebar">
         <nav>
+            <img src="../../assets/images/oc-gallery/alice/alice1bg.png" alt="">
             <ul class="navbar-list">
-                <li>Nav item 1</li>
-                <li>Nav item 2</li>
-                <li>Nav item 3</li>
-                <li>Nav item 4</li>
-                <li>Nav item 5</li>
-                <li>Nav item 6</li>
-                <li>Nav item 7</li>
-                <li>Nav item 8</li>
+                <li>Livre 1 - Infos Générales</li>
+                <li>Livre 2 - Histoire</li>
+                <li>Livre 3 - Notes de Personnage</li>
+                <li>Livre 4 - Illustrations</li>
             </ul>
+            <section class="music-player">
+                <div class="yt-audio-trigger card"
+                    data-youtube="https://www.youtube.com/watch?v=EKOSQGKn5Cw"
+                    tabindex="0"
+                    role="button"
+                >
+                    <img src="../../assets/images/oc-gallery/alice/Jukebox.png" alt="Cover" />
+                    <p><a href="https://www.youtube.com/watch?v=EKOSQGKn5Cw" target="_blank" rel="noopener">Aura<br><em>Ghost and Pals</em></a></p>
+                </div>
+            </section>
         </nav>
     </aside>
 
     <main class="page-content">
         <div class="animated-bg" aria-hidden="true">
-            <img src="../../assets/images/oc-gallery/alice/loop_bg.png" alt="">
+            <!-- <img src="../../assets/images/oc-gallery/alice/loop_bg.png" alt=""> -->
+             <img src="../../assets/images/oc-gallery/alice/loop_bg_animated.png" alt="">
         </div>
 
         <section class="book" aria-label="Book">
@@ -43,14 +53,52 @@
 
             <article class="book-page book-page-left">
                 <h1>Alice</h1>
-                <p>
-                    Ici ton texte de page gauche. Tu peux mettre une présentation,
-                    des infos de lore, une citation, ce que tu veux.
-                </p>
-                <p>
-                    Le texte restera placé sur la page même si la fenêtre change
-                    de taille.
-                </p>
+                <h2>Informations Générales</h2>
+                
+                <div class="infobox-table">
+                    <div class="ibox-row">
+                        <span class="ibox-label">Nom:</span>
+                        <span class="ibox-value">Alice</span>
+                    </div>
+                    <div class="ibox-row">
+                        <span class="ibox-label">Genre:</span>
+                        <span class="ibox-value">Féminin</span>
+                    </div>
+                    <div class="ibox-row">
+                        <span class="ibox-label">Orientation:</span>
+                        <span class="ibox-value">Aro-Ace</span>
+                    </div>
+                    <div class="ibox-row">
+                        <span class="ibox-label">Anniversaire:</span>
+                        <span class="ibox-value">05 Mai</span>
+                    </div>
+                    <div class="ibox-row">
+                        <span class="ibox-label">Âge:</span>
+                        <span class="ibox-value">Inconnu</span>
+                    </div>
+                    <div class="ibox-row">
+                        <span class="ibox-label">Espèce:</span>
+                        <span class="ibox-value">Humaine... ?</span>
+                    </div>
+                </div>
+                <section class="badges">
+                    <span>Majordome en chef</span>
+                    <span>Organisme infesté</span>
+                    <span>Cadavre respirant</span>
+                </section>
+                <hr>
+                <section class="overview">
+                    <p>
+                        Fidèle servante de l'illustre famille Blackraven, la seule qui soit restée jusqu'à la fin.
+                        Alice se considère comme un outil : ce n'est pas à elle de remettre les ordres en question.
+                        Elle fera tout ce qu'on lui demande, quelle qu'en soit la moralité.
+                    </p>
+                    <p>
+                        Seule survivante de la rage d'un <i>Warden</i>, Alice semble aujourd'hui errer sans but.
+                        Peut-être porte-t-elle encore la mémoire des Blackraven, ainsi que la corruption des Abysses ?
+                    </p>
+                </section>
+
             </article>
 
             <article class="book-page book-page-right">
