@@ -51,10 +51,11 @@ body {
 
 .music-player {
     display: block;
+    text-align: center;
     width: 50%;
     max-width: 50%;
     height: auto;
-        z-index: 9999;
+    z-index: 9999;
     width: max-content;
 }
 
@@ -65,7 +66,7 @@ body {
 
 .music-player .card p,
 .music-player .card a {
-    color: #ffffff;
+    color: #000000;
 }
 
 .music-player .card a {
