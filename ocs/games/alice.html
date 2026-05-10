@@ -22,16 +22,34 @@
 
             <ul class="navbar-list">
                 <li>
-                    <button type="button" class="nav-button">Livre 1 - Infos Générales</button>
+                    <button type="button" class="nav-button" data-target="general-info">
+                        Livre 1 - Infos Générales
+                    </button>
                 </li>
                 <li>
-                    <button type="button" class="nav-button">Livre 2 - Histoire</button>
+                    <button type="button" class="nav-button" data-target="story">
+                        Livre 2 - Histoire
+                    </button>
                 </li>
                 <li>
-                    <button type="button" class="nav-button">Livre 3 - Notes de Personnage</button>
+                    <button type="button" class="nav-button" data-target="character-notes">
+                        Livre 3 - Notes de Personnage
+                    </button>
                 </li>
                 <li>
-                    <button type="button" class="nav-button">Livre 4 - Illustrations</button>
+                    <button type="button" class="nav-button" data-target="illustrations">
+                        Livre 4 - Illustrations
+                    </button>
+                </li>
+                <li>
+                    <a
+                        class="nav-button nav-link"
+                        href="https://archiveofourown.org/works/82978376/chapters/218497006"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Livre 5 - The Dead Don't Feast
+                    </a>
                 </li>
             </ul>
 
@@ -58,124 +76,354 @@
         </div>
 
         <section class="book" aria-label="Book">
+            <button type="button" class="book-close-button" aria-label="Refermer le livre">
+                ✦
+            </button>
             <img
                 class="book-image"
                 src="../../assets/images/oc-gallery/alice/book_bg.png"
                 alt=""
             >
+            <section class="general-info book-section" data-book-section="general-info">
+                <article class="book-page book-page-left">
+                    <h1>Alice</h1>
+                    <h2>Informations Générales</h2>
+                    
+                    <div class="infobox-table">
+                        <div class="ibox-row">
+                            <span class="ibox-label">Nom:</span>
+                            <span class="ibox-value">Alice</span>
+                        </div>
+                        <div class="ibox-row">
+                            <span class="ibox-label">Genre:</span>
+                            <span class="ibox-value">Féminin</span>
+                        </div>
+                        <div class="ibox-row">
+                            <span class="ibox-label">Orientation:</span>
+                            <span class="ibox-value">Aro-Ace</span>
+                        </div>
+                        <div class="ibox-row">
+                            <span class="ibox-label">Anniversaire:</span>
+                            <span class="ibox-value">05 Mai</span>
+                        </div>
+                        <div class="ibox-row">
+                            <span class="ibox-label">Âge:</span>
+                            <span class="ibox-value">Inconnu</span>
+                        </div>
+                        <div class="ibox-row">
+                            <span class="ibox-label">Espèce:</span>
+                            <span class="ibox-value">Humaine... ?</span>
+                        </div>
+                    </div>
+                    <section class="badges">
+                        <span>Majordome en chef</span>
+                        <span>Organisme infesté</span>
+                        <span>Cadavre respirant</span>
+                    </section>
+                    <hr>
+                    <section class="overview">
+                        <p>
+                            Fidèle servante de l'illustre famille Blackraven, la seule qui soit restée jusqu'à la fin.
+                            Alice se considère comme un outil : ce n'est pas à elle de remettre les ordres en question.
+                            Elle fera tout ce qu'on lui demande, quelle qu'en soit la moralité.
+                        </p>
+                        <p>
+                            Seule survivante de la rage d'un <i>Warden</i>, Alice semble aujourd'hui errer sans but.
+                            Peut-être porte-t-elle encore la mémoire des Blackraven, ainsi que la corruption des Abysses ?
+                        </p>
+                    </section>
 
-            <article class="book-page book-page-left">
-                <h1>Alice</h1>
-                <h2>Informations Générales</h2>
-                
-                <div class="infobox-table">
-                    <div class="ibox-row">
-                        <span class="ibox-label">Nom:</span>
-                        <span class="ibox-value">Alice</span>
-                    </div>
-                    <div class="ibox-row">
-                        <span class="ibox-label">Genre:</span>
-                        <span class="ibox-value">Féminin</span>
-                    </div>
-                    <div class="ibox-row">
-                        <span class="ibox-label">Orientation:</span>
-                        <span class="ibox-value">Aro-Ace</span>
-                    </div>
-                    <div class="ibox-row">
-                        <span class="ibox-label">Anniversaire:</span>
-                        <span class="ibox-value">05 Mai</span>
-                    </div>
-                    <div class="ibox-row">
-                        <span class="ibox-label">Âge:</span>
-                        <span class="ibox-value">Inconnu</span>
-                    </div>
-                    <div class="ibox-row">
-                        <span class="ibox-label">Espèce:</span>
-                        <span class="ibox-value">Humaine... ?</span>
-                    </div>
-                </div>
-                <section class="badges">
-                    <span>Majordome en chef</span>
-                    <span>Organisme infesté</span>
-                    <span>Cadavre respirant</span>
-                </section>
-                <hr>
-                <section class="overview">
+                </article>
+                <article class="book-page book-page-right">
+                    <h2>Détails</h2>
+                    <section class="likes-dislikes">
+                        <h3>Aime</h3>
+                        <ul>
+                            <li>Les chiens</li>
+                            <li>Le silence</li>
+                            <li>Jardiner</li>
+                        </ul>
+                        <h3>N'aime pas</h3>
+                        <ul>
+                            <li>Les bruits forts</li>
+                            <li>Être remarquée</li>
+                            <li>Les héros moralisateurs</li>
+                        </ul>
+                    </section>
+                    <hr>
+                    <section class="notes">
+                        <p>
+                            Alice ressemble à une jeune femme droite et élégante, vêtue d'une tenue de majordome soigneusement
+                            entretenue. Celle-ci est composée d'une veste noire sur une chemise blanche, associé à un pantalon
+                            noir et des chaussures assorties. Une cravate grise complète l'ensemble. Ses cheveux noir ébène sont
+                            retenus par un noeud rose pâle, noué haut afin de ne pas gêner son travail.
+                        </p>
+                        <p>
+                            Son visage est marqué par une expression neutre, impassible, morte. Son corps n'est plus <i>entièrement</i>
+                            humain. Sa main gauche est rongée par une couche de Sculk : une substance noir verdâtre, presque vivante,
+                            qui se fond dans sa peau. Elle s'étend de sa main jusqu'à son épaule, puis remonte le long de son cou pour
+                            couvrir le côté gauche de son visage, s'incrustant sous l'oeil. Sa pupille gauche est devenue gris-terne,
+                            l'autre étant resté bleu marine.
+                        </p>
+                        <p>
+                            La substance presque fongique agit parfois comme un organisme vivant, pulsant lentement au rythme de son coeur.
+                            Elle émet une faible lueur dans l'obscurité, dont les motifs et paternes à la surfaces semblent changer et 
+                            amplifient ses émotions.
+                        </p>
+                        <p>
+                            Alice vit avec une douleur sourde constante et une vision altérée de l'oeil gauche. La corruption lui confère une vision
+                            nocturne, mais elle a du mal à percevoir les couleurs et les détails. Elle est également plus sensible à la lumière vive,
+                            et au son. Un coup de tonnerre ou une foule bruyante peuvent lui causer une sérieuse désoriantation, voire de la douleur
+                            physique.
+                        </p>
+                        <p>
+                            Depuis sa transformation, Alice n'a plus de besoin primaires. Manger, respirer, dormir lui sont devenus des actes mécaniques
+                            qu'elle performe pour conforter les autres, pour paraître "normale". La nuit, seuls les monstres les plus désespérés
+                            s'attaquent à elle. Les autres humment en sa direction, et se détourne par dégoût.
+                        </p>
+                        <p>
+                            Alice peut sembler apathique et vide de l'extérieur. Son visage reste impassible en toutes circonstances, comme si
+                            elle s'ennuyait éternellement. Pourtant, elle ressent bel et bien des émotions intérieurement. Il n'est simplement
+                            pas son rôle de les exprimer.
+                        </p>
+                    </section>
+                </article>
+            </section>
+            <section class="story book-section" data-book-section="story">
+                <article class="book-page book-page-left">
+                    <h2>Histoire</h2>
                     <p>
-                        Fidèle servante de l'illustre famille Blackraven, la seule qui soit restée jusqu'à la fin.
-                        Alice se considère comme un outil : ce n'est pas à elle de remettre les ordres en question.
-                        Elle fera tout ce qu'on lui demande, quelle qu'en soit la moralité.
+                        Née dans une famille de domestiques, Alice grandit plongée dans une vie de service
+                        auprès de la dynastie Blackraven, une noble famille philantrope aussi puissante que
+                        respectée.
                     </p>
                     <p>
-                        Seule survivante de la rage d'un <i>Warden</i>, Alice semble aujourd'hui errer sans but.
-                        Peut-être porte-t-elle encore la mémoire des Blackraven, ainsi que la corruption des Abysses ?
+                        D'abord chargée de tâches simples, son efficacité fit d'elle une aide précieuse au sein
+                        de la maisonnée, appréciée aussi bien par le personnel que par la famille. Avec les années,
+                        le couple eu un fils, qui s'attacha très vite à Alice grâce à ses soins et leur faible différence d'âge.
+                        Peu à peu, ses parents en vinrent eux aussi à la considérer comme une membre de la famille, malgré ses
+                        origines modestes.
                     </p>
-                </section>
+                    <p>
+                        Les investissements de la famille prirent un tournant funeste lorsque des mineurs de la région
+                        découvrirent une étrange substance enfouie dans les profondeurs de la terre : un liquide sombre
+                        et charnel, capable de ressouder les os brisés et de guérir les maladies.
+                    </p>
+                    <p>
+                        Ils l'apellèrent "<i>Sculk</i>".
+                    </p>
+                    <p>
+                        Persuadée d'avoir trouvé une matière miraculeuse, la famille investit massivement dans la compagnie
+                        minière. Tout fut mis en oeuvre pour exploiter pleinement la substance, et l'industrialiser.
+                    </p>
+                    <p>
+                        Mais le remède devint poison.
+                    </p>
+                    <p>
+                        Au fil des années, le Sculk rongea lentement les coeurs et corrompit les âmes. La famille
+                        ne fut bientôt plus que l'ombre de ce qu'elle avait été. <b>Lui</b> devint arrogant, paranoïaque.
+                        <b>Elle</b> devint avide, distante. Le couple autrefois bienveillant devint tyrannique et répandit
+                        misère, famine et maladie sur les terres alentoures, dans une quête sans fin de richesses et de pouvoir.
+                    </p>
+                </article>
+                <article class="book-page book-page-right">
+                    <p>
+                        Alice demeura à leur service, fidèle envers et contre tout. Elle ne posa pas questions lorsque l'enfant
+                        cessa soudainement de rire. Elle ne posa pas de questions lorsque le chien de la famille se mit à
+                        grogner face aux ombres. Elle ne posa pas de questions lorsque les miroirs furent bannis de la demeure.
+                    </p>
+                    <p>
+                        Elle ne posa pas de questions lorsque le majordome en chef toussa du sang, puis fut retrouvé mort sur un tapis
+                        le lendemain, lui laissant son titre en l'absence de tout autre domestique.
+                    </p>
+                    <p>
+                        Elle ne posa pas de questions lorsque le jardin se mit à pourrir au toucher de la Maîtresse de maison.
+                        Elle ne posa pas de questions losque la substance se glissa entre les murs anciens, avalant tableaux et tapisseries.
+                        Elle ne posa pas de questions lorsque les yeux du Maître devinrent noirs, suintant un liquide obscur.
+                        Elle ne posa pas de question lorsque son propre bras commença lentement à changer.
+                    </p>
+                    <p>
+                        Elle resta. Jusqu'à la fin.
+                    </p>
+                    <p>
+                        Celle-ci vint un soir d'orage, lorsque les mineurs révélèrent une cité enfouie, demeure d'une horreur ancienne. Une
+                        bête immense, aveugle et invincible. Plus grande qu'un Golem, une montagne d'un état d'existence indéfinissable.
+                        Un affront à la vie, à la mort, capable de broyer le béton dans le creux de ses mains, de réduire en poussière
+                        la moindre vibration. Un <i>Warden</i>.
+                    </p>
+                    <p>
+                        La bête se déchaîna sur la ville, détruisant tout sur son passage. Les Blackraven furent parmi les premières victimes.
+                        Les murs anciens de l'ancienne dynastie s'effondrèrent. Alice fut la seule survivante, cachée sous les cendres de la demeure ancestrale.
+                    </p>
+                    <p>
+                        A présent sans maître et sans but, elle erre aujourd'hui tel un fantôme à travers le monde, laissant derrière elle
+                        la désolation de ses terres natales.
+                    </p>
+                </article>
+            </section>
+            <section class="character-notes book-section" data-book-section="character-notes">
+                <article class="book-page book-page-left">
+                    <h2>Notes d'Alice</h2>
+                    <section class="char">
+                        <hr>
+                        <h3>Caelan Blackraven</h3>
+                        <p>
+                            Patriarche de la famille Blackraven. Maître Caelan était un homme d'affaires aussi bienveillant
+                            qu'impitoyable. Il entra dans la famille en épousant Dame Ysolda, et par cette union, la fortune
+                            familiale passa entre ses mains. Il était déterminé à l'employer pour le bien de la communauté.
+                        </p>
+                        <p>
+                            Il aimait les gens du peuple. Tous les Samedi étaient un prétexte pour visiter le marché d'un
+                            village local et s'entretenir avec populace.
+                        </p>
+                        <p>
+                            Il me faisait confiance. Il me parlait de la maladie de Lysandre, de ses peurs pour l'avenir.
+                            De ce qu'il laisserait derrière lui. De l'héritage ancien dont il tenait à
+                            se montrer digne. De l'amour qu'il portait à sa famille.
+                        </p>
+                        <p>
+                            Il m'y inclut, autrefois. Il me surnommait "Praline".
+                        </p>
+                        <p>
+                            Sa générosité et son avarice furent sa perte.
+                        </p>
+                    </section>
+                    <section class="char">
+                        <hr>
+                        <h3>Lysandre Blackraven</h3>
+                        <p>
+                            Héritier de la famille Blackraven. Lysandre était un jeune garçon gentil, plein de vie et d'une curiosité sans égards.
+                            Il était cependant fragile, étant né avec une maladie l'empêchant de quitter le domaine familial.
+                        </p>
+                        <p>
+                            Il aimait jouer dans les jardins avec son chien, Iver. Il aimait les histoires effayantes avant de dormir. Il
+                            aimait coiffer mes cheveux avec des rubans roses. Il aimait m'accompagner dans chaque tâche ménagère, peu importe
+                            à quel point elles pouvaient être ennuyeuses. Il aimait me regarder cuisiner, volant parfois des ingrédients pour
+                            les manger quand il pensait que je ne le voyais pas. Il avait peur du noir, et ne pouvait dormir sans lumière.
+                        </p>
+                        <p>
+                            Sa couleur préférée était le bleu sarcelle. <i>[Encre maculée]</i>
+                        </p>
+                    </section>
+                </article>
+                <article class="book-page book-page-right">
+                    <section class="char">
+                        <hr>
+                        <h3>Ysolda Blackraven</h3>
+                        <p>
+                            Matriarche de la famille Blackraven. Dame Ysolda aimait paraître comme douce, innofensive. Elle était
+                            terriblement rusée, calculatrice, et bien plus redoutable en affaire que son mari. Elle hérita de la
+                            fortune familiale quand son grand-père décéda durant son enfance. Seule héritière, elle reigna seule jusqu'à
+                            ce qu'elle rencontre Maître Caelan.
+                        </p>
+                        <p>
+                            Dame Ysolda aimait organiser de grandes fêtes dansantes au manoir. 
+                            ELle détestait comment les grand halls et couloirs vides l'étouffaient de solitude.
 
-            </article>
-
-            <article class="book-page book-page-right">
-                <h2>Détails</h2>
-                <section class="likes-dislikes">
-                    <h3>Aime</h3>
-                    <ul>
-                        <li>Les chiens</li>
-                        <li>Le silence</li>
-                        <li>Jardiner</li>
-                    </ul>
-                    <h3>N'aime pas</h3>
-                    <ul>
-                        <li>Les bruits forts</li>
-                        <li>Être remarquée</li>
-                        <li>Les héros moralisateurs</li>
-                    </ul>
-                </section>
-                <section class="notes">
-                    <p>
-                        Alice ressemble à une jeune femme droite et élégante, vêtue d'une tenue de majordome soigneusement
-                        entretenue. Celle-ci est composée d'une veste noire sur une chemise blanche, associé à un pantalon
-                        noir et des chaussures assorties. Une cravate grise complète l'ensemble. Ses cheveux noir ébène sont
-                        retenus par un noeud rose pâle, noué haut afin de ne pas gêner son travail.
-                    </p>
-                    <p>
-                        Son visage est marqué par une expression neutre, impassible, morte. Son corps n'est plus <i>entièrement</i>
-                        humain. Sa main gauche est rongée par une couche de Sculk: une substance noir verdâtre, presque vivante,
-                        qui se fond dans sa peau. Elle s'étend de sa main jusqu'à son épaule, puis remonte le long de son cou pour
-                        couvrir le côté gauche de son visage, s'incrustant sous l'oeil. Sa pupille gauche est devenue gris-terne,
-                        l'autre étant resté bleu marine.
-                    </p>
-                    <p>
-                        La substance presque fongique agit parfois comme un organisme vivant, pulsant lentement au rythme de son coeur.
-                        Elle émet une faible lueur dans l'obscurité, dont les motifs et paternes à la surfaces semblent changer et 
-                        amplifient ses émotions.
-                    </p>
-                    <p>
-                        Alice vit avec une douleur sourde constante et une vision altérée de l'oeil gauche. La corruption lui confère une vision
-                        nocturne, mais elle a du mal à percevoir les couleurs et les détails. Elle est également plus sensible à la lumière vive,
-                        et au son. Un coup de tonnerre ou une foule bruyante peuvent lui causer une sérieuse désoriantation, voire de la douleur
-                        physique.
-                    </p>
-                    <p>
-                        Depuis sa transformation, Alice n'a plus de besoin primaires. Manger, respirer, dormir lui sont devenus des actes mécaniques
-                        qu'elle performe pour conforter les autres, pour paraître "normale". La nuit, seuls les monstres les plus désespérés
-                        s'attaquent à elle. Les autres humment en sa direction, et se détourne par dégoût.
-                    </p>
-                    <p>
-                        Alice peut sembler apathique et vide de l'extérieur. Son visage reste impassible en toutes circonstances, comme si
-                        elle s'ennuyait éternellement. Pourtant, elle ressent bel et bien des émotions intérieurement. Il n'est simplement
-                        pas son rôle de les exprimer.
-                    </p>
-                    <p>
-                        Errant sans but, Alice ne se sent confortable que lorsqu'elle accomplie une tâche pour quelqu'un d'autre.
-                        Elle a besoin de se sentir utile, d'être au service de quelqu'un, et déteste par dessus tout prendre des décisions
-                        par elle-même. Secrètement, elle nourrit une affection particulière pour les animaux, surtout les chiens. Quand elle
-                        n'a rien à faire, elle tend à jardiner.
-                    </p>
-                </section>
-            </article>
+                        </p>
+                        <p>
+                            Elle aimait me montrer à son bras, lors de soirées mondaines. Elle aimait m'apprendre à danser, me tenir la jambe
+                            un verre de vin à la main pendant que je m'occupais du jardin. Elle me regardait parfois avec un air distant et triste.
+                            Elle me disait que j'étais jolie.
+                        </p>
+                        <p>
+                            Elle tenait trop à moi. Elle fut la première à partir.
+                        </p>
+                        <p>
+                            ...Elle me manque.
+                        </p>
+                    </section>
+                    <section class="char">
+                        <hr>
+                        <h3>"<i>La Sorcière</i>"</h3>
+                        <p>
+                            Une étrange femme que j'ai rencontrée dans les bois, après tout.
+                        </p>
+                        <p>Elle m'a recueillie.</p>
+                        <p>Elle m'a aidée.</p>
+                        <p>Elle a veillé sur moi.</p>
+                        <p>Elle est morte.</p>
+                        <p>
+                            Les dieux n'ont jamais réussi à lui voler son sourire.
+                        </p>
+                    </section>
+                </article>
+            </section>
+            <section class="illustrations book-section" data-book-section="illustrations">
+                <article class="book-page book-page-left">
+                    <h2>Illustrations</h2>
+                    <div class="galery-photo">
+                        <a href = "../../assets/images/oc-gallery/alice/alice1nobg.png" target="_blank" rel="noopener">
+                            <img src="../../assets/images/oc-gallery/alice/alice1nobg.png" alt=""/>
+                        </a>
+                        <p>Artwork par 
+                            <a href="https://x.com/Santithur" target="_blank" rel="noopener">Santithur</a>
+                        </p>
+                    </div>
+                </article>
+                <article class="book-page book-page-right">
+                    <div class="galery-photo">
+                        <a href = "../../assets/images/oc-gallery/alice/alice2nobg.png" target="_blank" rel="noopener">
+                            <img src="../../assets/images/oc-gallery/alice/alice2nobg.png" alt=""/>
+                        </a>
+                        <p>Artwork par 
+                            <a href="https://x.com/Santithur" target="_blank" rel="noopener">Santithur</a>
+                        </p>
+                    </div>
+                </article>
+            </section>
         </section>
     </main>
 
+
+
+
+    
+    <script>
+        const book = document.querySelector(".book");
+        const navButtons = document.querySelectorAll(".nav-button[data-target]");
+        const bookSections = document.querySelectorAll(".book-section[data-book-section]");
+        const closeBookButton = document.querySelector(".book-close-button");
+
+        navButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const target = button.dataset.target;
+
+                book.classList.remove("is-closing");
+                book.classList.add("is-open");
+
+                bookSections.forEach(section => {
+                    section.classList.toggle(
+                        "is-active",
+                        section.dataset.bookSection === target
+                    );
+                });
+
+                navButtons.forEach(navButton => {
+                    navButton.classList.toggle(
+                        "is-active",
+                        navButton === button
+                    );
+                });
+            });
+
+            closeBookButton.addEventListener("click", () => {
+                book.classList.add("is-closing");
+
+                book.addEventListener("animationend", () => {
+                    book.classList.remove("is-open", "is-closing");
+
+                    bookSections.forEach(section => {
+                        section.classList.remove("is-active");
+                    });
+
+                    navButtons.forEach(navButton => {
+                        navButton.classList.remove("is-active");
+                    });
+                }, { once: true });
+            })
+        });
+    </script>
     <script src="../../assets/js/header.js"></script>
 </body>
 </html>
