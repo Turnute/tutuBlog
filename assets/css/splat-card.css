@@ -1,0 +1,943 @@
+:root {
+    --splat-bg: #101018;
+    --splat-panel: rgba(17, 18, 28, 0.9);
+    --splat-panel-dark: rgba(5, 6, 13, 0.86);
+    --splat-text: #f7fff7;
+    --splat-muted: rgba(255, 255, 255, 0.74);
+
+    --splat-cyan: #21f6ff;
+    --splat-lime: #b7ff00;
+    --splat-pink: #ff2bd6;
+    --splat-orange: #ff8c1a;
+    --splat-purple: #7c3cff;
+    --splat-yellow: #fff04a;
+
+    --splat-shadow: rgba(0, 0, 0, 0.55);
+    --splat-black: #05060d;
+}
+
+/* Base page */
+body.splat-page {
+    min-height: 100vh;
+    color: var(--splat-text);
+    overflow-x: hidden;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    background:
+        radial-gradient(circle at 12% 18%, rgba(33, 246, 255, 0.55) 0 7%, transparent 8%),
+        radial-gradient(circle at 90% 12%, rgba(255, 43, 214, 0.45) 0 8%, transparent 9%),
+        radial-gradient(circle at 78% 82%, rgba(183, 255, 0, 0.38) 0 10%, transparent 11%),
+        radial-gradient(circle at 18% 88%, rgba(255, 140, 26, 0.35) 0 9%, transparent 10%),
+        linear-gradient(135deg, #090910 0%, #171421 45%, #0b0f18 100%);
+}
+
+body.splat-page *,
+body.splat-page *::before,
+body.splat-page *::after {
+    box-sizing: border-box;
+}
+
+body.splat-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+        linear-gradient(120deg, transparent 0 46%, rgba(255, 255, 255, 0.05) 47% 52%, transparent 53%);
+    background-size: 18px 18px, 90px 90px;
+    mix-blend-mode: screen;
+    opacity: 0.55;
+}
+
+body.splat-page img {
+    display: block;
+    max-width: 100%;
+}
+
+body.splat-page p {
+    margin: 0;
+}
+
+body.splat-page a {
+    color: var(--splat-cyan);
+    font-weight: 800;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+body.splat-page a:hover {
+    color: var(--splat-lime);
+}
+
+/* Header version Splatoon */
+body.splat-page .global-site-header {
+    background:
+        linear-gradient(90deg, rgba(33, 246, 255, 0.95), rgba(255, 43, 214, 0.95));
+    border-bottom: 4px solid var(--splat-lime);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.45);
+}
+
+body.splat-page .global-site-logo {
+    background: var(--splat-bg);
+    color: var(--splat-lime);
+    transform: rotate(-4deg);
+    border: 2px solid white;
+}
+
+body.splat-page .global-site-nav a {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+body.splat-page .global-site-nav a:hover,
+body.splat-page .global-site-nav a.active {
+    background: var(--splat-bg);
+    color: var(--splat-lime);
+    transform: rotate(-2deg) translateY(-2px);
+}
+
+/* Layout global */
+.splat-page-content {
+    width: min(1180px, calc(100% - 32px));
+    margin: 42px auto 80px;
+}
+
+.splat-hero {
+    position: relative;
+    padding: clamp(22px, 4vw, 48px);
+    border-radius: 34px;
+
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 36%),
+        var(--splat-panel);
+
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    outline: 8px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 18px 40px var(--splat-shadow);
+
+    overflow: hidden;
+}
+
+.splat-hero::before,
+.splat-hero::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.splat-hero::before {
+    width: 270px;
+    height: 190px;
+    right: -65px;
+    top: -45px;
+
+    background: var(--splat-pink);
+    border-radius: 52% 48% 46% 54% / 41% 55% 45% 59%;
+    transform: rotate(18deg);
+    filter: drop-shadow(0 10px 0 rgba(0, 0, 0, 0.35));
+}
+
+.splat-hero::after {
+    width: 210px;
+    height: 170px;
+    left: -55px;
+    bottom: -55px;
+
+    background: var(--splat-cyan);
+    border-radius: 60% 40% 67% 33% / 40% 63% 37% 60%;
+    transform: rotate(-18deg);
+    opacity: 0.9;
+}
+
+.splat-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Haut de page */
+.splat-hero__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+    margin-bottom: 34px;
+}
+
+.splat-hero__intro {
+    min-width: 0;
+}
+
+.splat-tag,
+.splat-mini-tag {
+    width: fit-content;
+    padding: 8px 14px;
+
+    background: var(--splat-lime);
+    color: var(--splat-bg);
+
+    font-size: 0.84rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 0 #000;
+}
+
+.splat-tag {
+    margin-bottom: 16px;
+}
+
+.splat-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(14px, 3vw, 30px);
+    flex-wrap: wrap;
+}
+
+.splat-hero h1 {
+    margin: 0;
+    text-align: left;
+
+    font-size: clamp(4.6rem, 13vw, 10rem);
+    line-height: 0.78;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+
+    color: white;
+    text-shadow:
+        5px 5px 0 #000,
+        9px 9px 0 var(--splat-pink),
+        -5px -5px 0 var(--splat-cyan);
+}
+
+.splat-name-tag {
+    width: clamp(105px, 14vw, 180px);
+    margin-top: clamp(8px, 2vw, 24px);
+
+    transform: rotate(9deg);
+    filter:
+        drop-shadow(5px 5px 0 #000)
+        drop-shadow(0 0 14px rgba(183, 255, 0, 0.35));
+}
+
+.splat-subtitle {
+    max-width: 720px;
+    margin: 28px 0 0;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 800;
+    line-height: 1.55;
+
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.splat-hook {
+    max-width: 700px;
+    margin-top: 18px;
+    padding-left: 18px;
+
+    color: var(--splat-muted);
+    line-height: 1.7;
+    font-weight: 650;
+
+    border-left: 5px solid var(--splat-pink);
+}
+
+/* Carte portrait + audio */
+.splat-character-card {
+    position: sticky;
+    top: 104px;
+
+    padding: 18px;
+    border-radius: 30px;
+
+    background:
+        radial-gradient(circle at 20% 5%, rgba(183, 255, 0, 0.22), transparent 32%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(0, 0, 0, 0.15)),
+        rgba(5, 6, 13, 0.78);
+
+    border: 3px solid rgba(255, 255, 255, 0.86);
+    box-shadow: 10px 10px 0 #000;
+    transform: rotate(1deg);
+}
+
+.splat-portrait-switch {
+    position: relative;
+    margin: 0 0 18px;
+    padding: 0;
+    border: 0;
+    min-inline-size: 0;
+}
+
+.splat-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.splat-portrait-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splat-portrait-stage {
+    position: relative;
+    min-height: 390px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+
+    border-radius: 24px;
+    border: 4px solid white;
+
+    background:
+        radial-gradient(circle at 50% 24%, rgba(33, 246, 255, 0.34), transparent 34%),
+        radial-gradient(circle at 18% 85%, rgba(255, 43, 214, 0.28), transparent 34%),
+        linear-gradient(160deg, #25213a, #090910);
+
+    box-shadow:
+        inset 0 0 0 5px rgba(0, 0, 0, 0.28),
+        7px 7px 0 rgba(0, 0, 0, 0.7);
+}
+
+.splat-portrait-stage::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    z-index: 0;
+
+    border-radius: 18px;
+    border: 2px dashed rgba(183, 255, 0, 0.55);
+    opacity: 0.9;
+}
+
+.splat-portrait {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    opacity: 0;
+    transform: translateX(16px) scale(0.98) rotate(1deg);
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease,
+        filter 0.28s ease;
+
+    filter: saturate(1.12) contrast(1.04) drop-shadow(0 12px 0 rgba(0, 0, 0, 0.38));
+}
+
+#kai-portrait-1:checked ~ .splat-portrait-stage .splat-portrait--one,
+#kai-portrait-2:checked ~ .splat-portrait-stage .splat-portrait--two {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+}
+
+.splat-portrait-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.splat-portrait-controls label {
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    border: 2px solid rgba(255, 255, 255, 0.68);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+
+    font-size: 0.82rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    transition:
+        transform 0.18s ease,
+        background-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.splat-portrait-controls label:hover {
+    transform: translateY(-2px) rotate(-1deg);
+}
+
+#kai-portrait-1:checked ~ .splat-portrait-controls label[for="kai-portrait-1"],
+#kai-portrait-2:checked ~ .splat-portrait-controls label[for="kai-portrait-2"] {
+    background: var(--splat-lime);
+    color: var(--splat-bg);
+}
+
+#kai-portrait-1:focus-visible ~ .splat-portrait-controls label[for="kai-portrait-1"],
+#kai-portrait-2:focus-visible ~ .splat-portrait-controls label[for="kai-portrait-2"] {
+    outline: 3px solid var(--splat-cyan);
+    outline-offset: 4px;
+}
+
+/* Carte audio */
+.card.yt-audio-trigger.splat-audio-card {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+
+    background:
+        radial-gradient(circle at 20% 10%, rgba(183, 255, 0, 0.35), transparent 34%),
+        linear-gradient(145deg, #191928, #090910);
+
+    border: 3px solid white;
+    border-radius: 22px;
+    box-shadow:
+        6px 6px 0 #000,
+        0 0 24px rgba(33, 246, 255, 0.22);
+
+    transform: rotate(-1deg);
+}
+
+.card.yt-audio-trigger.splat-audio-card:hover {
+    transform: rotate(1deg) translateY(-4px);
+    box-shadow:
+        8px 8px 0 #000,
+        0 0 30px rgba(255, 43, 214, 0.34);
+}
+
+.card.yt-audio-trigger.splat-audio-card img {
+    width: 74px;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 16px;
+    border: 3px solid var(--splat-lime);
+
+    filter: saturate(1.25) contrast(1.05);
+}
+
+.card.yt-audio-trigger.splat-audio-card p {
+    margin: 0;
+    text-align: left;
+}
+
+.card.yt-audio-trigger.splat-audio-card a {
+    color: var(--splat-cyan);
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.card.yt-audio-trigger.splat-audio-card a:hover {
+    color: var(--splat-lime);
+    text-decoration: underline;
+}
+
+.card.yt-audio-trigger.splat-audio-card em {
+    color: var(--splat-muted);
+    font-style: normal;
+    font-size: 0.88rem;
+}
+
+/* États audio existants */
+.yt-audio-trigger.splat-audio-card.is-playing {
+    outline: 4px solid var(--splat-lime);
+    box-shadow:
+        8px 8px 0 #000,
+        0 0 40px rgba(183, 255, 0, 0.55);
+}
+
+.yt-audio-trigger.splat-audio-card.is-paused {
+    outline: 4px solid var(--splat-orange);
+}
+
+/* Grille principale */
+.splat-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.38fr) minmax(250px, 0.72fr);
+    grid-template-areas:
+        "bio side"
+        "notes side";
+    gap: 26px;
+    align-items: stretch;
+}
+
+.splat-panel {
+    position: relative;
+    padding: clamp(20px, 3vw, 26px);
+    border-radius: 24px;
+
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.12), transparent 45%),
+        var(--splat-panel-dark);
+
+    border: 3px solid rgba(255, 255, 255, 0.84);
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.65);
+
+    overflow: hidden;
+}
+
+.splat-panel::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+
+    width: 48px;
+    height: 35px;
+
+    background: var(--splat-purple);
+    border-radius: 57% 43% 40% 60% / 44% 58% 42% 56%;
+    transform: rotate(-14deg);
+    opacity: 0.75;
+}
+
+.splat-panel > * {
+    position: relative;
+    z-index: 1;
+}
+
+.splat-panel h2 {
+    margin: 0 0 18px;
+    width: fit-content;
+
+    font-size: clamp(1.35rem, 3vw, 1.7rem);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    color: var(--splat-lime);
+    text-shadow: 3px 3px 0 #000;
+}
+
+.splat-bio {
+    grid-area: bio;
+}
+
+.splat-notes {
+    grid-area: notes;
+}
+
+.splat-bio p {
+    margin-top: 16px;
+    line-height: 1.75;
+    font-size: 1.02rem;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.splat-bio h2 + p {
+    margin-top: 0;
+}
+
+/* Stats */
+.splat-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+
+.splat-stats li {
+    padding: 14px;
+    border-radius: 16px;
+
+    background:
+        linear-gradient(90deg, rgba(33, 246, 255, 0.22), rgba(255, 43, 214, 0.18));
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.splat-stats span,
+.splat-stats strong {
+    display: block;
+}
+
+.splat-stats span {
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.splat-stats strong {
+    color: white;
+    font-size: 1.03rem;
+    line-height: 1.25;
+}
+
+/* Colonne aime / déteste */
+.splat-side {
+    grid-area: side;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.splat-side-block {
+    padding: 18px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.44);
+}
+
+.splat-side-block--likes {
+    box-shadow: inset 6px 0 0 var(--splat-lime);
+}
+
+.splat-side-block--dislikes {
+    box-shadow: inset 6px 0 0 var(--splat-pink);
+}
+
+.splat-side h3 {
+    width: fit-content;
+    margin: 0 0 14px;
+    padding: 6px 12px;
+
+    background: white;
+    color: var(--splat-bg);
+    border-radius: 999px;
+
+    font-size: 1.05rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    box-shadow: 4px 4px 0 #000;
+    transform: rotate(-2deg);
+}
+
+.splat-side ul,
+.splat-note-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.splat-side li,
+.splat-note-list li {
+    position: relative;
+    padding-left: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.65;
+}
+
+.splat-side li + li,
+.splat-note-list li + li {
+    margin-top: 10px;
+}
+
+.splat-side li::before,
+.splat-note-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+
+    background: var(--splat-cyan);
+    box-shadow: 2px 2px 0 #000;
+}
+
+.splat-side-block--likes li::before {
+    background: var(--splat-lime);
+}
+
+.splat-side-block--dislikes li::before {
+    background: var(--splat-pink);
+}
+
+/* Galerie */
+.splat-gallery-section {
+    margin-top: 34px;
+}
+
+.splat-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+
+    margin-bottom: 18px;
+}
+
+.splat-gallery-section h2 {
+    margin: 0;
+
+    color: white;
+    font-size: clamp(2rem, 7vw, 4.2rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.06em;
+
+    text-shadow:
+        4px 4px 0 #000,
+        7px 7px 0 var(--splat-cyan);
+}
+
+.splat-mini-tag {
+    background: var(--splat-orange);
+    transform: rotate(2deg);
+}
+
+.splat-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.splat-gallery-item {
+    position: relative;
+    margin: 0;
+    min-height: 220px;
+    overflow: hidden;
+
+    border-radius: 24px;
+    border: 3px solid rgba(255, 255, 255, 0.86);
+    background: rgba(5, 6, 13, 0.82);
+    box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.7);
+
+    transform: rotate(-1deg);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.splat-gallery-item:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.splat-gallery-item:hover {
+    transform: translateY(-5px) rotate(0deg);
+    box-shadow:
+        9px 9px 0 rgba(0, 0, 0, 0.74),
+        0 0 28px rgba(33, 246, 255, 0.24);
+}
+
+.splat-gallery-item--featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.splat-gallery-item a {
+    display: block;
+    height: 100%;
+}
+
+.splat-gallery-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    object-position: center;
+
+    filter: saturate(1.15) contrast(1.04);
+    transition: transform 0.22s ease;
+}
+
+.splat-gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.splat-gallery-item figcaption {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    padding: 10px 12px;
+    border-radius: 14px;
+
+    background: rgba(0, 0, 0, 0.76);
+    color: white;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+
+    backdrop-filter: blur(8px);
+}
+
+.splat-gallery-item figcaption a {
+    color: var(--splat-lime);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .splat-hero__header {
+        grid-template-columns: 1fr;
+    }
+
+    .splat-character-card {
+        position: relative;
+        top: auto;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .splat-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "bio"
+            "side"
+            "notes";
+    }
+
+    .splat-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .splat-gallery-item--featured {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .splat-page-content {
+        width: min(100% - 22px, 1180px);
+        margin-top: 28px;
+    }
+
+    .splat-hero {
+        padding: 20px;
+        border-radius: 26px;
+        outline-width: 6px;
+    }
+
+    .splat-tag,
+    .splat-mini-tag {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .splat-title-row {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .splat-hero h1 {
+        text-align: center;
+        font-size: clamp(4rem, 23vw, 7rem);
+    }
+
+    .splat-name-tag {
+        width: 120px;
+        margin-top: 0;
+    }
+
+    .splat-subtitle,
+    .splat-hook {
+        text-align: center;
+    }
+
+    .splat-hook {
+        padding-left: 0;
+        padding-top: 14px;
+        border-left: 0;
+        border-top: 5px solid var(--splat-pink);
+    }
+
+    .splat-character-card {
+        transform: none;
+    }
+
+    .splat-portrait-stage {
+        min-height: 330px;
+    }
+
+    .card.yt-audio-trigger.splat-audio-card {
+        grid-template-columns: 62px 1fr;
+    }
+
+    .card.yt-audio-trigger.splat-audio-card img {
+        width: 62px;
+    }
+
+    .splat-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .splat-section-heading {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .splat-gallery-section h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .splat-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .splat-gallery-item--featured {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 430px) {
+    .splat-portrait-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .splat-panel {
+        padding: 18px;
+    }
+
+    .splat-gallery-item,
+    .splat-gallery-item img {
+        min-height: 190px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.splat-page *,
+    body.splat-page *::before,
+    body.splat-page *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .card.yt-audio-trigger.splat-audio-card,
+    .card.yt-audio-trigger.splat-audio-card:hover,
+    .splat-gallery-item,
+    .splat-gallery-item:hover,
+    .splat-portrait,
+    .global-site-nav a,
+    .global-site-nav a:hover {
+        transform: none;
+    }
+}
