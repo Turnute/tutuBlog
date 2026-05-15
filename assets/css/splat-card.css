@@ -941,3 +941,249 @@ body.splat-page .global-site-nav a.active {
         transform: none;
     }
 }
+
+/* ================================
+   PATCH LAYOUT KAI SPLAT-CARD
+   ================================ */
+
+/* Le haut ne dépend plus de la carte visuelle */
+.splat-hero {
+    overflow: hidden;
+}
+
+.splat-hero__header {
+    display: block;
+    margin-bottom: clamp(30px, 5vw, 52px);
+    padding-right: clamp(0px, 28vw, 360px);
+}
+
+.splat-hero__intro {
+    max-width: 760px;
+}
+
+/* Le tag-image va au coin haut droit du main */
+.splat-name-tag {
+    position: absolute;
+    top: clamp(34px, 5vw, 58px);
+    right: clamp(28px, 5vw, 62px);
+    z-index: 3;
+
+    width: clamp(190px, 22vw, 310px);
+
+    transform: rotate(6deg);
+    filter:
+        drop-shadow(8px 8px 0 rgba(0, 0, 0, 0.8))
+        drop-shadow(0 0 18px rgba(183, 255, 0, 0.35));
+}
+
+/* Titre + subtitle : on évite le chevauchement */
+.splat-hero h1 {
+    line-height: 0.9;
+    margin-bottom: 15px;
+}
+
+.splat-subtitle {
+    margin-top: clamp(24px, 3.2vw, 46px);
+}
+
+/* Nouvelle grille : colonne gauche texte, colonne droite visuel + aime/déteste */
+.splat-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 440px);
+    gap: clamp(24px, 3vw, 34px);
+    align-items: start;
+}
+
+.splat-main-column {
+    display: grid;
+    gap: 26px;
+    min-width: 0;
+}
+
+.splat-right-rail {
+    display: grid;
+    gap: 26px;
+    align-self: start;
+    min-width: 0;
+}
+
+/* La carte visuelle ne crée plus un énorme trou dans le header */
+.splat-character-card {
+    position: relative;
+    top: auto;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    padding: 20px;
+    transform: rotate(1deg);
+}
+
+/* Portrait plus large et plus lisible */
+.splat-portrait-stage {
+    min-height: 480px;
+    aspect-ratio: 4 / 5;
+}
+
+.splat-portrait {
+    padding: 10px;
+}
+
+/* L'audio suit la largeur de la carte */
+.card.yt-audio-trigger.splat-audio-card {
+    grid-template-columns: 82px 1fr;
+}
+
+.card.yt-audio-trigger.splat-audio-card img {
+    width: 82px;
+}
+
+/* Aime / Déteste : ne s'étire plus artificiellement */
+.splat-side {
+    display: grid;
+    gap: 18px;
+    align-content: start;
+    min-height: auto;
+}
+
+/* On neutralise les anciens placements de grille si présents */
+.splat-bio,
+.splat-notes,
+.splat-side {
+    grid-area: auto;
+}
+
+/* Taches différentes selon les panels */
+.splat-panel::after {
+    right: var(--splat-spot-right, 18px);
+    left: var(--splat-spot-left, auto);
+    top: var(--splat-spot-top, auto);
+    bottom: var(--splat-spot-bottom, 16px);
+
+    width: var(--splat-spot-w, 48px);
+    height: var(--splat-spot-h, 35px);
+
+    background: var(--splat-spot-color, var(--splat-purple));
+    border-radius: var(
+        --splat-spot-radius,
+        57% 43% 40% 60% / 44% 58% 42% 56%
+    );
+
+    transform: rotate(var(--splat-spot-rotate, -14deg));
+    opacity: var(--splat-spot-opacity, 0.75);
+}
+
+.splat-bio {
+    --splat-spot-color: var(--splat-purple);
+    --splat-spot-right: 22px;
+    --splat-spot-bottom: 18px;
+    --splat-spot-w: 54px;
+    --splat-spot-h: 36px;
+    --splat-spot-rotate: -14deg;
+}
+
+.splat-notes {
+    --splat-spot-color: var(--splat-cyan);
+    --splat-spot-right: 30px;
+    --splat-spot-bottom: 24px;
+    --splat-spot-w: 44px;
+    --splat-spot-h: 44px;
+    --splat-spot-rotate: 18deg;
+    --splat-spot-radius: 48% 52% 58% 42% / 45% 42% 58% 55%;
+    --splat-spot-opacity: 0.8;
+}
+
+.splat-side {
+    --splat-spot-color: var(--splat-orange);
+    --splat-spot-left: 24px;
+    --splat-spot-right: auto;
+    --splat-spot-bottom: 22px;
+    --splat-spot-w: 62px;
+    --splat-spot-h: 34px;
+    --splat-spot-rotate: 12deg;
+    --splat-spot-radius: 62% 38% 43% 57% / 45% 56% 44% 55%;
+    --splat-spot-opacity: 0.65;
+}
+
+/* Un petit blob supplémentaire sur la carte visuelle pour casser la symétrie */
+.splat-character-card::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: 42px;
+
+    width: 74px;
+    height: 48px;
+
+    background: var(--splat-pink);
+    border-radius: 55% 45% 39% 61% / 48% 54% 46% 52%;
+    transform: rotate(18deg);
+    opacity: 0.9;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 1060px) {
+    .splat-hero__header {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .splat-hero__intro {
+        max-width: none;
+    }
+
+    .splat-name-tag {
+        position: relative;
+        top: auto;
+        right: auto;
+
+        width: min(300px, 72vw);
+        margin: 0 auto 24px;
+
+        transform: rotate(4deg);
+    }
+
+    .splat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .splat-right-rail {
+        max-width: 520px;
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    .splat-character-card {
+        transform: none;
+    }
+
+    .splat-portrait-stage {
+        min-height: 440px;
+    }
+}
+
+@media (max-width: 700px) {
+    .splat-hero__header {
+        margin-bottom: 30px;
+    }
+
+    .splat-subtitle {
+        margin-top: 28px;
+    }
+
+    .splat-portrait-stage {
+        min-height: 340px;
+    }
+
+    .card.yt-audio-trigger.splat-audio-card {
+        grid-template-columns: 64px 1fr;
+    }
+
+    .card.yt-audio-trigger.splat-audio-card img {
+        width: 64px;
+    }
+}
