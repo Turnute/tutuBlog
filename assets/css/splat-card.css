@@ -62,7 +62,7 @@ body.splat-page p {
 }
 
 body.splat-page a {
-    color: var(--splat-cyan);
+    color: var(--splat-black);
     font-weight: 800;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
