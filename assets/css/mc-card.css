@@ -592,10 +592,9 @@ body[data-global-header-style="minecraft-card"] .global-site-header {
     grid-row: 2;
 }
 
-/* Notes plus compactes */
 .notes {
-    font-size: 0.72em;
-    line-height: 1.3;
+    font-size: 0.75em;
+    line-height: 1.25;
 }
 
 .notes p {
@@ -603,7 +602,7 @@ body[data-global-header-style="minecraft-card"] .global-site-header {
 }
 
 .story p {
-    font-size: clamp(0.75rem, 1cqi, 0.95rem);
+    font-size: clamp(0.80rem, 1cqi, 0.95rem);
     margin-bottom: 0.5em;
 }
 
@@ -615,7 +614,7 @@ body[data-global-header-style="minecraft-card"] .global-site-header {
 }
 
 .char p {
-    font-size: clamp(0.75rem, 0.925cqi, 0.95rem);
+    font-size: clamp(0.80rem, 0.925cqi, 0.95rem);
     margin-bottom: 0.5em;
     margin-top: 0;
 }
