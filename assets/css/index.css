@@ -1,3 +1,15 @@
+/* Styles communs aux pages simples du site */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-content {
+    width: 100%;
+    min-height: calc(100dvh - 72px);
+    padding: 1px 0 3rem;
+}
+
 .cadre {
     width: fit-content;
     max-width: min(80vw, 800px);
@@ -18,21 +30,14 @@
     text-align: left;
 }
 
-div {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h1 {
+.cadre h1 {
     text-align: center;
     font-size: 2.5em;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
-p {
+.cadre p {
     margin: 20px 0;
-    text-justify: auto;
-}
-br {
     line-height: 1.6;
-    margin-bottom: 6px;
 }

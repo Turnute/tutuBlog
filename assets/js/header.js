@@ -3,17 +3,13 @@ const headerContainer = document.getElementById("site-header");
 if (headerContainer) {
     const body = document.body;
 
-    // Valeurs globales par défaut
     const DEFAULTS = {
         siteTitle: "L'Atelier des Rêves",
         siteLogo: "𖤓",
         navTheme: "default"
     };
 
-    // Récupère l'URL absolue du script actuel
     const scriptUrl = new URL(document.currentScript.src);
-
-    // Remonte de /.assets/.code/js/ vers la racine du site
     const siteRoot = new URL("../../", scriptUrl);
 
     const links = [
@@ -26,48 +22,46 @@ if (headerContainer) {
 
     const homeHref = new URL("index.html", siteRoot).href;
 
-    // Valeurs personnalisées si présentes, sinon fallback
     const siteTitle = body.dataset.siteTitle || DEFAULTS.siteTitle;
     const siteLogo = body.dataset.siteLogo || DEFAULTS.siteLogo;
     const navTheme = body.dataset.navTheme || DEFAULTS.navTheme;
+    const siteTagline = body.dataset.siteTagline || "";
 
-    // Détecte automatiquement la page courante si non précisée
     let currentPage = body.dataset.currentPage || "";
 
     if (!currentPage) {
-        const currentPath = window.location.pathname.replace(/\\/g, "/");
+        const path = window.location.pathname.replace(/\\/g, "/");
 
-        if (currentPath.endsWith("/index.html")) {
-            currentPage = "home";
-        } else if (currentPath.includes("/blog/")) {
-            currentPage = "blog";
-        } else if (currentPath.includes("/games/") && currentPath.includes("/ocs/")) {
-            currentPage = "ocs"; // Priorise OCs si les deux sont présents
-        } else if (currentPath.includes("/games/")) {
-            currentPage = "games";
-        } else if (currentPath.includes("/music/")) {
-            currentPage = "music";
-        } else if (currentPath.includes("/works/")) {
-            currentPage = "works";
-        } else if (currentPath.includes("/ocs/")) {
+        // On teste les dossiers avant /index.html, sinon blog/index.html était vu comme l'accueil.
+        if (path.includes("/ocs/")) {
             currentPage = "ocs";
+        } else if (path.includes("/blog/")) {
+            currentPage = "blog";
+        } else if (path.includes("/games/")) {
+            currentPage = "games";
+        } else if (path.includes("/music/")) {
+            currentPage = "music";
+        } else if (path.includes("/works/")) {
+            currentPage = "works";
+        } else {
+            currentPage = "home";
         }
     }
 
-    // Applique le thème au body pour le CSS
     body.setAttribute("data-nav-theme", navTheme);
 
     const navLinks = links.map(link => {
-        const isActive = link.key === currentPage ? "active" : "";
-        return `<a href="${link.href}" class="${isActive}">${link.label}</a>`;
-    }).join("");
+        const isActive = link.key === currentPage;
+        const activeClass = isActive ? " active" : "";
+        const ariaCurrent = isActive ? ' aria-current="page"' : "";
 
-    const siteTagline = body.dataset.siteTagline || "";
+        return `<a href="${link.href}" class="global-site-nav__link${activeClass}"${ariaCurrent}>${link.label}</a>`;
+    }).join("");
 
     headerContainer.innerHTML = `
         <header class="global-site-header">
             <a href="${homeHref}" class="global-site-brand">
-                <div class="global-site-logo">${siteLogo}</div>
+                <div class="global-site-logo" aria-hidden="true">${siteLogo}</div>
                 <span class="global-site-title" data-site-tagline="${siteTagline}">${siteTitle}</span>
             </a>
 
@@ -76,6 +70,4 @@ if (headerContainer) {
             </nav>
         </header>
     `;
-
-
 }

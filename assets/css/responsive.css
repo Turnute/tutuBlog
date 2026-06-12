@@ -1,0 +1,427 @@
+/* =========================================================
+   Responsive + petits correctifs communs
+   ---------------------------------------------------------
+   Ce fichier est chargé en dernier. Il ne remplace pas les
+   thèmes existants : il corrige surtout les débordements et
+   adapte les grosses mises en page sur téléphone.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Le cadre noir/blanc reste identique sur PC, mais respire mieux sur mobile. */
+.cadre {
+    width: fit-content;
+    max-width: min(800px, calc(100vw - 2rem));
+}
+
+#pfp {
+    width: clamp(120px, 44vw, 200px);
+}
+
+@media (max-width: 700px) {
+    .cadre {
+        margin: 1.5rem auto;
+        padding: 1rem;
+        border-width: 3px;
+        outline-width: 5px;
+    }
+
+    .cadre h1,
+    h1 {
+        font-size: clamp(1.7rem, 9vw, 2.4rem);
+        line-height: 1.1;
+    }
+
+    .cadre p {
+        line-height: 1.6;
+    }
+}
+
+/* =========================================================
+   Header global
+   ========================================================= */
+
+.global-site-brand,
+.global-site-nav {
+    min-width: 0;
+}
+
+.global-site-nav a[aria-current="page"] {
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .global-site-header {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .global-site-brand {
+        min-width: 0;
+    }
+
+    .global-site-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .global-site-nav {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 2px 0 6px;
+        scrollbar-width: thin;
+    }
+
+    .global-site-nav a {
+        flex: 0 0 auto;
+        padding: 9px 12px;
+        white-space: nowrap;
+    }
+}
+
+/* =========================================================
+   Index des OCs
+   ========================================================= */
+
+@media (max-width: 700px) {
+    .oc-browser {
+        width: min(100%, calc(100vw - 0.75rem));
+    }
+
+    .oc-browser__viewport {
+        padding-inline: 0.4rem;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x proximity;
+    }
+
+    .oc-folder,
+    .oc-file,
+    .oc-folder__card {
+        scroll-snap-align: start;
+    }
+}
+
+@media (max-width: 420px) {
+    :root {
+        --oc-card-width: 152px;
+        --oc-card-height: 205px;
+        --oc-illu-size: 92px;
+    }
+}
+
+/* =========================================================
+   Fiches Pokémon / Tutupedia
+   ========================================================= */
+
+@media (max-width: 700px) {
+    .page-shell {
+        padding-inline: 10px;
+    }
+
+    .article {
+        padding: 12px;
+    }
+
+    .infobox-float {
+        width: 100%;
+    }
+
+    .relation-body,
+    .team-body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .relation-body img,
+    .team-body img {
+        align-self: center;
+        width: min(150px, 55vw);
+        height: auto;
+    }
+
+    .team-icons {
+        flex-wrap: wrap;
+    }
+
+    .color-palette {
+        width: min(100%, 280px);
+    }
+
+    .badge,
+    .type-chip,
+    .tag {
+        white-space: normal;
+    }
+}
+
+/* =========================================================
+   Fiches Monster Hunter
+   ========================================================= */
+
+@media (max-width: 860px) {
+    .guild-card {
+        min-height: auto;
+    }
+
+    .infobox-content {
+        min-width: 0;
+        max-width: none;
+        min-height: auto;
+        height: auto;
+    }
+
+    .infobox-header {
+        min-height: 125px;
+    }
+
+    .infobox-header .logo {
+        width: clamp(42px, 18vw, 76px);
+    }
+
+    .ibox-title-wrap {
+        width: 100%;
+        height: 86px;
+    }
+
+    .ibox-title-wrap h1 {
+        white-space: normal;
+        font-size: clamp(1.15rem, 6vw, 1.7rem);
+        line-height: 1.05;
+    }
+
+    .ibox-row {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .ibox-value {
+        font-size: 1.18rem;
+    }
+
+    .infobox-weapons,
+    .armor {
+        overflow-x: auto;
+    }
+
+    .guild-card > .photo {
+        position: relative;
+        top: auto !important;
+        right: auto;
+        width: min(340px, 82vw);
+        margin: 1.25rem auto;
+    }
+
+    .appearance {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+    }
+
+    .card {
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+    }
+
+    .bio {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .relations .relation {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .relations .photo {
+        width: min(260px, 72vw);
+        justify-self: center;
+        transform: rotate(2deg) !important;
+    }
+
+    .relations .relation-text {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .music-player {
+        position: static;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .anecdotes h3,
+    .litterature h3,
+    .anecdotes li,
+    .litterature a {
+        margin-left: 0;
+    }
+
+    .anecdotes ul,
+    .litterature p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .infobox-table {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .details p,
+    .bio p,
+    .relations .relation-text p {
+        text-align: left;
+    }
+}
+
+/* =========================================================
+   Fiche Minecraft / livre Alice
+   ========================================================= */
+
+@media (max-width: 900px) {
+    body[data-global-header-style="minecraft-card"] {
+        display: block;
+    }
+
+    body[data-global-header-style="minecraft-card"] .sidebar {
+        border-right: 0;
+        border-bottom: 1px dotted #bababa;
+    }
+
+    body[data-global-header-style="minecraft-card"] .sidebar nav {
+        display: block;
+    }
+
+    body[data-global-header-style="minecraft-card"] .sidebar > nav > img {
+        display: none;
+    }
+
+    body[data-global-header-style="minecraft-card"] .navbar-list {
+        display: flex;
+        overflow-x: auto;
+        gap: 0.7rem;
+        padding: 0.75rem;
+    }
+
+    body[data-global-header-style="minecraft-card"] .navbar-list li {
+        flex: 0 0 min(170px, 68vw);
+    }
+
+    body[data-global-header-style="minecraft-card"] .nav-button {
+        min-height: 56px;
+        font-size: 0.85rem;
+    }
+
+    body[data-global-header-style="minecraft-card"] .music-player {
+        padding: 0.75rem;
+    }
+
+    body[data-global-header-style="minecraft-card"] .page-content {
+        min-height: calc(100dvh - 190px);
+        padding: 0.75rem;
+        overflow: auto;
+        display: block;
+    }
+
+    body[data-global-header-style="minecraft-card"] .book {
+        width: 100%;
+        aspect-ratio: auto;
+        min-height: auto;
+        display: none;
+    }
+
+    body[data-global-header-style="minecraft-card"] .book.is-open {
+        display: grid;
+        gap: 1rem;
+    }
+
+    body[data-global-header-style="minecraft-card"] .book-image {
+        display: none;
+    }
+
+    body[data-global-header-style="minecraft-card"] .book-page {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        padding: 1rem;
+        border: 2px solid rgba(75, 53, 37, 0.55);
+        border-radius: 6px;
+        background: rgba(255, 245, 210, 0.92);
+    }
+
+    body[data-global-header-style="minecraft-card"] .book-page-left,
+    body[data-global-header-style="minecraft-card"] .book-page-right {
+        left: auto;
+    }
+
+    body[data-global-header-style="minecraft-card"] .book-close-button {
+        position: sticky;
+        top: 0.75rem;
+        right: auto;
+        justify-self: end;
+        width: auto;
+        height: auto;
+        padding: 0.65rem 0.9rem;
+        border-radius: 4px;
+    }
+
+    body[data-global-header-style="minecraft-card"] .book-close-button::before,
+    body[data-global-header-style="minecraft-card"] .book-close-button::after {
+        display: none;
+    }
+}
+
+/* =========================================================
+   Fiche Splatoon / Kai
+   ========================================================= */
+
+@media (max-width: 520px) {
+    .splat-page-content {
+        width: min(100% - 14px, 1180px);
+    }
+
+    .splat-hero {
+        padding: 16px;
+        outline-width: 4px;
+    }
+
+    .splat-hero h1 {
+        font-size: clamp(3.1rem, 22vw, 5.6rem);
+    }
+
+    .splat-portrait-stage {
+        min-height: 300px;
+    }
+
+    .splat-panel {
+        padding: 16px;
+    }
+}
