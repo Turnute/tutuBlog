@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Atelier des Rêves</title>
+    <title>L'Atelier des Rêves | OCs</title>
 
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/looping_bg.css">
     <link rel="stylesheet" href="../assets/css/index_oc.css">
     <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 
     <link rel="icon" type="image/png" href="../assets/images/pfp.png">
 </head>
@@ -21,173 +21,202 @@
         <div class="cadre">
             <h2>Qu'est-ce qu'un OC ?</h2>
             <p>
-                "OC" est l'abréviation de l'anglais <em>Original Character</em>, signifiant "personnage original".
-                Le terme désigne un personnage créé par un auteur indépendant, souvent dans le cadre de la fan-création.<br>
-                Un OC permet de réexplorer un monde, une histoire ou une ambiance à travers un regard différent de celui de l'œuvre d'origine.
+                « OC » est l'abréviation de l'anglais <em>Original Character</em>,
+                signifiant « personnage original ». Le terme désigne un personnage
+                créé par un auteur indépendant, souvent dans le cadre de la fan-création.
             </p>
             <p>
                 Cette galerie rassemble mes propres OCs, répartis entre plusieurs univers.
             </p>
         </div>
 
-        <section class="oc-browser">
-            <div class="oc-browser__divider"></div>
+        <section class="oc-browser" aria-labelledby="oc-browser-title">
+            <header class="oc-browser__heading">
+                <div>
+                    <p class="oc-browser__eyebrow">GALERIE</p>
+                    <h1 id="oc-browser-title">Mes personnages</h1>
+                </div>
+                <p class="oc-browser__intro">
+                    Recherche un personnage par son nom ou filtre la galerie par univers.
+                </p>
+            </header>
 
-            <div class="oc-browser__rail">
-                <div class="oc-browser__label" aria-hidden="true">
-                    <span>DOSSIERS</span>
+            <div class="oc-browser__toolbar">
+                <label class="oc-search" for="oc-search-input">
+                    <span class="oc-search__label">Rechercher un OC</span>
+                    <span class="oc-search__field">
+                        <span class="oc-search__icon" aria-hidden="true">⌕</span>
+                        <input
+                            id="oc-search-input"
+                            type="search"
+                            placeholder="Ex. Brize, Pokémon, Skyrim…"
+                            autocomplete="off"
+                        >
+                    </span>
+                </label>
+
+                <div class="oc-filters" aria-label="Filtrer les OCs par catégorie">
+                    <button class="oc-filter is-active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+                    <button class="oc-filter" type="button" data-filter="monsterhunter" aria-pressed="false">Monster Hunter</button>
+                    <button class="oc-filter" type="button" data-filter="pokemon" aria-pressed="false">Pokémon</button>
+                    <button class="oc-filter" type="button" data-filter="autres" aria-pressed="false">Autres jeux</button>
+                    <button class="oc-filter" type="button" data-filter="ttrpg" aria-pressed="false">JDR</button>
                 </div>
 
-                <div class="oc-browser__viewport">
-                    <div class="oc-browser__track">
-                        <article class="oc-folder" data-folder="monsterhunter">
-                            <button class="oc-folder__card" type="button" aria-expanded="false">
-                                <img class="oc-card__illu" src="../assets/images/MHW-Rathalos_Icon.webp" alt="Illustration de Monster Hunter">
-                                <span class="oc-card__title">Monster Hunter</span>
-                            </button>
-
-                            <div class="oc-folder__files" aria-label="OCs Monster Hunter">
-                                <a class="oc-file" href="games/monsterhunter/tulnute.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/tulnute.webp" alt="Tul'nute Rhyis">
-                                    <span class="oc-card__title">Tul'nute Rhyis</span>
-                                </a>
-
-                                <a class="oc-file" href="games/monsterhunter/freyja.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/freyja.webp" alt="Freyja Ironheart">
-                                    <span class="oc-card__title">Freyja Ironheart</span>
-                                </a>
-
-                                <a class="oc-file" href="games/monsterhunter/neferti.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/neferti.webp" alt="Neferti">
-                                    <span class="oc-card__title">Neferti</span>
-                                </a>
-
-                                <a class="oc-file" href="games/monsterhunter/garrick.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/garrick.webp" alt="Garrick Striker">
-                                    <span class="oc-card__title">Garrick Striker</span>
-                                </a>
-
-                                <a class="oc-file" href="games/monsterhunter/vendredi.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/vendredi.webp" alt="Vendredi">
-                                    <span class="oc-card__title">Vendredi</span>
-                                </a>
-                            </div>
-                        </article>
-
-                        <article class="oc-folder" data-folder="pokemon">
-                            <button class="oc-folder__card" type="button" aria-expanded="false">
-                                <img class="oc-card__illu" src="../assets/images/Pokeball.png" alt="Illustration de Pokémon">
-                                <span class="oc-card__title">Pokémon</span>
-                            </button>
-
-                            <div class="oc-folder__files" aria-label="OCs Pokémon">
-                                <a class="oc-file" href="games/pokemon/alex.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/alex.png" alt="Alex">
-                                    <span class="oc-card__title">Alex</span>
-                                </a>
-
-                                <a class="oc-file" href="games/pokemon/juliana.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/juliana.webp" alt="Juliana">
-                                    <span class="oc-card__title">Juliana</span>
-                                </a>
-
-                                <a class="oc-file" href="games/pokemon/morgane.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/morgane.webp" alt="Morgane">
-                                    <span class="oc-card__title">Morgane</span>
-                                </a>
-                            </div>
-                        </article>
-
-                        <article class="oc-folder" data-folder="autres">
-                            <button class="oc-folder__card" type="button" aria-expanded="false">
-                                <img class="oc-card__illu" src="../assets/images/mc_bookshelf.jpg" alt="Illustration d'Autres OCs">
-                                <span class="oc-card__title">Autres Jeux</span>
-                            </button>
-
-                            <div class="oc-folder__files" aria-label="Autres Jeux">
-                                <a class="oc-file" href="games/alice.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/alice.webp" alt="Alice">
-                                    <span class="oc-card__title">Alice<br><em>Minecraft</em></span>
-                                </a>
-
-                                <a class="oc-file" href="games/kai.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/kai.webp" alt="Kai">
-                                    <span class="oc-card__title">Kai<br><em>Splatoon</em></span>
-                                </a>
-
-                                <a class="oc-file" href="games/brize.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/brize.png" alt="Brize">
-                                    <span class="oc-card__title">Brize Lanuq<br><em>Baldur's Gate 3</em></span>
-                                </a>
-                                <a class="oc-file" href="games/arbek.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/arbek.png" alt="Arbek">
-                                    <span class="oc-card__title">Arbek gro-Khazgur<br><em>Skyrim</em></span>
-                                </a>
-                            </div>
-                        </article>
-
-                        <article class="oc-folder" data-folder="ttrpg">
-                            <button class="oc-folder__card" type="button" aria-expanded="false">
-                                <img class="oc-card__illu" src="../assets/images/dice.png" alt="TableTop RPGs"/>
-                                <span class="oc-card__title">JDR</span>
-                            </button>
-
-                            <div class="oc-folder__files" aria-label="TTRPGS">
-                                <a class="oc-file" href="ttrpgs/talgor.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/talgor.webp" alt="Talgor">
-                                    <span class="oc-card__title">Talgor</span>
-                                </a>
-
-                                <a class="oc-file" href="ttrpgs/erleos.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/erleos.webp" alt="Erleos">
-                                    <span class="oc-card__title">Erleos Laan</span>
-                                </a>
-
-                                <a class="oc-file" href="ttrpgs/caim.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/caim.webp" alt="Caim">
-                                    <span class="oc-card__title">Caim</span>
-                                </a>
-
-                                <a class="oc-file" href="ttrpgs/alea.html">
-                                    <img class="oc-card__illu" src="../assets/images/oc-icons/alea.png" alt="Alea">
-                                    <span class="oc-card__title">A’lea Ludo</span>
-                                </a>
-                            </div>
-                        </article>
-
-                    </div>
-                </div>
+                <p id="oc-results-status" class="oc-results-status" aria-live="polite"></p>
             </div>
+
+            <div class="oc-groups">
+                <section class="oc-group" data-folder="monsterhunter" aria-labelledby="group-monsterhunter">
+                    <header class="oc-group__header">
+                        <img src="../assets/images/MHW-Rathalos_Icon.webp" alt="" width="64" height="64" loading="lazy" decoding="async">
+                        <div>
+                            <h2 id="group-monsterhunter">Monster Hunter</h2>
+                            <p><span class="oc-group__visible-count">5</span> personnages</p>
+                        </div>
+                    </header>
+
+                    <div class="oc-grid">
+                        <a class="oc-file" href="games/monsterhunter/tulnute.html" data-search="Tul'nute Rhyis Monster Hunter">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/tulnute.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Tul'nute Rhyis</span>
+                            <span class="oc-card__universe">Monster Hunter</span>
+                        </a>
+
+                        <a class="oc-file" href="games/monsterhunter/freyja.html" data-search="Freyja Ironheart Monster Hunter">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/freyja.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Freyja Ironheart</span>
+                            <span class="oc-card__universe">Monster Hunter</span>
+                        </a>
+
+                        <a class="oc-file" href="games/monsterhunter/neferti.html" data-search="Neferti Monster Hunter">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/neferti.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Neferti</span>
+                            <span class="oc-card__universe">Monster Hunter</span>
+                        </a>
+
+                        <a class="oc-file" href="games/monsterhunter/garrick.html" data-search="Garrick Striker Monster Hunter">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/garrick.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Garrick Striker</span>
+                            <span class="oc-card__universe">Monster Hunter</span>
+                        </a>
+
+                        <a class="oc-file" href="games/monsterhunter/vendredi.html" data-search="Vendredi Yoko Monster Hunter">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/vendredi.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Vendredi</span>
+                            <span class="oc-card__universe">Monster Hunter</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="oc-group" data-folder="pokemon" aria-labelledby="group-pokemon">
+                    <header class="oc-group__header">
+                        <img src="../assets/images/Pokeball.png" alt="" width="64" height="64" loading="lazy" decoding="async">
+                        <div>
+                            <h2 id="group-pokemon">Pokémon</h2>
+                            <p><span class="oc-group__visible-count">3</span> personnages</p>
+                        </div>
+                    </header>
+
+                    <div class="oc-grid">
+                        <a class="oc-file" href="games/pokemon/alex.html" data-search="Alex Pokémon Pokemon">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/alex.png" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Alex</span>
+                            <span class="oc-card__universe">Pokémon</span>
+                        </a>
+
+                        <a class="oc-file" href="games/pokemon/juliana.html" data-search="Juliana Pokémon Pokemon">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/juliana.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Juliana</span>
+                            <span class="oc-card__universe">Pokémon</span>
+                        </a>
+
+                        <a class="oc-file" href="games/pokemon/morgane.html" data-search="Morgane Pokémon Pokemon Legends ZA">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/morgane.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Morgane</span>
+                            <span class="oc-card__universe">Pokémon</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="oc-group" data-folder="autres" aria-labelledby="group-autres">
+                    <header class="oc-group__header">
+                        <img src="../assets/images/mc_bookshelf.jpg" alt="" width="64" height="64" loading="lazy" decoding="async">
+                        <div>
+                            <h2 id="group-autres">Autres jeux</h2>
+                            <p><span class="oc-group__visible-count">4</span> personnages</p>
+                        </div>
+                    </header>
+
+                    <div class="oc-grid">
+                        <a class="oc-file" href="games/alice.html" data-search="Alice Minecraft">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/alice.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Alice</span>
+                            <span class="oc-card__universe">Minecraft</span>
+                        </a>
+
+                        <a class="oc-file" href="games/kai.html" data-search="Kai Splatoon">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/kai.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Kai</span>
+                            <span class="oc-card__universe">Splatoon</span>
+                        </a>
+
+                        <a class="oc-file" href="games/brize.html" data-search="Brize Lanuq Baldur's Gate 3 BG3 Dungeons Dragons">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/brize.png" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Brize Lanuq</span>
+                            <span class="oc-card__universe">Baldur's Gate 3</span>
+                        </a>
+
+                        <a class="oc-file" href="games/arbek.html" data-search="Arbek gro-Khazgur Skyrim Elder Scrolls Orc Orsimer">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/arbek.png" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Arbek gro-Khazgur</span>
+                            <span class="oc-card__universe">Skyrim</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="oc-group" data-folder="ttrpg" aria-labelledby="group-ttrpg">
+                    <header class="oc-group__header">
+                        <img src="../assets/images/dice.png" alt="" width="64" height="64" loading="lazy" decoding="async">
+                        <div>
+                            <h2 id="group-ttrpg">JDR</h2>
+                            <p><span class="oc-group__visible-count">4</span> personnages</p>
+                        </div>
+                    </header>
+
+                    <div class="oc-grid">
+                        <a class="oc-file" href="ttrpgs/talgor.html" data-search="Talgor JDR TTRPG">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/talgor.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Talgor</span>
+                            <span class="oc-card__universe">JDR</span>
+                        </a>
+
+                        <a class="oc-file" href="ttrpgs/erleos.html" data-search="Erleos Laan JDR TTRPG">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/erleos.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Erleos Laan</span>
+                            <span class="oc-card__universe">JDR</span>
+                        </a>
+
+                        <a class="oc-file" href="ttrpgs/caim.html" data-search="Caim JDR TTRPG">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/caim.webp" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">Caim</span>
+                            <span class="oc-card__universe">JDR</span>
+                        </a>
+
+                        <a class="oc-file" href="ttrpgs/alea.html" data-search="Alea A'lea Ludo JDR TTRPG">
+                            <img class="oc-card__illu" src="../assets/images/oc-icons/alea.png" alt="" width="160" height="160" loading="lazy" decoding="async">
+                            <span class="oc-card__title">A’lea Ludo</span>
+                            <span class="oc-card__universe">JDR</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <p class="oc-empty" hidden>Aucun personnage ne correspond à cette recherche.</p>
         </section>
     </main>
 
     <script src="../assets/js/header.js"></script>
-    <script>
-        const folders = document.querySelectorAll(".oc-folder");
-
-        folders.forEach((folder) => {
-            const button = folder.querySelector(".oc-folder__card");
-
-            button.addEventListener("click", () => {
-                const wasOpen = folder.classList.contains("is-open");
-
-                folders.forEach((item) => {
-                    item.classList.remove("is-open");
-                    item.querySelector(".oc-folder__card").setAttribute("aria-expanded", "false");
-                });
-
-                if (!wasOpen) {
-                    folder.classList.add("is-open");
-                    button.setAttribute("aria-expanded", "true");
-
-                    folder.scrollIntoView({
-                        behavior: "smooth",
-                        inline: "start",
-                        block: "nearest"
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="../assets/js/ocs-browser.js"></script>
 </body>
 </html>

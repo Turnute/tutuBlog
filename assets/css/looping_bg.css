@@ -1,14 +1,33 @@
-body {
-    /* background: url("https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex.png") repeat 0 0; */
-    background: url("../images/checkerboard-cross.webp") repeat 0 0;
-    animation: animate-bg 18.3s linear infinite;
+html {
+    background-color: #8f82a8;
 }
 
-@keyframes animate-bg {
-    from {
-        background-position: 0 0;
-    }
+body {
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -420px;
+    z-index: -1;
+    pointer-events: none;
+    background: url("../images/checkerboard-cross.webp") repeat;
+    transform: translate3d(0, 0, 0);
+    animation: animate-bg-layer 18.3s linear infinite;
+    will-change: transform;
+}
+
+@keyframes animate-bg-layer {
     to {
-        background-position: 400px 400px;
+        transform: translate3d(400px, 400px, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
     }
 }
