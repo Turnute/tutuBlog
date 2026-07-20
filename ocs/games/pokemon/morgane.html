@@ -1,41 +1,39 @@
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Morgane — Tutupedia</title>
-  <link rel = "icon" type="image/webp" href="../../../assets/images/tutupedia_logo.webp">
-
+  <link href="../../../assets/images/tutupedia_logo.webp" rel="icon" type="image/webp" />
   <!-- CSS du bandeau global -->
-  <link rel="stylesheet" href="../../../assets/css/header.css" />
-  <link rel="stylesheet" href="../../../assets/css/global-header-pokewiki.css" />
-
+  <link href="../../../assets/css/header.css" rel="stylesheet">
+  <link href="../../../assets/css/global-header-pokewiki.css" rel="stylesheet" />
   <!-- CSS propre à la page OC -->
-  <link rel="stylesheet" href="../../../assets/css/pokewiki-oc.css" />
-
+  <link href="../../../assets/css/pokewiki-oc.css" rel="stylesheet" />
   <!-- CSS de la fonctionnalité audio YouTube -->
-  <link rel="stylesheet" href="../../../assets/css/youtube-audio.css" />
-
+  <link href="../../../assets/css/youtube-audio.css" rel="stylesheet" />
   <style>
-    :root{
+    :root {
       /* --accent: #84b93f; */
       --hover-bar: #1d1d1d;
     }
 
     .team-icons img {
-        height: 60px;
-        background-color: #799cb9;
-        border-radius: 3px 14px 3px 14px;
+      height: 60px;
+      background-color: #799cb9;
+      border-radius: 3px 14px 3px 14px;
     }
 
     .team-icons table {
-        background-color: #d0e3f0;
-        border-radius: 3px;
-        margin: auto;
+      background-color: #d0e3f0;
+      border-radius: 3px;
+      margin: auto;
     }
 
     .team-icons td {
-        padding: 0 10px;
+      padding: 0 10px;
     }
 
     .team-head {
@@ -46,30 +44,22 @@
       margin-top: 15px;
     }
   </style>
-
   <!-- JS de la page -->
-  <script src="../../../assets/js/pokewiki-oc.js" defer></script>
-
+  <script defer="" src="../../../assets/js/pokewiki-oc.js"></script>
   <!-- JS du bandeau global -->
-  <script src="../../../assets/js/header.js" defer></script>
-
+  <script defer="" src="../../../assets/js/header.js"></script>
   <!-- JS de la fonctionnalité audio YouTube -->
-  <script src="../../../assets/js/youtube-audio.js" defer></script>
-  <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+  <script defer="" src="../../../assets/js/youtube-audio.js"></script>
+  <link href="../../../assets/css/responsive.css" rel="stylesheet" />
+  <link href="../../../assets/css/performance.css" rel="stylesheet" />
 </head>
 
-<body
-  data-nav-theme="ocs"
-  data-global-header-style="pokewiki"
-  data-site-title="TUTUPEDIA"
-  data-site-logo="" 
-  data-site-tagline="The Turnute-driven Pokémon Encyclopedia"
->
+<body data-global-header-style="pokewiki" data-nav-theme="ocs" data-site-logo=""
+  data-site-tagline="The Turnute-driven Pokémon Encyclopedia" data-site-title="TUTUPEDIA">
   <!-- Bandeau global injecté ici -->
   <div id="site-header"></div>
-
   <div class="page-shell">
-    <aside class="sidebar" aria-label="Barre latérale">
+    <aside aria-label="Barre latérale" class="sidebar">
       <section class="side-card">
         <h2>Navigation</h2>
         <div class="content">
@@ -84,75 +74,81 @@
           </ul>
         </div>
       </section>
-
       <section class="side-card">
         <h2>Bande Son</h2>
         <div class="content" style="display: flex; justify-content: center;">
-          <div class="yt-audio-trigger card"
-            data-youtube="https://www.youtube.com/watch?v=b-AHzI4Y_qA"
-            tabindex="0"
-            role="button"
-          >
-            <img src="../../../assets/images/oc-gallery/morgane/cover.jpg" alt="Cover" />
-            <p><a href="https://www.youtube.com/watch?v=b-AHzI4Y_qA" target="_blank" rel="noopener">Enchanté<br><em>Dirt Poor Robins</em></a></p>
+          <div class="yt-audio-trigger card" data-youtube="https://www.youtube.com/watch?v=b-AHzI4Y_qA" role="button"
+            tabindex="0">
+            <img alt="Cover" decoding="async" height="640" src="../../../assets/images/oc-gallery/morgane/cover.jpg"
+              width="640" />
+            <p><a href="https://www.youtube.com/watch?v=b-AHzI4Y_qA" rel="noopener"
+                target="_blank">Enchanté<br /><em>Dirt Poor Robins</em></a></p>
           </div>
         </div>
         <div class="content" style="display: flex; justify-content: center;">
-          <div class="yt-audio-trigger card"
-            data-youtube="https://youtu.be/JydwXcmh9b4?is=9jrUCkGDqLYdulX_"
-            tabindex="0"
-            role="button"
-          >
-            <img src="../../../assets/images/oc-gallery/morgane/cover.webp" alt="Cover" />
-            <p><a href="https://youtu.be/JydwXcmh9b4?is=9jrUCkGDqLYdulX_" target="_blank" rel="noopener">Chatterbox<br><em>Martin Gonzalez</em></a></p>
+          <div class="yt-audio-trigger card" data-youtube="https://youtu.be/JydwXcmh9b4?is=9jrUCkGDqLYdulX_"
+            role="button" tabindex="0">
+            <img alt="Cover" decoding="async" height="1200" src="../../../assets/images/oc-gallery/morgane/cover.webp"
+              width="1200" />
+            <p><a href="https://youtu.be/JydwXcmh9b4?is=9jrUCkGDqLYdulX_" rel="noopener"
+                target="_blank">Chatterbox<br /><em>Martin Gonzalez</em></a></p>
           </div>
         </div>
       </section>
-
       <section class="side-card">
         <h2>Littérature</h2>
         <div class="content">
-          <a href="https://archiveofourown.org/works/81654596" target="_blank" rel="noopener"> At the Edge of Lumiose’s Lights</a>
+          <a href="https://archiveofourown.org/works/81654596" rel="noopener" target="_blank"> At the Edge of Lumiose’s
+            Lights</a>
         </div>
       </section>
     </aside>
-
     <main class="page">
-      <div class="page-tabs" aria-label="Onglets de page">
+      <div aria-label="Onglets de page" class="page-tabs">
         <a class="tab-link active" href="#">Article</a>
       </div>
-
       <article class="article">
         <!-- Outils mobiles -->
         <div class="mobile-tools">
           <button class="mini-btn" id="sidebarToggle" type="button">Afficher la barre latérale</button>
         </div>
-
         <!-- Contenu de l'article -->
         <!-- En-tête -->
         <header class="article-header" id="intro">
           <h1>Morgane</h1>
           <div class="subtitle">Monarque d'un trône vacant.</div>
         </header>
-
         <!-- Infobox -->
-        <aside class="infobox infobox-float" aria-label="Infobox personnage">
+        <aside aria-label="Infobox personnage" class="infobox infobox-float">
           <div class="infobox-title">Morgane</div>
           <div class="infobox-subtitle">Ombre de l'Hôtel Z</div>
           <div class="portrait">
             <div class="portrait-frame">
-              <img 
-                src="../../../assets/images/oc-gallery/morgane/IMG_1010.JPG"
-                alt="Morgane"
-              />
+              <img alt="Morgane" decoding="async" height="1659"
+                src="../../../assets/images/oc-gallery/morgane/IMG_1010.webp" width="1080" />
             </div>
           </div>
           <table class="ibox-table">
-            <tr><th>Région</th><td>Kalos</td></tr>
-            <tr><th>Âge</th><td>21 ans</td></tr>
-            <tr><th>Genre</th><td>Féminin</td></tr>
-            <tr><th>Orientation</th><td>Aromantique</td></tr>
-            <tr><th>Occupation</th><td>Concierge</td></tr>
+            <tr>
+              <th>Région</th>
+              <td>Kalos</td>
+            </tr>
+            <tr>
+              <th>Âge</th>
+              <td>21 ans</td>
+            </tr>
+            <tr>
+              <th>Genre</th>
+              <td>Féminin</td>
+            </tr>
+            <tr>
+              <th>Orientation</th>
+              <td>Aromantique</td>
+            </tr>
+            <tr>
+              <th>Occupation</th>
+              <td>Concierge</td>
+            </tr>
             <tr>
               <th>Spécialité</th>
               <td>
@@ -161,69 +157,70 @@
                 </div>
               </td>
             </tr>
-            <tr><th>Design</th><td>Esthétique punk chic</td></tr>
-            <tr><th>Nature</th><td>Solo</td></tr>
+            <tr>
+              <th>Design</th>
+              <td>Esthétique punk chic</td>
+            </tr>
+            <tr>
+              <th>Nature</th>
+              <td>Solo</td>
+            </tr>
           </table>
         </aside>
-
         <!-- Contenu principal -->
         <section class="lead">
           <p>
-            Jeune concierge d'hôtel en provenance de la ville d'Illumis, Morgane est une dresseuse de renom s'étant illustrée lors de la compétition du Royale Z-A. Membre de la Team MZ et au centre des évènements qui ont menacé de détruire la ville, elle possède des connexions partout : des basfonds du Clan Dérouillard jusqu'à la haute société de la FRIM.
+            Jeune concierge d'hôtel en provenance de la ville d'Illumis, Morgane est une dresseuse de renom s'étant
+            illustrée lors de la compétition du Royale Z-A. Membre de la Team MZ et au centre des évènements qui ont
+            menacé de détruire la ville, elle possède des connexions partout : des basfonds du Clan Dérouillard jusqu'à
+            la haute société de la FRIM.
           </p>
           <p>
-            Originaire de Flusselles, Morgane a fui jeune une prison dorée pour grandir dans les ruelles sombres de la capitale Kalosienne. Elle fut éventuellement recueillie par A.Z. et trouva maison, nourriture et famille à l'Hôtel Z dont elle reprit la co-direction, quelques semaines après le décès de l'homme. Malgré son poste elle reste discrète, préférant opérer dans les ombres et faisant le sale boulot avec une efficacité impitoyable.
+            Originaire de Flusselles, Morgane a fui jeune une prison dorée pour grandir dans les ruelles sombres de la
+            capitale Kalosienne. Elle fut éventuellement recueillie par A.Z. et trouva maison, nourriture et famille à
+            l'Hôtel Z dont elle reprit la co-direction, quelques semaines après le décès de l'homme. Malgré son poste
+            elle reste discrète, préférant opérer dans les ombres et faisant le sale boulot avec une efficacité
+            impitoyable.
           </p>
           <p>
-            C'est une personne déterminée et têtue, qui aime farouchement ses proches mais préfère garder une distance de sécurité avec eux. Morgane a des difficultés à faire confiance aux autres et à se montrer vulnérable, se protégeant par la colère lorsqu'elle se sent acculée.
+            C'est une personne déterminée et têtue, qui aime farouchement ses proches mais préfère garder une distance
+            de sécurité avec eux. Morgane a des difficultés à faire confiance aux autres et à se montrer vulnérable, se
+            protégeant par la colère lorsqu'elle se sent acculée.
           </p>
           <p>
-            Héritière en fuite devenue concierge d’hôtel et exécutante discrète d’Illumis, Morgane protège farouchement les siens sans jamais vraiment se laisser aimer en retour.
+            Héritière en fuite devenue concierge d’hôtel et exécutante discrète d’Illumis, Morgane protège farouchement
+            les siens sans jamais vraiment se laisser aimer en retour.
           </p>
-
           <div class="team-icons">
             <table>
               <tr>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/team-icons/amphinobi.png" 
-                    alt="Amphinobi"
-                  />
+                  <img alt="Amphinobi" decoding="async" height="160" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/team-icons/amphinobi.png" width="160" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/team-icons/pandarbare.png" 
-                    alt="Pandarbare"
-                  />
+                  <img alt="Pandarbare" decoding="async" height="160" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/team-icons/pandarbare.png" width="160" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/team-icons/brutapode.png" 
-                    alt="Brutapode"
-                  />
+                  <img alt="Brutapode" decoding="async" height="160" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/team-icons/brutapode.png" width="160" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/team-icons/mysdibule.png" 
-                    alt="Mysdibule"
-                  />
+                  <img alt="Mysdibule" decoding="async" height="160" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/team-icons/mysdibule.png" width="160" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/team-icons/bruyverne.png" 
-                    alt="Bruyverne"
-                  />
+                  <img alt="Bruyverne" decoding="async" height="160" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/team-icons/bruyverne.png" width="160" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/team-icons/embrylex.png" 
-                    alt="Embrylex"
-                  />
+                  <img alt="Embrylex" decoding="async" height="160" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/team-icons/embrylex.png" width="160" />
                 </td>
               </tr>
             </table>
           </div>
-
           <nav class="toc" id="toc">
             <div class="toc-header">
               <h2>Sommaire</h2>
@@ -242,52 +239,58 @@
             </div>
           </nav>
         </section>
-
         <!-- Sections principales -->
         <!-- Personnalité -->
         <section class="section" id="personality">
-            <h2 class="section-title">Personnalité</h2>
-
-            <div class="traits-grid">
-                <article class="trait-card positive">
-                <h3>Positifs</h3>
-                <ul>
-                    <li>Fidèle</li>
-                    <li>Déterminée</li>
-                    <li>Débrouillarde</li>
-                </ul>
-                </article>
-
-                <article class="trait-card neutral">
-                <h3>Neutres</h3>
-                <ul>
-                    <li>Solitaire</li>
-                    <li>Fière</li>
-                    <li>Indépendante</li>
-                </ul>
-                </article>
-
-                <article class="trait-card negative">
-                <h3>Négatifs</h3>
-                <ul>
-                    <li>Fuyante</li>
-                    <li>Fermée</li>
-                    <li>Colérique</li>
-                </ul>
-                </article>
-            </div>
-        
-            <p>
-                Réservée, Morgane est quelqu'un qui a tendance à éviter l'attention si elle le peut. Elle préfère observer les gens à distance pour mieux évaluer la situation, et anticiper les besoins de ses proches. Elle reste malgré tout quelqu'un d'attentionné, à sa propre manière. Il n'est pas rare pour Rudi de trouver une nouvelle tenue de danse sur son lit la veille d'une audition, ou pour Inno d'avoir des rabais de prix sur ses tissus de la part de vendeurs encore hautains la veille.
-            </p>
-            <p>
-              Morgane déteste montrer toute forme de vulnérabilité, et cherche à rester en contrôle en toute circonstance. Elle utilise son apparence comme une armure, faisant très attention à l'image qu'elle renvoie d'elle-même. Malgré tout, elle refuse de cacher qui elle est pour le confort des autres et s'assume pleinement, même en jouant les réceptionnistes lors d'une soirée mondaine avec une veste en cuir et un regard meurtrier. Fermée sur son passé, les gens savent qu'il vaut mieux ne pas poser de question sur son histoire familiale, ou A.Z..
-            </p>
-            <p>
-              Férue de combats, Morgane s'illustre par la pression constante qu'elle impose à son adversaire, tant physique que psychologique. Elle n'hésite pas à porter des coups bas pour déstabiliser et crée ses propres failles avec férocité. Elle est fière de sa force et ne rate jamais une occasion de redescendre les prétentieux d'un cran.
-            </p>
+          <h2 class="section-title">Personnalité</h2>
+          <div class="traits-grid">
+            <article class="trait-card positive">
+              <h3>Positifs</h3>
+              <ul>
+                <li>Fidèle</li>
+                <li>Déterminée</li>
+                <li>Débrouillarde</li>
+              </ul>
+            </article>
+            <article class="trait-card neutral">
+              <h3>Neutres</h3>
+              <ul>
+                <li>Solitaire</li>
+                <li>Fière</li>
+                <li>Indépendante</li>
+              </ul>
+            </article>
+            <article class="trait-card negative">
+              <h3>Négatifs</h3>
+              <ul>
+                <li>Fuyante</li>
+                <li>Fermée</li>
+                <li>Colérique</li>
+              </ul>
+            </article>
+          </div>
+          <p>
+            Réservée, Morgane est quelqu'un qui a tendance à éviter l'attention si elle le peut. Elle préfère observer
+            les gens à distance pour mieux évaluer la situation, et anticiper les besoins de ses proches. Elle reste
+            malgré tout quelqu'un d'attentionné, à sa propre manière. Il n'est pas rare pour Rudi de trouver une
+            nouvelle tenue de danse sur son lit la veille d'une audition, ou pour Inno d'avoir des rabais de prix sur
+            ses tissus de la part de vendeurs encore hautains la veille.
+          </p>
+          <p>
+            Morgane déteste montrer toute forme de vulnérabilité, et cherche à rester en contrôle en toute circonstance.
+            Elle utilise son apparence comme une armure, faisant très attention à l'image qu'elle renvoie d'elle-même.
+            Malgré tout, elle refuse de cacher qui elle est pour le confort des autres et s'assume pleinement, même en
+            jouant les réceptionnistes lors d'une soirée mondaine avec une veste en cuir et un regard meurtrier. Fermée
+            sur son passé, les gens savent qu'il vaut mieux ne pas poser de question sur son histoire familiale, ou
+            A.Z..
+          </p>
+          <p>
+            Férue de combats, Morgane s'illustre par la pression constante qu'elle impose à son adversaire, tant
+            physique que psychologique. Elle n'hésite pas à porter des coups bas pour déstabiliser et crée ses propres
+            failles avec férocité. Elle est fière de sa force et ne rate jamais une occasion de redescendre les
+            prétentieux d'un cran.
+          </p>
         </section>
-
         <!-- Apparence -->
         <section class="section" id="appearance">
           <h2 class="section-title">Apparence</h2>
@@ -297,7 +300,7 @@
             <div style="background-color: #3B343C;" title="#3B343C"></div>
             <div style="background-color: #242529;" title="#242529"></div>
             <div style="background-color: #F1F0F5;" title="#F1F0F5"></div>
-          </div> 
+          </div>
           <p>
             Morgane présente une esthétique punk chic dominée par le noir et le blanc, cherchant un équilibre
             entre élégance soignée et décontraction rebelle.
@@ -306,7 +309,7 @@
             <div class="data-card">
               <h3>Style vestimentaire</h3>
               <p>
-                Le plus souvent des tenues à pantalon, plus pratiques, mais s'autorise parfois des ensembles à jupe. 
+                Le plus souvent des tenues à pantalon, plus pratiques, mais s'autorise parfois des ensembles à jupe.
                 Blazers damassés, gilets formels, blouses fluides, crop-top sur maillot de compression, pantalons larges
                 ou chinos, bottes hautes, mocassins ou chaussures de course, toujours accompagnée de chokers, gants sans
                 doigts et boucles d'oreilles métalliques punk.
@@ -317,42 +320,62 @@
               <p>
                 Elle porte un Méga-Anneau au poignet, signe de sa maîtrise. Morgane a des cheveux courts noirs coupés
                 en dégradé avec un balayage doré, ainsi qu'une longue frange qui tombe sur l'oeil droit. Ses yeux olive
-                sont accentués par un trait d'eyeliner cachant des cernes sombres. Des taches de rousseur parsèment son visage,
+                sont accentués par un trait d'eyeliner cachant des cernes sombres. Des taches de rousseur parsèment son
+                visage,
                 avec un grain de beauté juste sous l'oeil gauche.
               </p>
             </div>
           </div>
         </section>
-
         <!-- Bio -->
         <section class="section" id="bio">
           <h2 class="section-title">Biographie</h2>
           <div class="tab-panel active">
             <p>
-                Morgane est née à Flusselles dans une famille riche descendant de l'antique monarchie Kalosienne. Elle y grandit avec une mère froide, obsédée par resplendissance de son héritage, ainsi qu'une panoplie d'intendants et prétendants, tous convoitant la colossale fortune familiale de la duchesse. L'héritière fugua ainsi alors qu'elle était encore jeune, rejetant plus d'une décennie d'obéissance aveugle le jour où sa main fut promise à un comte de bonne famille.
+              Morgane est née à Flusselles dans une famille riche descendant de l'antique monarchie Kalosienne. Elle y
+              grandit avec une mère froide, obsédée par resplendissance de son héritage, ainsi qu'une panoplie
+              d'intendants et prétendants, tous convoitant la colossale fortune familiale de la duchesse. L'héritière
+              fugua ainsi alors qu'elle était encore jeune, rejetant plus d'une décennie d'obéissance aveugle le jour où
+              sa main fut promise à un comte de bonne famille.
             </p>
             <p>
-              S'infiltrant clandestinement à bord d'un train partant loin de sa ville natale, Morgane se retrouva ainsi dans les rues de la capitale de Kalos, enfin libre mais sans un sous. Elle survécut pendant des années, vivant autant de générosité d'inconnus que d'étourderie de touristes, ainsi qu'avec la rare solidarité d'autres jeunes dans sa situation. Enchaînant petits boulots pourris et affaires louches pour subvenir à ses besoins, sa vie changea un soir il y a deux ans.
+              S'infiltrant clandestinement à bord d'un train partant loin de sa ville natale, Morgane se retrouva ainsi
+              dans les rues de la capitale de Kalos, enfin libre mais sans un sous. Elle survécut pendant des années,
+              vivant autant de générosité d'inconnus que d'étourderie de touristes, ainsi qu'avec la rare solidarité
+              d'autres jeunes dans sa situation. Enchaînant petits boulots pourris et affaires louches pour subvenir à
+              ses besoins, sa vie changea un soir il y a deux ans.
             </p>
             <p>
-              Morgane fouillait une poubelle derrière un hôtel, cherchant de quoi calmer son estomac en plainte après plusieurs jours de jeûne, quand un vieil homme de trois mètres de haut accompagné de son Floette à fleur noire la surprirent. L'homme se présenta comme le dirigeant de l'hôtel, A.Z., et contrairement à ses craintes, il n'appela pas les autorités. À la place il lui tendit la main, promettant dîner et lit chaud. Malgré sa méfiance, Morgane accepta.
+              Morgane fouillait une poubelle derrière un hôtel, cherchant de quoi calmer son estomac en plainte après
+              plusieurs jours de jeûne, quand un vieil homme de trois mètres de haut accompagné de son Floette à fleur
+              noire la surprirent. L'homme se présenta comme le dirigeant de l'hôtel, A.Z., et contrairement à ses
+              craintes, il n'appela pas les autorités. À la place il lui tendit la main, promettant dîner et lit chaud.
+              Malgré sa méfiance, Morgane accepta.
             </p>
             <p>
-              Ne voulant pas avoir de dette, Morgane resta à l'hôtel d'abord pour repayer A.Z. en l'aidant à gérer les lieux. Elle finit par s'attacher tendrement <em>(malgré elle)</em> au vieil homme et aux autres jeunes résidant dans les locaux, les rejoignant pour former la Team MZ et sauver Illumis d'un sombre destin pressenti par l'immortel. À leur côté elle géra la menace de la Méga-Évolution Férox, grimpa les rangs du Z-A Royale et fit une impression sur le gratin compétitif de la ville. Elle affronta éventuellement la source de leurs problèmes sous la forme de l'Ange, une ancienne machine construite il y a 2000 ans par A.Z. au centre de la ville, aidée du Pokémon légendaire Zygarde.
+              Ne voulant pas avoir de dette, Morgane resta à l'hôtel d'abord pour repayer A.Z. en l'aidant à gérer les
+              lieux. Elle finit par s'attacher tendrement <em>(malgré elle)</em> au vieil homme et aux autres jeunes
+              résidant dans les locaux, les rejoignant pour former la Team MZ et sauver Illumis d'un sombre destin
+              pressenti par l'immortel. À leur côté elle géra la menace de la Méga-Évolution Férox, grimpa les rangs du
+              Z-A Royale et fit une impression sur le gratin compétitif de la ville. Elle affronta éventuellement la
+              source de leurs problèmes sous la forme de l'Ange, une ancienne machine construite il y a 2000 ans par
+              A.Z. au centre de la ville, aidée du Pokémon légendaire Zygarde.
             </p>
             <p>
-              Malheureusement, A.Z. ne survécut pas à cette confrontation. Suite à son combat contre l'Ange, Morgane tomba dans les pommes, et apprit le décès de l'homme à son réveil. Elle resta enfermée dans sa chambre pendant une semaine entière, ne réémergeant que pour ses funérailles. À partir de là, elle continua d’avancer avec force, sans jamais vraiment montrer l’ampleur réelle de son deuil.
+              Malheureusement, A.Z. ne survécut pas à cette confrontation. Suite à son combat contre l'Ange, Morgane
+              tomba dans les pommes, et apprit le décès de l'homme à son réveil. Elle resta enfermée dans sa chambre
+              pendant une semaine entière, ne réémergeant que pour ses funérailles. À partir de là, elle continua
+              d’avancer avec force, sans jamais vraiment montrer l’ampleur réelle de son deuil.
             </p>
             <p>
-              Avec le reste de la Team MZ, Morgane reprit finalement la co-direction de l'Hôtel, et continue à remplir son rôle à ce jour.
+              Avec le reste de la Team MZ, Morgane reprit finalement la co-direction de l'Hôtel, et continue à remplir
+              son rôle à ce jour.
             </p>
           </div>
         </section>
-
         <!-- Équipe Pokémon -->
         <section class="section" id="team">
           <h2 class="section-title">Équipe Pokémon</h2>
-
           <div class="team-grid">
             <!-- Pokémon 1 -->
             <article class="team-card">
@@ -367,11 +390,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/morgane/team-thumb/Méga-Amphinobi_(Official_Game_Art)-LPZA.png"
-                  alt="Amphinobi"
-                />
-
+                <img alt="Amphinobi"
+                  src="../../../assets/images/oc-gallery/morgane/team-thumb/mega-amphinobi-official-lpza.png" />
                 <div class="team-content">
                   <p>
                     Son premier partenaire, Morgane l'a rencontré assez jeune dans les rues d'Illumis quand
@@ -383,7 +403,6 @@
                     confiance aux inconnus. Il surveille la ville, tapis dans l'ombre, prêt à agir et rapportant à
                     Morgane tout ce qui mérite son attention.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Eau">Sheauriken</span>
                     <span class="type-chip" data-type="Glace">Poing Glace</span>
@@ -393,7 +412,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 2 -->
             <article class="team-card">
               <div class="team-head">
@@ -407,11 +425,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/morgane/team-thumb/719px-Pandarbare-XY.png"
-                  alt="Pandarbare"
-                />
-
+                <img alt="Pandarbare" decoding="async" height="600" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/team-thumb/719px-Pandarbare-XY.png" width="719" />
                 <div class="team-content">
                   <p>
                     Une brute intimidante au tempérament grossier qui
@@ -420,9 +435,9 @@
                     le soleil de l’après-midi, avec la moitié de l’équipe entassée sur lui.
                   </p>
                   <p>
-                    Morgane l’a rencontré alors qu’il n’était encore qu’un Pandespiègle, quand il a essayé de lui 
-                    voler de l’argent. Elle l’a pris en chasse, puis a décidé de l’accueillir 
-                    lorsqu’elle a trouvé la Poké Ball brisée que son précédent propriétaire avait laissé sur le 
+                    Morgane l’a rencontré alors qu’il n’était encore qu’un Pandespiègle, quand il a essayé de lui
+                    voler de l’argent. Elle l’a pris en chasse, puis a décidé de l’accueillir
+                    lorsqu’elle a trouvé la Poké Ball brisée que son précédent propriétaire avait laissé sur le
                     sol.
                   </p>
                   <div class="moves">
@@ -434,7 +449,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 3 -->
             <article class="team-card">
               <div class="team-head">
@@ -448,11 +462,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/morgane/team-thumb/Brutapode-NB.png"
-                  alt="Brutapode"
-                />
-
+                <img alt="Brutapode" decoding="async" height="1033" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/team-thumb/Brutapode-NB.webp" width="1100" />
                 <div class="team-content">
                   <p>
                     Un soir, Morgane sortait les poubelles quand elle trouva un Venipatte géant fouiller la benne à
@@ -463,7 +474,6 @@
                     tendresse qui ensevelira à peu près n'importe qui de son corps pour un gros câlin. Morgane cause
                     souvent des problèmes dans les cafés qui n'ont pas assez de place pour l'accueillir.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Insecte">Mégacorne</span>
                     <span class="type-chip" data-type="Poison">Queue Poison</span>
@@ -473,7 +483,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 4 -->
             <article class="team-card">
               <div class="team-head">
@@ -487,11 +496,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/morgane/team-thumb/Mysdibule-RS.png"
-                  alt="Mysdibule"
-                />
-
+                <img alt="Mysdibule" decoding="async" height="848" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/team-thumb/Mysdibule-RS.webp" width="1100" />
                 <div class="team-content">
                   <p>
                     Extrêmement compétitive, Mysdibule est un Pokémon en recherche constante de puissance. Elle
@@ -503,7 +509,6 @@
                     pour les sucreries, qu'elle partage souvent avec Brutapode en grimpant sur sa tête pour se moquer
                     du style vestimentaire des passants.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Fée">Câlinerie</span>
                     <span class="type-chip" data-type="Ténèbres">Mâchouille</span>
@@ -513,7 +518,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 5 -->
             <article class="team-card">
               <div class="team-head">
@@ -527,11 +531,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/morgane/team-thumb/Bruyverne-XY.png"
-                  alt="Bruyverne"
-                />
-
+                <img alt="Bruyverne" decoding="async" height="799" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/team-thumb/Bruyverne-XY.webp" width="1100" />
                 <div class="team-content">
                   <p>
                     Morgane dormait les fenêtres ouvertes pendant une chaude nuit d’été lorsqu’un Sonistrelle
@@ -543,7 +544,6 @@
                     Bruyverne est terrifié des inconnus, préférant la solitude du toit de l’hôtel et
                     la compagnie de Morgane pendant ses pauses clopes.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Normal">Bang Sonique</span>
                     <span class="type-chip" data-type="Vol">Lame d'Air</span>
@@ -553,7 +553,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 6 -->
             <article class="team-card">
               <div class="team-head">
@@ -567,11 +566,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/morgane/team-thumb/345px-Embrylex-HGSS.png"
-                  alt="Embrylex"
-                />
-
+                <img alt="Embrylex" decoding="async" height="599" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/team-thumb/345px-Embrylex-HGSS.png" width="345" />
                 <div class="team-content">
                   <p>
                     Une véritable teigne. Embrylex est née d'un oeuf qu'un client reconnaissant a confié à Morgane.
@@ -594,12 +590,10 @@
             </article>
           </div>
         </section>
-
         <!-- Relations -->
         <section class="section" id="relations">
           <h2 class="section-title">Relations</h2>
           <div class="relation-cards">
-
             <!-- Relation 1 -->
             <div class="data-card">
               <div class="relation-head">
@@ -607,24 +601,27 @@
                 <span class="tag">[Nouvelle Famille]</span>
               </div>
               <div class="relation-body">
-                <img 
-                  src="../../../assets/images/oc-gallery/morgane/relations/Logo_Team_MZ_LPZA.png" 
-                  alt="Team MZ"
-                />
+                <img alt="Team MZ" decoding="async" height="458" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/relations/Logo_Team_MZ_LPZA.png" width="512" />
                 <div class="relation-content">
                   <p>
-                    Sa seconde famille. Malgré des tensions (surtout avec Boro) suite au décès d'A.Z., Morgane aime tendrement chacun de ses membres avec qui elle tient l'Hôtel Z.
+                    Sa seconde famille. Malgré des tensions (surtout avec Boro) suite au décès d'A.Z., Morgane aime
+                    tendrement chacun de ses membres avec qui elle tient l'Hôtel Z.
                   </p>
                   <p>
-                    Lorsqu'elle a originellement été ramenée par A.Z. ils l'ont accueillis à bras ouverts sans poser de question. Inno lui transmit son intérêt pour la mode, Boro devint son partenaire compétitif, et Rudi lui fit découvrir un visage nouveau d'Illumis. Elle veille sur eux, à distance, en prétendant ne pas être attachée.
+                    Lorsqu'elle a originellement été ramenée par A.Z. ils l'ont accueillis à bras ouverts sans poser de
+                    question. Inno lui transmit son intérêt pour la mode, Boro devint son partenaire compétitif, et Rudi
+                    lui fit découvrir un visage nouveau d'Illumis. Elle veille sur eux, à distance, en prétendant ne pas
+                    être attachée.
                   </p>
                   <p>
-                    Les trois sont aujourd'hui non seulement parmi les seules personnes en Illumis ayant connaissance de ses origines, mais aussi les seules avec qui elle s'autorise un brin de vulnérabilité de temps à autres.
+                    Les trois sont aujourd'hui non seulement parmi les seules personnes en Illumis ayant connaissance de
+                    ses origines, mais aussi les seules avec qui elle s'autorise un brin de vulnérabilité de temps à
+                    autres.
                   </p>
                 </div>
               </div>
             </div>
-
             <!-- Relation 2 -->
             <div class="data-card">
               <div class="relation-head">
@@ -632,24 +629,26 @@
                 <span class="tag">[Dette, amour, deuil et rancune]</span>
               </div>
               <div class="relation-body">
-                <img 
-                  src="../../../assets/images/oc-gallery/morgane/relations/A.Z.-LPZA.png" 
-                  alt="A.Z."
-                />
+                <img alt="A.Z." decoding="async" height="1054" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/relations/A.Z.-LPZA.webp" width="1100" />
                 <div class="relation-content">
                   <p>
                     A.Z. est une figure difficile dans la vie de Morgane, même post-mortem.
                   </p>
                   <p>
-                    Au-delà même de l'Ange et des mois de manipulations de la Team MZ contre sa propre arme, Morgane ne lui a jamais pardonné son décès. A.Z. savait qu'il était mourant, ayant arrangé ses propres funérailles, mais ne leur a rien dit. Pire encore : le soir où elle affronta l'Ange, il lui promit une discussion quand tout serait fini, seulement pour mourir avant.
+                    Au-delà même de l'Ange et des mois de manipulations de la Team MZ contre sa propre arme, Morgane ne
+                    lui a jamais pardonné son décès. A.Z. savait qu'il était mourant, ayant arrangé ses propres
+                    funérailles, mais ne leur a rien dit. Pire encore : le soir où elle affronta l'Ange, il lui promit
+                    une discussion quand tout serait fini, seulement pour mourir avant.
                   </p>
                   <p>
-                    Elle garde cependant des sentiments conflictuellement tendres à son égard, pour tout ce qu'il lui a donné. Pour avoir été la première personne à l'accepter comme elle était. Elle reprend beaucoup de ses maniérismes sans même s'en rendre compte.
+                    Elle garde cependant des sentiments conflictuellement tendres à son égard, pour tout ce qu'il lui a
+                    donné. Pour avoir été la première personne à l'accepter comme elle était. Elle reprend beaucoup de
+                    ses maniérismes sans même s'en rendre compte.
                   </p>
                 </div>
               </div>
             </div>
-
             <!-- Relation 3 -->
             <div class="data-card">
               <div class="relation-head">
@@ -657,29 +656,32 @@
                 <span class="tag">[Amie ?]</span>
               </div>
               <div class="relation-body">
-                <img 
-                  src="../../../assets/images/oc-gallery/morgane/relations/466px-Sprite_Millie_LPZA.png" 
-                  alt="Millie"
-                />
+                <img alt="Millie" decoding="async" height="599" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/relations/466px-Sprite_Millie_LPZA.png" width="466" />
                 <div class="relation-content">
                   <p>
-                    Détective de l'Agence Beladonis, Millie rencontra Morgane pour la première fois dans les rues d'Illumis il y a sept années.
+                    Détective de l'Agence Beladonis, Millie rencontra Morgane pour la première fois dans les rues
+                    d'Illumis il y a sept années.
                   </p>
                   <p>
-                    À l'époque proches et soudées, elle devinrent distantes quand Millie fut recueillie par un détective local.
-                    Morgane lui en voulut amèrement et vit les efforts de Millie pour garder le contact et l'aider comme de la pitié,
+                    À l'époque proches et soudées, elle devinrent distantes quand Millie fut recueillie par un détective
+                    local.
+                    Morgane lui en voulut amèrement et vit les efforts de Millie pour garder le contact et l'aider comme
+                    de la pitié,
                     coupant les ponts.
                   </p>
                   <p>
-                    Des années plus tard, elles reconnectèrent. Morgane, à présent à l'Hôtel Z, s'excusa à contre-coeur et elles
-                    réparent leur amitié passée depuis. Morgane passe souvent à l'agence pour l'aider sur des affaires, ou vérifier
-                    qu'elle ne travaille pas à des heures impossibles. Secrètement, Millie utilise de ses connexions pour s'assurer
+                    Des années plus tard, elles reconnectèrent. Morgane, à présent à l'Hôtel Z, s'excusa à contre-coeur
+                    et elles
+                    réparent leur amitié passée depuis. Morgane passe souvent à l'agence pour l'aider sur des affaires,
+                    ou vérifier
+                    qu'elle ne travaille pas à des heures impossibles. Secrètement, Millie utilise de ses connexions
+                    pour s'assurer
                     que le passé ne revienne pas hanter son amie.
                   </p>
                 </div>
               </div>
             </div>
-
             <!-- Relation 4 -->
             <div class="data-card">
               <div class="relation-head">
@@ -687,161 +689,171 @@
                 <span class="tag">[Conseiller indésirable]</span>
               </div>
               <div class="relation-body">
-                <img 
-                  src="../../../assets/images/oc-gallery/morgane/relations/L-LPZA.png" 
-                  alt="Lysandre"
-                />
+                <img alt="Lysandre" decoding="async" height="1100" loading="lazy"
+                  src="../../../assets/images/oc-gallery/morgane/relations/L-LPZA.webp" width="766" />
                 <div class="relation-content">
                   <p>
                     L'ancien boss de la Team Flare. Morgane ne sait pas trop que penser de lui. Elle a conscience
-                    de ses actes impardonnables d'il y a quelques années, mais ne peut s'empêcher de voir en lui la même pénitence
+                    de ses actes impardonnables d'il y a quelques années, mais ne peut s'empêcher de voir en lui la même
+                    pénitence
                     éternelle que portait A.Z..
                   </p>
                   <p>
                     Est-ce pour cela, ou car l'homme l'a aidée face à l'Ange en portant la volonté de Zygarde, elle ne
                     sait pas, mais elle se surprend à tolérer sa présence à chacune de leur rencontre. Lysandre apparait
-                    souvent à des moments propices pour porter des conseils qu'elle écoute, malgré elle. 
+                    souvent à des moments propices pour porter des conseils qu'elle écoute, malgré elle.
                   </p>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
-
         <!-- Galerie -->
         <section class="section" id="gallery">
           <h2 class="section-title">Galerie</h2>
           <div class="gallery-grid">
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/morgane/IMG_1038.JPG" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/IMG_1038.JPG" 
-                    alt="Img0">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1038.webp" rel="noopener" target="_blank">
+                  <img alt="Img0" decoding="async" height="1080" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1038.webp" width="1920" />
                 </a>
               </div>
               <p>In-Game Screenshot</p>
             </figure>
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/morgane/IMG_1723.JPG" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/IMG_1723.JPG" 
-                    alt="Img1">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1723.webp" rel="noopener" target="_blank">
+                  <img alt="Img1" decoding="async" height="1080" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1723.webp" width="1920" />
                 </a>
               </div>
               <p>In-Game Screenshot</p>
             </figure>
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/morgane/IMG_1849.jpg" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/IMG_1849.jpg" 
-                    alt="Img2">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1849.jpg" rel="noopener" target="_blank">
+                  <img alt="Img2" decoding="async" height="1080" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1849.jpg" width="1920" />
                 </a>
               </div>
               <p>In-Game Screenshot</p>
             </figure>
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/morgane/IMG_1850.jpg" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/IMG_1850.jpg" 
-                    alt="Img3">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1850.jpg" rel="noopener" target="_blank">
+                  <img alt="Img3" decoding="async" height="1080" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1850.jpg" width="1920" />
                 </a>
               </div>
               <p>In-Game Screenshot</p>
             </figure>
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/morgane/IMG_1087.JPG" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/IMG_1087.JPG" 
-                    alt="Img4">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1087.JPG" rel="noopener" target="_blank">
+                  <img alt="Img4" decoding="async" height="1920" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1087.JPG" width="1080" />
                 </a>
               </div>
               <p>In-Game Screenshot</p>
             </figure>
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/morgane/IMG_1043.JPG" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/IMG_1043.JPG" 
-                    alt="Img5">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1043.JPG" rel="noopener" target="_blank">
+                  <img alt="Img5" decoding="async" height="1080" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1043.JPG" width="1920" />
                 </a>
               </div>
               <p>In-Game Screenshot</p>
             </figure>
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/morgane/IMG_1010.JPG" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/morgane/IMG_1010.JPG" 
-                    alt="Img6">
+                <a href="../../../assets/images/oc-gallery/morgane/IMG_1010.webp" rel="noopener" target="_blank">
+                  <img alt="Img6" decoding="async" height="1659" loading="lazy"
+                    src="../../../assets/images/oc-gallery/morgane/IMG_1010.webp" width="1080" />
                 </a>
               </div>
               <p>In-Game Screenshot</p>
             </figure>
           </div>
         </section>
-
         <!-- Anecdotes -->
         <section class="section" id="trivia">
           <h2 class="section-title">Anecdotes</h2>
           <ul>
             <li>
-              Peu de gens le savent, mais Morgane joue d'un instrument. Elle garde une basse dans sa chambre, dont personne d'autre que ses Pokémon n'a jamais entendu le son. 
+              Peu de gens le savent, mais Morgane joue d'un instrument. Elle garde une basse dans sa chambre, dont
+              personne d'autre que ses Pokémon n'a jamais entendu le son.
             </li>
             <li>
-              Morgane n’est pas son vrai nom, même si elle garde ce détail jalousement pour elle. C’est juste un nom qu’elle a trouvé dans la panique, un jour où elle essayait de dissimuler son passé, inspiré de façon embarrassante par une star de cinéma sur qui elle avait un crush. Il lui est resté depuis. 
+              Morgane n’est pas son vrai nom, même si elle garde ce détail jalousement pour elle. C’est juste un nom
+              qu’elle a trouvé dans la panique, un jour où elle essayait de dissimuler son passé, inspiré de façon
+              embarrassante par une star de cinéma sur qui elle avait un crush. Il lui est resté depuis.
             </li>
             <li>
-              De toute la team MZ, Morgane est la première à se lever le matin, malgré ses habitudes nocturnes. Dans le chaos ambulant de leur quotidien, elle est une présence ferme et constante qui s'assure que les choses soient faites. Elle rappelle à Rudi sa répétition de danse, prépare un café pour Inno avant même qu'il n'émerge de ses draps, et réveille Boro juste à temps pour qu'il soit à l'heure à son travail.
+              De toute la team MZ, Morgane est la première à se lever le matin, malgré ses habitudes nocturnes. Dans le
+              chaos ambulant de leur quotidien, elle est une présence ferme et constante qui s'assure que les choses
+              soient faites. Elle rappelle à Rudi sa répétition de danse, prépare un café pour Inno avant même qu'il
+              n'émerge de ses draps, et réveille Boro juste à temps pour qu'il soit à l'heure à son travail.
             </li>
             <li>
-              Semblant active à toute heure de la journée et de la nuit, Morgane rattrape souvent son sommeil par des siestes rapides là où personne ne la trouvera en milieu de journée.
+              Semblant active à toute heure de la journée et de la nuit, Morgane rattrape souvent son sommeil par des
+              siestes rapides là où personne ne la trouvera en milieu de journée.
             </li>
             <li>
-              Morgane captura officiellement son Grenousse il y a cinq ans, bien qu'ils se soient rencontrés bien avant. Elle fit du pickpocket durant une célébration pour les héros ayant stoppé la Team Flare afin d'acheter une Poké Ball, quand être accompagnée portout par un Pokémon sauvage devint un risque trop important pour l'oeil des autoritées.
+              Morgane captura officiellement son Grenousse il y a cinq ans, bien qu'ils se soient rencontrés bien avant.
+              Elle fit du pickpocket durant une célébration pour les héros ayant stoppé la Team Flare afin d'acheter une
+              Poké Ball, quand être accompagnée portout par un Pokémon sauvage devint un risque trop important pour
+              l'oeil des autoritées.
             </li>
             <li>
-              Morgane câche une seule honte : elle est désespérément mauvaise à tous types de jeux vidéos. Elle n'a jamais vraiment compris l'intérêt du médium et, malgré les efforts de ses amis, elle n'a jamais pu s'y mettre. Narica se vengea une fois de ses humiliations répétées en combats Pokémon en l'affrontant à un jeu de combat en live. A ce jour, toutes les rediffusions de ce match ont mystérieusement disparu.
+              Morgane câche une seule honte : elle est désespérément mauvaise à tous types de jeux vidéos. Elle n'a
+              jamais vraiment compris l'intérêt du médium et, malgré les efforts de ses amis, elle n'a jamais pu s'y
+              mettre. Narica se vengea une fois de ses humiliations répétées en combats Pokémon en l'affrontant à un jeu
+              de combat en live. A ce jour, toutes les rediffusions de ce match ont mystérieusement disparu.
             </li>
           </ul>
         </section>
-
         <!-- Références -->
         <section class="section" id="refs">
           <h2 class="section-title">Note de l'Auteur</h2>
           <div class="refs">
             <p>
-              <em>Légendes Pokémon : Z-A</em> est un jeu qui m'a marqué pour des raisons personnelles. Et parmi ces raisons, son écriture ne figure pas vraiment.
+              <em>Légendes Pokémon : Z-A</em> est un jeu qui m'a marqué pour des raisons personnelles. Et parmi ces
+              raisons, son écriture ne figure pas vraiment.
             </p>
             <p>
-              Les personnages sont très sympathiques et colorés, l'aventure est divertissante et les enjeux sont pesants, mais l'exécution des thèmes abordés ne m'a que peu touchés, personnellement. <em>Z-A</em> parle d'entraide entre les gens, de la façon dont nous pouvons avancer main dans la main pour construire un meilleur lendemain. Et ce, de façon au final assez plate et creuse. L'écriture se refuse aux relations complexes et reste dépourvue de véritables conflits interpersonnels.            </p>
+              Les personnages sont très sympathiques et colorés, l'aventure est divertissante et les enjeux sont
+              pesants, mais l'exécution des thèmes abordés ne m'a que peu touchés, personnellement. <em>Z-A</em> parle
+              d'entraide entre les gens, de la façon dont nous pouvons avancer main dans la main pour construire un
+              meilleur lendemain. Et ce, de façon au final assez plate et creuse. L'écriture se refuse aux relations
+              complexes et reste dépourvue de véritables conflits interpersonnels. </p>
             <p>
-              Ce n'est aucunement une mauvaise chose, en soi. Mais je mentirai si je prétendais que le jeu ne m'avait pas, malgré tout, laissé sur ma faim.
+              Ce n'est aucunement une mauvaise chose, en soi. Mais je mentirai si je prétendais que le jeu ne m'avait
+              pas, malgré tout, laissé sur ma faim.
             </p>
             <p>
-              Ainsi, Morgane est un personnage pensé pour "salir" ce monde parfait. Pour introduire des tensions dans ce récit idéalisé, tout en restant fidèle aux thèmes d'entraide et d'amitié si chers à la série Pokémon.
+              Ainsi, Morgane est un personnage pensé pour "salir" ce monde parfait. Pour introduire des tensions dans ce
+              récit idéalisé, tout en restant fidèle aux thèmes d'entraide et d'amitié si chers à la série Pokémon.
             </p>
             <p>
-              Le visuel était déjà établi, il me fallait seulement trouver un lore et un nom : Morgane. Un nom déjà trop parfait, ancré dans mon esprit bien avant que je me rende compte qu'il était déjà attribué à un personnage existant de Pokémon. Oups !
+              Le visuel était déjà établi, il me fallait seulement trouver un lore et un nom : Morgane. Un nom déjà trop
+              parfait, ancré dans mon esprit bien avant que je me rende compte qu'il était déjà attribué à un personnage
+              existant de Pokémon. Oups !
             </p>
             <p>
-              S'en est suivi l'écriture d'une scène one-shot pour le personnage : <em>At the Edge of Lumiose's Lights</em>. Et le reste, vous le connaissez.
+              S'en est suivi l'écriture d'une scène one-shot pour le personnage : <em>At the Edge of Lumiose's
+                Lights</em>. Et le reste, vous le connaissez.
             </p>
           </div>
         </section>
-
         <!-- Note de bas de page -->
         <div class="footer-note">
           L'Atelier des Rêves ouvre ses portes à tout le monde. Explorez, créez, partagez.
         </div>
-
       </article>
     </main>
   </div>
 </body>
+
 </html>

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Alex — Tutupedia</title>
-  <link rel = "icon" type="image/webp" href="../../../assets/images/tutupedia_logo.webp">
-
+  <link href="../../../assets/images/tutupedia_logo.webp" rel="icon" type="image/webp" />
   <!-- CSS du bandeau global -->
-  <link rel="stylesheet" href="../../../assets/css/header.css" />
-  <link rel="stylesheet" href="../../../assets/css/global-header-pokewiki.css" />
-
+  <link href="../../../assets/css/header.css" rel="stylesheet">
+  <link href="../../../assets/css/global-header-pokewiki.css" rel="stylesheet" />
   <!-- CSS propre à la page OC -->
-  <link rel="stylesheet" href="../../../assets/css/pokewiki-oc.css" />
-
+  <link href="../../../assets/css/pokewiki-oc.css" rel="stylesheet" />
   <!-- CSS de la fonctionnalité audio YouTube -->
-  <link rel="stylesheet" href="../../../assets/css/youtube-audio.css" />
-
+  <link href="../../../assets/css/youtube-audio.css" rel="stylesheet" />
   <style>
-    :root{
+    :root {
       /* --accent: #84b93f; */
       --hover-bar: #AACEF3;
     }
@@ -27,30 +25,22 @@
       border-bottom: 1px solid #d0dfb4;
     }
   </style>
-
   <!-- JS de la page -->
-  <script src="../../../assets/js/pokewiki-oc.js" defer></script>
-
+  <script defer="" src="../../../assets/js/pokewiki-oc.js"></script>
   <!-- JS du bandeau global -->
-  <script src="../../../assets/js/header.js" defer></script>
-
+  <script defer="" src="../../../assets/js/header.js"></script>
   <!-- JS de la fonctionnalité audio YouTube -->
-  <script src="../../../assets/js/youtube-audio.js" defer></script>
-  <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+  <script defer="" src="../../../assets/js/youtube-audio.js"></script>
+  <link href="../../../assets/css/responsive.css" rel="stylesheet" />
+  <link href="../../../assets/css/performance.css" rel="stylesheet" />
 </head>
 
-<body
-  data-nav-theme="ocs"
-  data-global-header-style="pokewiki"
-  data-site-title="TUTUPEDIA"
-  data-site-logo="" 
-  data-site-tagline="The Turnute-driven Pokémon Encyclopedia"
->
+<body data-global-header-style="pokewiki" data-nav-theme="ocs" data-site-logo=""
+  data-site-tagline="The Turnute-driven Pokémon Encyclopedia" data-site-title="TUTUPEDIA">
   <!-- Bandeau global injecté ici -->
   <div id="site-header"></div>
-
   <div class="page-shell">
-    <aside class="sidebar" aria-label="Barre latérale">
+    <aside aria-label="Barre latérale" class="sidebar">
       <section class="side-card">
         <h2>Navigation</h2>
         <div class="content">
@@ -65,58 +55,65 @@
           </ul>
         </div>
       </section>
-
       <section class="side-card">
         <h2>Bande Son</h2>
         <div class="content" style="display: flex; justify-content: center;">
-          <div class="yt-audio-trigger card"
-            data-youtube="https://youtu.be/QWhWCpia3RI?si=aYlVoTNcycCVaZSg"
-            tabindex="0"
-            role="button"
-          >
-            <img src="../../../assets/images/oc-gallery/alex/album-cover.jpg" alt="Cover" />
-            <p><a href="https://youtu.be/QWhWCpia3RI?si=aYlVoTNcycCVaZSg" target="_blank" rel="noopener"><em>130Grit Sound Studio</em></a></p>
+          <div class="yt-audio-trigger card" data-youtube="https://youtu.be/QWhWCpia3RI?si=aYlVoTNcycCVaZSg"
+            role="button" tabindex="0">
+            <img alt="Cover" decoding="async" height="240" src="../../../assets/images/oc-gallery/alex/album-cover.jpg"
+              width="240" />
+            <p><a href="https://youtu.be/QWhWCpia3RI?si=aYlVoTNcycCVaZSg" rel="noopener" target="_blank"><em>130Grit
+                  Sound Studio</em></a></p>
           </div>
         </div>
       </section>
     </aside>
-
     <main class="page">
-      <div class="page-tabs" aria-label="Onglets de page">
+      <div aria-label="Onglets de page" class="page-tabs">
         <a class="tab-link active" href="#">Article</a>
       </div>
-
       <article class="article">
         <!-- Outils mobiles -->
         <div class="mobile-tools">
           <button class="mini-btn" id="sidebarToggle" type="button">Afficher la barre latérale</button>
         </div>
-
         <!-- Contenu de l'article -->
         <!-- En-tête -->
         <header class="article-header" id="intro">
           <h1>Alex</h1>
           <div class="subtitle">Un poil dans la main, et le pied sous l'eau.</div>
         </header>
-
         <!-- Infobox -->
-        <aside class="infobox infobox-float" aria-label="Infobox personnage">
+        <aside aria-label="Infobox personnage" class="infobox infobox-float">
           <div class="infobox-title">Alex</div>
           <div class="infobox-subtitle">Champion d'Arène</div>
           <div class="portrait">
             <div class="portrait-frame">
-              <img 
-                src="../../../assets/images/oc-gallery/alex/alex-santithur.png"
-                alt="Alex"
-              />
+              <img alt="Alex" decoding="async" height="1368"
+                src="../../../assets/images/oc-gallery/alex/alex-santithur.png" width="1196" />
             </div>
           </div>
           <table class="ibox-table">
-            <tr><th>Région</th><td>Jotho</td></tr>
-            <tr><th>Âge</th><td>22 ans</td></tr>
-            <tr><th>Genre</th><td>Masculin</td></tr>
-            <tr><th>Orientation</th><td>Gay</td></tr>
-            <tr><th>Occupation</th><td>Champion d'Arène, menace des bibliothèques</td></tr>
+            <tr>
+              <th>Région</th>
+              <td>Jotho</td>
+            </tr>
+            <tr>
+              <th>Âge</th>
+              <td>22 ans</td>
+            </tr>
+            <tr>
+              <th>Genre</th>
+              <td>Masculin</td>
+            </tr>
+            <tr>
+              <th>Orientation</th>
+              <td>Gay</td>
+            </tr>
+            <tr>
+              <th>Occupation</th>
+              <td>Champion d'Arène, menace des bibliothèques</td>
+            </tr>
             <tr>
               <th>Spécialité</th>
               <td>
@@ -125,82 +122,76 @@
                 </div>
               </td>
             </tr>
-            <tr><th>Design</th><td>Tresse enfantine, maillot de bain et tongs, bracelet de perles</td></tr>
-            <tr><th>Ville</th><td><a href="https://www.pokepedia.fr/Ville_Griotte">Ville Griotte</a></td></tr>
-            <tr><th>Badge</th><td>Badge Ondes</td></tr>
-            <tr><th>Nature</th><td>Relax</td></tr>
+            <tr>
+              <th>Design</th>
+              <td>Tresse enfantine, maillot de bain et tongs, bracelet de perles</td>
+            </tr>
+            <tr>
+              <th>Ville</th>
+              <td><a href="https://www.pokepedia.fr/Ville_Griotte">Ville Griotte</a></td>
+            </tr>
+            <tr>
+              <th>Badge</th>
+              <td>Badge Ondes</td>
+            </tr>
+            <tr>
+              <th>Nature</th>
+              <td>Relax</td>
+            </tr>
           </table>
         </aside>
-
         <!-- Contenu principal -->
         <section class="lead">
-          <p><b>Alex</b>, tout nouveau Champion d'Arène de la région de Jotho, est un homme trans qui aime 
+          <p><b>Alex</b>, tout nouveau Champion d'Arène de la région de Jotho, est un homme trans qui aime
             se laisser porter par le courant.</p>
-
           <p>Son attitude décontractée et facile à vivre fait de lui un adversaire apprécié en début
             de parcours dans le circuit des Arènes de la région, surtout auprès des plus jeunes Dresseurs...
             quand ils parviennent à le trouver. Alex suit rarement un emploi du temps fixe et n'accepte
             que les challengers qui éveillent son intérêt.
           </p>
-
           <p>
             Cette attitude amène souvent les gens à le qualifier de "paresseux" et, pour cette raison,
             à le sous-estimer. Alex cherche rarement à les contredire, il lui arrive vraiment d'oublier
             ses propres matchs d'Arène après tout. Il se demande parfois pourquoi on lui a confié ce poste,
             mais continue à faire de son mieux malgré tout.
           </p>
-
           <p>
-            Il joue sur les idées reçues à son sujet, et aime surprendre les challengers qui s'attendent à un combat facile.
+            Il joue sur les idées reçues à son sujet, et aime surprendre les challengers qui s'attendent à un combat
+            facile.
           </p>
-
           <div class="quote-box">
             « C'est pas toi qui contrôles la marée, gamin ! Suis un peu, et tâche de pas te noyer. »
           </div>
-
           <div class="team-icons">
             <table>
               <tr>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_195.png" 
-                    alt="Maraiste"
-                  />
+                  <img alt="Maraiste" decoding="async" height="56" loading="lazy"
+                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_195.png" width="56" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_158.png" 
-                    alt="Kaiminus"
-                  />
+                  <img alt="Kaiminus" decoding="async" height="56" loading="lazy"
+                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_158.png" width="56" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_131.png" 
-                    alt="Lokhlass"
-                  />
+                  <img alt="Lokhlass" decoding="async" height="56" loading="lazy"
+                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_131.png" width="56" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_130_s.png" 
-                    alt="Léviator Rouge"
-                  />
+                  <img alt="Léviator Rouge" decoding="async" height="56" loading="lazy"
+                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_130_s.png" width="56" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_134.png" 
-                    alt="Aquali"
-                  />
+                  <img alt="Aquali" decoding="async" height="56" loading="lazy"
+                    src="../../../assets/images/oc-gallery/alex/team-icons/Spr_2c_134.png" width="56" />
                 </td>
                 <td>
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/team-icons/Pokémon-Icon_490a_SDLP.png" 
-                    alt="Oeuf de Manaphy"
-                  />
+                  <img alt="Oeuf de Manaphy"
+                    src="../../../assets/images/oc-gallery/alex/team-icons/pokemon-icon-490a-sdlp.png" />
                 </td>
               </tr>
             </table>
           </div>
-
           <nav class="toc" id="toc">
             <div class="toc-header">
               <h2>Sommaire</h2>
@@ -219,69 +210,64 @@
             </div>
           </nav>
         </section>
-
         <!-- Sections principales -->
         <!-- Personnalité -->
         <section class="section" id="personality">
-            <h2 class="section-title">Personnalité</h2>
-
-            <div class="traits-grid">
-                <article class="trait-card positive">
-                <h3>Positifs</h3>
-                <ul>
-                    <li>Perspicace</li>
-                    <li>Patient</li>
-                    <li>Encourageant</li>
-                </ul>
-                </article>
-
-                <article class="trait-card neutral">
-                <h3>Neutres</h3>
-                <ul>
-                    <li>Décontracté</li>
-                    <li>Nonchalant</li>
-                    <li>Taquin</li>
-                </ul>
-                </article>
-
-                <article class="trait-card negative">
-                <h3>Négatifs</h3>
-                <ul>
-                    <li>Fuyant</li>
-                    <li>Procrastinateur</li>
-                    <li>Constamment en retard</li>
-                </ul>
-                </article>
-            </div>
-        
-            <p>
-                Avec son attitude décontractée et détendue, il n'est pas rare de trouver Alex en train de somnoler
-                sur le rivage plutôt que de faire son boulot à l'Arène. Il a la mauvaise habitude de gérer les
-                problèmes en dormant jusqu'à ce qu'ils disparaissent. Cela dit, quand c'est important, il répond présent.
-                Pour la ville, ses habitants, et ses Pokémons.
-            </p>
-            <p>
-                Alex est souvent sous-estimé, et il aime alimenter l'image "paresseuse" que les gens ont de lui,
-                s'en servant à son avantage. Il peut se montrer rusé et impitoyable quand il le veut, frappant
-                là où ça fait le plus mal. Il est cependant bienveillant et préfère taquiner ses adversaires
-                et plaisanter avec eux.
-            </p>
-            <p>
-                Il représente une bonne présence pour les jeunes Dresseurs, car il perçoit bien leurs forces et leurs 
-                faiblesses, et constitue une influence très positive dans leur développement.
-            </p>
-            <p>
-                Passant le plus clair de son temps à nager et à dormir sur le rivage de Ville Griotte, Alex est passionné
-                par les mythes et légendes de la région. On le voit souvent un livre d'histoire à la main, prenant des notes
-                dans un petit carnet à mesure qu'il recueille des informations auprès des anciens qui racontent des histoires
-                auxquelles plus personne ne prête attention. 
-            </p>
-            <p>
-                C'est un nerd qui dévore des romans d'aventure, de fantasy et de romance entre deux baignades. Alex cite
-                souvent ses lectures sans même s'en rendre compte.
-            </p>
+          <h2 class="section-title">Personnalité</h2>
+          <div class="traits-grid">
+            <article class="trait-card positive">
+              <h3>Positifs</h3>
+              <ul>
+                <li>Perspicace</li>
+                <li>Patient</li>
+                <li>Encourageant</li>
+              </ul>
+            </article>
+            <article class="trait-card neutral">
+              <h3>Neutres</h3>
+              <ul>
+                <li>Décontracté</li>
+                <li>Nonchalant</li>
+                <li>Taquin</li>
+              </ul>
+            </article>
+            <article class="trait-card negative">
+              <h3>Négatifs</h3>
+              <ul>
+                <li>Fuyant</li>
+                <li>Procrastinateur</li>
+                <li>Constamment en retard</li>
+              </ul>
+            </article>
+          </div>
+          <p>
+            Avec son attitude décontractée et détendue, il n'est pas rare de trouver Alex en train de somnoler
+            sur le rivage plutôt que de faire son boulot à l'Arène. Il a la mauvaise habitude de gérer les
+            problèmes en dormant jusqu'à ce qu'ils disparaissent. Cela dit, quand c'est important, il répond présent.
+            Pour la ville, ses habitants, et ses Pokémons.
+          </p>
+          <p>
+            Alex est souvent sous-estimé, et il aime alimenter l'image "paresseuse" que les gens ont de lui,
+            s'en servant à son avantage. Il peut se montrer rusé et impitoyable quand il le veut, frappant
+            là où ça fait le plus mal. Il est cependant bienveillant et préfère taquiner ses adversaires
+            et plaisanter avec eux.
+          </p>
+          <p>
+            Il représente une bonne présence pour les jeunes Dresseurs, car il perçoit bien leurs forces et leurs
+            faiblesses, et constitue une influence très positive dans leur développement.
+          </p>
+          <p>
+            Passant le plus clair de son temps à nager et à dormir sur le rivage de Ville Griotte, Alex est passionné
+            par les mythes et légendes de la région. On le voit souvent un livre d'histoire à la main, prenant des notes
+            dans un petit carnet à mesure qu'il recueille des informations auprès des anciens qui racontent des
+            histoires
+            auxquelles plus personne ne prête attention.
+          </p>
+          <p>
+            C'est un nerd qui dévore des romans d'aventure, de fantasy et de romance entre deux baignades. Alex cite
+            souvent ses lectures sans même s'en rendre compte.
+          </p>
         </section>
-
         <!-- Apparence -->
         <section class="section" id="appearance">
           <h2 class="section-title">Apparence</h2>
@@ -291,7 +277,7 @@
             <div style="background-color: #FCE089;" title="#FCE089"></div>
             <div style="background-color: #EBA54A;" title="#EBA54A"></div>
             <div style="background-color: #68413B;" title="#68413B"></div>
-          </div> 
+          </div>
           <div class="columns-2">
             <div class="data-card">
               <h3>Design général</h3>
@@ -303,76 +289,74 @@
             <div class="data-card">
               <h3>Cicatrices notables</h3>
               <ul>
-                <li>Une légère marque traversant l'arête du nez, laissée par un rocher coupant la nuit où il est tombé du ciel</li>
+                <li>Une légère marque traversant l'arête du nez, laissée par un rocher coupant la nuit où il est tombé
+                  du ciel</li>
                 <li>Des cicatrices de torsoplastie, datant d'avant sa chute</li>
               </ul>
             </div>
           </div>
         </section>
-
         <!-- Bio -->
         <section class="section" id="bio">
           <h2 class="section-title">Biographie</h2>
-
-          <div class="tab-controls" aria-label="Onglets biographie">
+          <div aria-label="Onglets biographie" class="tab-controls">
             <button class="tab-btn active" data-tab="past" type="button">Origines</button>
             <button class="tab-btn" data-tab="journey" type="button">Première Année</button>
             <button class="tab-btn" data-tab="current" type="button">Champion d'Arène</button>
           </div>
-
           <div class="tab-panel active" data-panel="past">
             <p>
-                On sait peu de choses des origines d'Alex, qui est apparu il y a trois ans à Ville Griotte,
-                après être tombé dans la mer depuis une <b><a href="https://www.pokepedia.fr/Ultra-Br%C3%A8che" target="_blank">Ultra-Brèche</a></b>.
-                Ramené sur la rive par un vaillant Axoloto, Alex souffre (comme d'autres "Imprégnés" avant lui) d'amnésie et ne
-                sait presque rien de lui-même, hormis son nom et un étrange caillou dans sa poche gauche.
+              On sait peu de choses des origines d'Alex, qui est apparu il y a trois ans à Ville Griotte,
+              après être tombé dans la mer depuis une <b><a href="https://www.pokepedia.fr/Ultra-Br%C3%A8che"
+                  target="_blank">Ultra-Brèche</a></b>.
+              Ramené sur la rive par un vaillant Axoloto, Alex souffre (comme d'autres "Imprégnés" avant lui) d'amnésie
+              et ne
+              sait presque rien de lui-même, hormis son nom et un étrange caillou dans sa poche gauche.
             </p>
             <p>
-                Alex fut généreusement accueilli par les habitants de Ville Griotte, et se remis rapidement
-                de cette épreuve. On lui donna un toit, de quoi manger, ainsi qu'une Poké Ball pour le Pokémon qui ne quittait
-                pas son côté. Reconnaissant pour l'aide qu'on lui apporta à ses débuts, Alex cherche encore à leur rendre
-                la pareille - même si on lui répète qu'il n'en a pas besoin - en aidant de toutes les façons possibles :
-                porter les courses d'une vieille dame, divertir les enfants, ou s'occuper des Pokémons en difficulté, chose pour
-                laquelle il se découvrit un talent surprenant.
+              Alex fut généreusement accueilli par les habitants de Ville Griotte, et se remis rapidement
+              de cette épreuve. On lui donna un toit, de quoi manger, ainsi qu'une Poké Ball pour le Pokémon qui ne
+              quittait
+              pas son côté. Reconnaissant pour l'aide qu'on lui apporta à ses débuts, Alex cherche encore à leur rendre
+              la pareille - même si on lui répète qu'il n'en a pas besoin - en aidant de toutes les façons possibles :
+              porter les courses d'une vieille dame, divertir les enfants, ou s'occuper des Pokémons en difficulté,
+              chose pour
+              laquelle il se découvrit un talent surprenant.
             </p>
             <p>
-                C'est durant cette période qu'il rencontra pour la première fois
-                <b><a href="https://www.pokepedia.fr/Peter" target="_blank">Peter</a></b>,
-                célèbre Dresseur de dragons et alors Maître de la ligue Indigo, qui enquêtait sur l'apparition
-                soudaine de l'Ultra-Brêche. L'homme devint rapidement un ami et un mentor, qui continua à lui
-                rendre visite de manière semi-régulière au fil des années.
+              C'est durant cette période qu'il rencontra pour la première fois
+              <b><a href="https://www.pokepedia.fr/Peter" target="_blank">Peter</a></b>,
+              célèbre Dresseur de dragons et alors Maître de la ligue Indigo, qui enquêtait sur l'apparition
+              soudaine de l'Ultra-Brêche. L'homme devint rapidement un ami et un mentor, qui continua à lui
+              rendre visite de manière semi-régulière au fil des années.
             </p>
           </div>
-
           <div class="tab-panel" data-panel="journey">
             <p>
-                Sa première expérience de noyade laissa cependant des traces, si bien qu'il
-                évita consciencieusement le bord de mer. Pourtant, au fond de lui, il en avait la nostalgie.
-                Alors, malgré la terreur qui le saisissait à chaque fois qu'il posait le pied sur le sable,
-                il affronta encore et encore sa plus grande peur. Cela pris des mois, mais il finit par pouvoir
-                sereinement tremper les orteils dans l'eau. Puis le pied, la cheville, la jambe, la taille...
-                jusqu'à tout le corps.
+              Sa première expérience de noyade laissa cependant des traces, si bien qu'il
+              évita consciencieusement le bord de mer. Pourtant, au fond de lui, il en avait la nostalgie.
+              Alors, malgré la terreur qui le saisissait à chaque fois qu'il posait le pied sur le sable,
+              il affronta encore et encore sa plus grande peur. Cela pris des mois, mais il finit par pouvoir
+              sereinement tremper les orteils dans l'eau. Puis le pied, la cheville, la jambe, la taille...
+              jusqu'à tout le corps.
             </p>
             <p>
-                Avec le temps, il devint capable de se baigner et nager librement, sans que la peur ne le retienne.
+              Avec le temps, il devint capable de se baigner et nager librement, sans que la peur ne le retienne.
             </p>
           </div>
-
           <div class="tab-panel" data-panel="current">
-            <p>Environ un an et demi après son arrivée dans la région, Ville Griotte reçut de nouveau la 
-                visite de Peter, désormais détrôné pour la seconde fois de son titre de Maître de la Ligue.
-                C’est à cette époque que Frédo, le Champion d’Arène de type Glace d’Acajou, prit sa retraite.
-                Parcourant la région à la recherche d’un remplaçant, Jotho ayant besoin d’un nouveau Champion d’Arène,
-                Peter vit en Alex quelque chose qu’il avait remarqué chez lui au fil des années, et le nomma
-                Champion d’Arène.</p>
+            <p>Environ un an et demi après son arrivée dans la région, Ville Griotte reçut de nouveau la
+              visite de Peter, désormais détrôné pour la seconde fois de son titre de Maître de la Ligue.
+              C’est à cette époque que Frédo, le Champion d’Arène de type Glace d’Acajou, prit sa retraite.
+              Parcourant la région à la recherche d’un remplaçant, Jotho ayant besoin d’un nouveau Champion d’Arène,
+              Peter vit en Alex quelque chose qu’il avait remarqué chez lui au fil des années, et le nomma
+              Champion d’Arène.</p>
             <p>Déconcerté mais flatté, Alex accepta, et continue depuis lors à faire de son mieux.</p>
           </div>
         </section>
-
         <!-- Équipe Pokémon -->
         <section class="section" id="team">
           <h2 class="section-title">Équipe Pokémon</h2>
-
           <div class="team-grid">
             <!-- Pokémon 1 -->
             <article class="team-card">
@@ -387,11 +371,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/alex/team-thumb/Maraiste-OA.png"
-                  alt="Maraiste"
-                />
-
+                <img alt="Maraiste" decoding="async" height="240" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/team-thumb/Maraiste-OA.png" width="260" />
                 <div class="team-content">
                   <p>Maraiste a quitté son lac natal très jeune, alors qu'il n'était qu'un Axoloto
                     désireux de parcourir le monde. Tout a changé le jour où Alex lui est littéralement
@@ -402,7 +383,6 @@
                     Il a tendance à faire la sieste n'importe où sans même prendre la peine de
                     fermer les yeux depuis son évolution.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Eau">Hydro-Queue</span>
                     <span class="type-chip" data-type="Sol">Boue-Bombe</span>
@@ -412,7 +392,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 2 -->
             <article class="team-card">
               <div class="team-head">
@@ -425,20 +404,18 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/alex/team-thumb/Kaiminus-OA.png"
-                  alt="Kaiminus"
-                />
-
+                <img alt="Kaiminus" decoding="async" height="822" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/team-thumb/Kaiminus-OA.webp" width="1100" />
                 <div class="team-content">
                   <p>
-                    Abandonné par son précédent dresseur, Alex a recueilli ce très jeune Pokémon très tôt dans sa carrière.
-                </p>
-                <p>
-                    Kaiminus est un pur concentré de joie et d'énergie, vibrant frénétiquement d'excitation à l'idée de faire et de mordre
+                    Abandonné par son précédent dresseur, Alex a recueilli ce très jeune Pokémon très tôt dans sa
+                    carrière.
+                  </p>
+                  <p>
+                    Kaiminus est un pur concentré de joie et d'énergie, vibrant frénétiquement d'excitation à l'idée de
+                    faire et de mordre
                     à peu près n'importe quoi.
-                </p>
-
+                  </p>
                   <div class="moves">
                     <span class="type-chip" data-type="Eau">Pistolet à O</span>
                     <span class="type-chip" data-type="Eau">Hydrocanon</span>
@@ -448,7 +425,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 3 -->
             <article class="team-card">
               <div class="team-head">
@@ -462,23 +438,18 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/alex/team-thumb/Lokhlass-RB.png"
-                  alt="Lokhlass"
-                />
-
+                <img alt="Lokhlass" decoding="async" height="916" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/team-thumb/Lokhlass-RB.png" width="885" />
                 <div class="team-content">
                   <p>
                     La "mère" de l'équipe... et d'Alex aussi. Elle le traînera jusqu'à ses responsabilités
                     s'il le faut.
                   </p>
-
                   <p>
                     Ils se sont rencontrés lors d'un incident dans les Caves Jumelles, où elle a aidé
                     Alex à sauver des Dresseurs d'un éboulement. Froide envers les inconnus, Lokhlass est
                     protectrice et attentionnée avec ceux qu'elle aime.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Eau">Surf</span>
                     <span class="type-chip" data-type="Glace">Laser Glace</span>
@@ -488,7 +459,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 4 -->
             <article class="team-card">
               <div class="team-head">
@@ -502,11 +472,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/alex/team-thumb/ZYZkAgT.png"
-                  alt="Léviator Rouge"
-                />
-
+                <img alt="Léviator Rouge" decoding="async" height="500" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/team-thumb/ZYZkAgT.png" width="638" />
                 <div class="team-content">
                   <p>
                     Le célébrissime "Léviator Rouge" du Lac Colère, au nord d'Écorcia.
@@ -514,9 +481,9 @@
                   </p>
                   <p>
                     Léviator est un Pokémon marqué par un traumatisme profond et des problèmes de colère
-                    qu'Alex a l'habitude d'apaiser. Il respecte Lokhlass, et se montre surprenamment patient avec Kaiminus.
+                    qu'Alex a l'habitude d'apaiser. Il respecte Lokhlass, et se montre surprenamment patient avec
+                    Kaiminus.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Eau">Cascade</span>
                     <span class="type-chip" data-type="Dragon">Colère</span>
@@ -526,7 +493,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 5 -->
             <article class="team-card">
               <div class="team-head">
@@ -539,11 +505,8 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/alex/team-thumb/Aquali-RV.png"
-                  alt="Aquali"
-                />
-
+                <img alt="Aquali" decoding="async" height="784" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/team-thumb/Aquali-RV.png" width="708" />
                 <div class="team-content">
                   <p>
                     Extrêmement paresseux, les passes-temps favoris d'Aquali incluent : faire la sieste,
@@ -554,7 +517,6 @@
                   <p>
                     Aquali a été offert à Alex sous la forme d'un Évoli pour son anniversaire par son amie, Jasmine.
                   </p>
-
                   <div class="moves">
                     <span class="type-chip" data-type="Eau">Ébullition</span>
                     <span class="type-chip" data-type="Psy">Repos</span>
@@ -564,7 +526,6 @@
                 </div>
               </div>
             </article>
-
             <!-- Pokémon 6 -->
             <article class="team-card">
               <div class="team-head">
@@ -574,32 +535,27 @@
                 </div>
               </div>
               <div class="team-body">
-                <img
-                  src="../../../assets/images/oc-gallery/alex/team-thumb/Manaphy.png"
-                  alt="Oeuf de Manaphy"
-                />
-
+                <img alt="Oeuf de Manaphy" decoding="async" height="317" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/team-thumb/Manaphy.png" width="251" />
                 <div class="team-content">
                   <p>
                     Alex se promenait sur le bord de mer lorsqu'il a trouvé cet œuf étrange, échoué sur le sable.
                     Personne à qui il l'a montré ne sait de quel Pokémon il s'agit.
-                </p>
-                <p>
+                  </p>
+                  <p>
                     Le seul indice à son sujet vient d'un vieux pêcheur dément qui murmure des légendes à
                     propos d'un "prince des mers". Alex n'y prête pas vraiment attention, attendant patiemment
                     que l'œuf éclose. Cela fait des semaines. Il pulse toujours.
-                </p>
+                  </p>
                 </div>
               </div>
             </article>
           </div>
         </section>
-
         <!-- Relations -->
         <section class="section" id="relations">
           <h2 class="section-title">Relations</h2>
           <div class="columns-2">
-
             <!-- Relation 1 -->
             <div class="data-card">
               <div class="relation-head">
@@ -607,11 +563,9 @@
                 <span class="tag">[Mentor]</span>
               </div>
               <div class="relation-body">
-                <img 
-                  src="../../../assets/images/oc-gallery/alex/relations/Spr_B2W2_Lance.png" 
-                  alt="Peter"
-                  style="image-rendering: pixelated;"
-                />
+                <img alt="Peter" decoding="async" height="80" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/relations/Spr_B2W2_Lance.png"
+                  style="image-rendering: pixelated;" width="80" />
                 <div class="relation-content">
                   <p>
                     Le Maître de la Ligue Indigo par intermittence. Peter a rencontré Alex alors qu'il
@@ -629,7 +583,6 @@
                 </div>
               </div>
             </div>
-
             <!-- Relation 2 -->
             <div class="data-card">
               <div class="relation-head">
@@ -637,11 +590,9 @@
                 <span class="tag">[Meilleure Amie]</span>
               </div>
               <div class="relation-body">
-                <img 
-                  src="../../../assets/images/oc-gallery/alex/relations/Spr_HGSS_Jasmine.png" 
-                  alt="Jasmine"
-                  style="image-rendering: pixelated;"
-                />
+                <img alt="Jasmine" decoding="async" height="80" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/relations/Spr_HGSS_Jasmine.png"
+                  style="image-rendering: pixelated;" width="80" />
                 <div class="relation-content">
                   <p>
                     Championne d'Arène d'Oliville, Jasmine est une jeune femme gentille mais timide qu'Alex a rencontré
@@ -650,7 +601,8 @@
                   </p>
                   <p>
                     Jasmine et Alex forment une combinaison redoutable en combats duo, la Dresseuse de type Acier étant
-                    connue pour sa défense insurmontable. Ils trainent souvent ensemble au bord de l'eau lorsqu'ils se voient,
+                    connue pour sa défense insurmontable. Ils trainent souvent ensemble au bord de l'eau lorsqu'ils se
+                    voient,
                     snacks à la main.
                   </p>
                   <p>
@@ -659,7 +611,6 @@
                 </div>
               </div>
             </div>
-
             <!-- Relation 3 -->
             <div class="data-card">
               <div class="relation-head">
@@ -667,126 +618,122 @@
                 <span class="tag">[Rival]</span>
               </div>
               <div class="relation-body">
-                <img 
-                  src="../../../assets/images/oc-gallery/alex/relations/Spr_HGSS_Falkner.png" 
-                  alt="Albert"
-                  style="image-rendering: pixelated;"
-                />
+                <img alt="Albert" decoding="async" height="80" loading="lazy"
+                  src="../../../assets/images/oc-gallery/alex/relations/Spr_HGSS_Falkner.png"
+                  style="image-rendering: pixelated;" width="80" />
                 <div class="relation-content">
                   <p>
-                    Le Champion d’Arène de Mauville. Albert a hérité du titre de son père et travaille sans relâche 
+                    Le Champion d’Arène de Mauville. Albert a hérité du titre de son père et travaille sans relâche
                     pour tenter d’être à la hauteur de son héritage.
                   </p>
                   <p>
-                    Travailleur et têtu, Albert a rencontré Alex dans le cadre du travail. Scandalisé qu’un homme 
-                    aussi paresseux et si peu sérieux ait reçu le titre de Champion d’Arène, Albert lui a voué du 
-                    ressentiment pendant des mois. Mais après avoir travaillé ensemble et fini par s’affronter, 
+                    Travailleur et têtu, Albert a rencontré Alex dans le cadre du travail. Scandalisé qu’un homme
+                    aussi paresseux et si peu sérieux ait reçu le titre de Champion d’Arène, Albert lui a voué du
+                    ressentiment pendant des mois. Mais après avoir travaillé ensemble et fini par s’affronter,
                     Alex a gagné son respect.
                   </p>
                   <p>
-                    De nos jours, ils s’entraînent souvent ensemble, leur rivalité les poussant mutuellement vers le haut.
+                    De nos jours, ils s’entraînent souvent ensemble, leur rivalité les poussant mutuellement vers le
+                    haut.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
         <!-- Galerie -->
         <section class="section" id="gallery">
           <h2 class="section-title">Galerie</h2>
           <div class="gallery-grid">
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/alex/alex-santithur.png" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/alex-santithur.png" 
-                    alt="Artwork principal">
+                <a href="../../../assets/images/oc-gallery/alex/alex-santithur.png" rel="noopener" target="_blank">
+                  <img alt="Artwork principal" decoding="async" height="1368" loading="lazy"
+                    src="../../../assets/images/oc-gallery/alex/alex-santithur.png" width="1196" />
                 </a>
               </div>
-              <p>Artwork par <a href="https://x.com/Santithur" target="_blank" rel="noopener">Santithur</a>.</p>
+              <p>Artwork par <a href="https://x.com/Santithur" rel="noopener" target="_blank">Santithur</a>.</p>
             </figure>
             <figure class="gallery-item">
               <div class="gallery-thumb">
-                <a href="../../../assets/images/oc-gallery/alex/alex-picrew.png" target="_blank" rel="noopener">
-                  <img 
-                    src="../../../assets/images/oc-gallery/alex/alex-picrew.png" 
-                    alt="Ancien Picrew">
+                <a href="../../../assets/images/oc-gallery/alex/alex-picrew.png" rel="noopener" target="_blank">
+                  <img alt="Ancien Picrew" decoding="async" height="600" loading="lazy"
+                    src="../../../assets/images/oc-gallery/alex/alex-picrew.png" width="600" />
                 </a>
               </div>
-              <p>Ancien Picrew<br><em>
-                <a href="https://picrew.me/ja/image_maker/701767" target="_blank" rel="noopener">
+              <p>Ancien Picrew<br /><em>
+                  <a href="https://picrew.me/ja/image_maker/701767" rel="noopener" target="_blank">
                     Par extrA_nocpno</a>
                 </em></p>
             </figure>
           </div>
         </section>
-
         <!-- Anecdotes -->
         <section class="section" id="trivia">
           <h2 class="section-title">Anecdotes</h2>
           <ul>
-            <li>La tresse dans les cheveux d'Alex est faite par les enfants de Ville Griotte qui le harcèlent chaque matin.</li>
+            <li>La tresse dans les cheveux d'Alex est faite par les enfants de Ville Griotte qui le harcèlent chaque
+              matin.</li>
             <li>Si on lui fait remarquer l'inutilité de son masque de plongée en intérieur, il haussera les épaules
-                nonchalamment en marmonnant "au cas où" avec un léger sourire.
+              nonchalamment en marmonnant "au cas où" avec un léger sourire.
             </li>
             <li>Son appartement dans Ville Griotte est le grenier d'une grand-mère ésseulée. Il prend le thé avec
-                elle chaque jour dans l'après-midi, parfois pour se cacher de Peter et de ses responsabilités.
+              elle chaque jour dans l'après-midi, parfois pour se cacher de Peter et de ses responsabilités.
             </li>
             <li>
-                Il vit chez lui dans un chaos ordonné de livres empruntés à la bibliothèque dont la date de retour
-                est dépassée de plusieurs mois, de feuilles de papier clairsemées de notes sur les mythes et légendes locales,
-                et de cartes gribouillées de toute part ne faisant de sens que pour lui.
+              Il vit chez lui dans un chaos ordonné de livres empruntés à la bibliothèque dont la date de retour
+              est dépassée de plusieurs mois, de feuilles de papier clairsemées de notes sur les mythes et légendes
+              locales,
+              et de cartes gribouillées de toute part ne faisant de sens que pour lui.
             </li>
             <li>
-                Alex prétend ne rien s'y connaître en stratégie. Secrètement, il étudie assiduement plusieurs ouvrages offerts
-                par Jasmine dans lequels il gribouille des notes et idées en tous genre.
+              Alex prétend ne rien s'y connaître en stratégie. Secrètement, il étudie assiduement plusieurs ouvrages
+              offerts
+              par Jasmine dans lequels il gribouille des notes et idées en tous genre.
             </li>
             <li>
-                Il prend un malin plaisir à provoquer Albert à chaque opportunité qui se présente. En retour, il endure
-                des heures de critiques sur son attitude et sa posture avec le sourire. Pourtant, selon Jasmine, les deux
-                sont très bons amis.
+              Il prend un malin plaisir à provoquer Albert à chaque opportunité qui se présente. En retour, il endure
+              des heures de critiques sur son attitude et sa posture avec le sourire. Pourtant, selon Jasmine, les deux
+              sont très bons amis.
             </li>
             <li>
-                Lokhlass est une présence maternelle pour toute son équipe : elle chante pour endormir Kaiminus, 
-                traine Aquali en combat en l'attrapant par la nuque, et réveille Alex de ses siestes impromptues
-                en lui crachant de l'eau au visage.
+              Lokhlass est une présence maternelle pour toute son équipe : elle chante pour endormir Kaiminus,
+              traine Aquali en combat en l'attrapant par la nuque, et réveille Alex de ses siestes impromptues
+              en lui crachant de l'eau au visage.
             </li>
             <li>
-                Quand la Team Rocket fut dissolue, Léviator était l'une de leurs expériences dont la Ligue ne savait
-                que faire. C'est Peter qui a insisté en secret pour qu'il soit confié à Alex.
+              Quand la Team Rocket fut dissolue, Léviator était l'une de leurs expériences dont la Ligue ne savait
+              que faire. C'est Peter qui a insisté en secret pour qu'il soit confié à Alex.
             </li>
             <li>
-                Alex ne connait rien de son passé, mais possède un indice : une étrange pierre qui était dans sa poche
-                lorsqu'il est tombé de l'Ultra-Brèche. Il ne sait pas ce que c'est et préfère garder le secret, l'idée
-                d'en apprendre plus sur lui-même lui faisant encore peur.
+              Alex ne connait rien de son passé, mais possède un indice : une étrange pierre qui était dans sa poche
+              lorsqu'il est tombé de l'Ultra-Brèche. Il ne sait pas ce que c'est et préfère garder le secret, l'idée
+              d'en apprendre plus sur lui-même lui faisant encore peur.
             </li>
           </ul>
         </section>
-
         <!-- Références -->
         <section class="section" id="refs">
           <h2 class="section-title">Références / Notes</h2>
           <ol class="refs">
             <li>
-                Le design d'Alex prédate nombre de mes OCs, étant né d'une trend idiote "répond à ce questionnaire
-                pour avoir un type, et fais en un champion d'arène avec ce picrew". Le résultat m'est resté en tête
-                pendant des années, jusqu'à ce que je décide d'en faire un réel personnage.
+              Le design d'Alex prédate nombre de mes OCs, étant né d'une trend idiote "répond à ce questionnaire
+              pour avoir un type, et fais en un champion d'arène avec ce picrew". Le résultat m'est resté en tête
+              pendant des années, jusqu'à ce que je décide d'en faire un réel personnage.
             </li>
             <li>
-                Alex est mon premier OC dans l'Univers de Pokémon. Son insertion dans le canon de la région
-                de Jotho et ses relations aux différents personnages était vraiment fun à imaginer.                 
+              Alex est mon premier OC dans l'Univers de Pokémon. Son insertion dans le canon de la région
+              de Jotho et ses relations aux différents personnages était vraiment fun à imaginer.
             </li>
           </ol>
         </section>
-
         <!-- Note de bas de page -->
         <div class="footer-note">
           L'Atelier des Rêves ouvre ses portes à tout le monde. Explorez, créez, partagez.
         </div>
-
       </article>
     </main>
   </div>
 </body>
+
 </html>

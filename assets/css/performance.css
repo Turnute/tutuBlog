@@ -1,0 +1,101 @@
+/* =========================================================
+   Correctifs de performance ciblés
+   ========================================================= */
+
+/* =========================================================
+   KAI / SPLATOON
+   ========================================================= */
+
+/* Le motif décoratif plein écran était positionné en fixed.
+   Même sans mix-blend-mode, Firefox et certains GPU le recomposent pendant
+   tout le défilement. Il conserve le même aspect, mais appartient maintenant
+   à la page et défile avec elle. */
+body.splat-page {
+    position: relative;
+    isolation: isolate;
+}
+
+body.splat-page::before {
+    position: absolute;
+    mix-blend-mode: normal;
+    opacity: 0.22;
+}
+
+.splat-name-tag,
+.splat-portrait,
+.splat-gallery-item img {
+    filter: none;
+}
+
+.splat-gallery-item figcaption {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(0, 0, 0, 0.88);
+}
+
+/* Ces éléments coupent déjà leur contenu avec overflow:hidden. Leur peinture
+   peut donc être isolée sans modifier le rendu visible. */
+.splat-panel,
+.splat-gallery-item {
+    contain: paint;
+}
+
+/* =========================================================
+   FICHES JDR / ARBEK
+   ========================================================= */
+
+body[data-global-header-style="ttrpg"] .ttrpg-sidebar {
+    position: static;
+    top: auto;
+}
+
+/* Le dossier était un unique élément très haut avec plusieurs couches de
+   dégradés, une texture répétée et un grand inset-shadow. Chaque nouvelle
+   bande révélée pendant le scroll devait être rasterisée. Les cartes internes
+   gardent leurs textures et décorations, mais la grande feuille devient unie. */
+body[data-global-header-style="ttrpg"] .ttrpg-dossier {
+    background: var(--ttrpg-paper);
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.40),
+        inset 0 0 0 1px rgba(255, 248, 220, 0.55);
+}
+
+body[data-global-header-style="ttrpg"] .ttrpg-dossier::before {
+    display: none;
+}
+
+/* =========================================================
+   CONTENU LONG HORS ÉCRAN
+   ========================================================= */
+
+/* Les sections longues situées hors écran ne sont mises en page et peintes
+   qu'à l'approche du viewport. Les navigateurs non compatibles ignorent
+   simplement ces règles. */
+@supports (content-visibility: auto) {
+    .splat-panel,
+    .splat-gallery-section,
+    body[data-global-header-style="ttrpg"] .section,
+    body[data-global-header-style="ttrpg"] .ttrpg-gallery,
+    body[data-global-header-style="pokewiki"] .section {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 560px;
+    }
+
+    body[data-global-header-style="pokewiki"] .team-card,
+    body[data-global-header-style="pokewiki"] .relation-card {
+        contain-intrinsic-size: auto 300px;
+    }
+}
+
+/* Évite de conserver des transitions inutiles quand l'utilisateur préfère
+   limiter les mouvements. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

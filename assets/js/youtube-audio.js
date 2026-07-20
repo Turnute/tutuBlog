@@ -193,14 +193,9 @@
   }
 
   function initYouTubeAudioTriggers() {
-    // Précharge l’API dès le chargement de la page
-    loadYouTubeAPI().then(() => {
-      const firstVideoId = getFirstValidVideoId();
-      if (firstVideoId) {
-        ensurePlayer(firstVideoId);
-      }
-    });
-
+    // L’API YouTube et son iframe ne sont créées qu’au premier clic.
+    // Cela évite un chargement réseau et un document embarqué coûteux
+    // sur chaque fiche, même lorsque la musique n’est jamais lancée.
     document.addEventListener("click", (event) => {
       const trigger = event.target.closest(".yt-audio-trigger");
       if (!trigger) return;
