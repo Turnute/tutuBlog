@@ -753,6 +753,7 @@ aside.sidebar {
 
 .team-icons img {
   height: 50px;
+  width: auto;
 }
 
 .team-grid {

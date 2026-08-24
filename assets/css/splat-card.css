@@ -23,12 +23,12 @@ body.splat-page {
     overflow-x: hidden;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-    background:
-        radial-gradient(circle at 12% 18%, rgba(33, 246, 255, 0.55) 0 7%, transparent 8%),
-        radial-gradient(circle at 90% 12%, rgba(255, 43, 214, 0.45) 0 8%, transparent 9%),
-        radial-gradient(circle at 78% 82%, rgba(183, 255, 0, 0.38) 0 10%, transparent 11%),
-        radial-gradient(circle at 18% 88%, rgba(255, 140, 26, 0.35) 0 9%, transparent 10%),
-        linear-gradient(135deg, #090910 0%, #171421 45%, #0b0f18 100%);
+    background-color: var(--splat-bg);
+    background-image: url("../images/splatoon_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body.splat-page *,
@@ -75,7 +75,7 @@ body.splat-page a:hover {
 /* Header version Splatoon */
 body.splat-page .global-site-header {
     background:
-        linear-gradient(90deg, rgba(33, 246, 255, 0.95), rgba(255, 43, 214, 0.95));
+        linear-gradient(90deg, rgba(207, 255, 33, 0.95), rgba(75, 43, 255, 0.95));
     border-bottom: 4px solid var(--splat-lime);
     box-shadow: 0 8px 0 rgba(0, 0, 0, 0.45);
 }
