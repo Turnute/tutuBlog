@@ -3,26 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Atelier des Rêves</title>
+    <meta name="description" content="Jeux et prototypes créés par Turnute.">
+    <title>L'Atelier des Rêves | Jeux</title>
 
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="../assets/css/looping_bg.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/index_games.css">
 
     <link rel="icon" type="image/png" href="../assets/images/pfp.png">
 </head>
 
-<body data-nav-theme="games" data-site-logo="Jeux">
+<body data-nav-theme="games" data-site-logo="Jeux" data-current-page="games">
     <div id="site-header"></div>
 
-    <main class="page-content">
-        <div class="cadre">
-            <h1>WIP</h1>
-            <p>En travaux ! Du balais ! >:[</p>
-        </div>
+    <main class="page-content games-layout">
+        <section class="games-browser" aria-labelledby="games-browser-title">
+            <header class="games-browser__heading">
+                <div>
+                    <p class="games-browser__eyebrow">JEUX &amp; PROTOTYPES</p>
+                    <h1 id="games-browser-title">Mes jeux</h1>
+                </div>
+                <p class="games-browser__intro">
+                    Projets étudiants, game jams et petites expériences à découvrir.
+                </p>
+            </header>
+
+            <div class="game-picker" aria-label="Choisir un jeu">
+                <button class="game-picker__scroll game-picker__scroll--previous" type="button" aria-label="Faire défiler les jeux vers la gauche">
+                    <span aria-hidden="true">‹</span>
+                </button>
+
+                <div id="game-tabs" class="game-tabs" role="tablist" aria-label="Mes jeux"></div>
+
+                <button class="game-picker__scroll game-picker__scroll--next" type="button" aria-label="Faire défiler les jeux vers la droite">
+                    <span aria-hidden="true">›</span>
+                </button>
+            </div>
+
+            <article id="game-detail" class="game-detail" role="tabpanel" aria-live="polite" tabindex="0">
+                <section class="game-media" aria-roledescription="carrousel" aria-label="Illustrations du jeu">
+                    <div id="game-media-stage" class="game-media__stage"></div>
+
+                    <button id="media-previous" class="game-media__arrow game-media__arrow--previous" type="button" aria-label="Illustration précédente">
+                        <span aria-hidden="true">‹</span>
+                    </button>
+                    <button id="media-next" class="game-media__arrow game-media__arrow--next" type="button" aria-label="Illustration suivante">
+                        <span aria-hidden="true">›</span>
+                    </button>
+
+                    <div class="game-media__footer">
+                        <p id="media-caption" class="game-media__caption"></p>
+                        <div id="media-pagination" class="game-media__pagination" aria-label="Choisir une illustration"></div>
+                    </div>
+                </section>
+
+                <section class="game-info" aria-labelledby="game-title">
+                    <div>
+                        <p id="game-kicker" class="game-info__kicker"></p>
+                        <h2 id="game-title"></h2>
+                    </div>
+
+                    <dl class="game-info__meta">
+                        <div>
+                            <dt>Sortie</dt>
+                            <dd><time id="game-date"></time></dd>
+                        </div>
+                        <div>
+                            <dt>Format</dt>
+                            <dd id="game-genre"></dd>
+                        </div>
+                    </dl>
+
+                    <p id="game-description" class="game-info__description"></p>
+
+                    <a id="game-link" class="game-info__link" href="#" target="_blank" rel="noreferrer">
+                        <span>Découvrir le jeu</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </section>
+            </article>
+
+            <noscript>
+                <p class="games-noscript">Cette galerie interactive nécessite JavaScript.</p>
+            </noscript>
+        </section>
     </main>
 
     <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/games-data.js"></script>
+    <script src="../assets/js/games-browser.js"></script>
 </body>
 </html>
