@@ -16,6 +16,18 @@
     <script src="../../assets/js/header.js" defer></script>
 
     <link rel="icon" type="image/png" href="../../assets/images/pfp.png">
+
+    <style>
+      .pkmn-team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+    </style>
 </head>
 
 <body
@@ -50,12 +62,12 @@
           <p>Heathens - AURORA</p>
         </div>
         <div class="yt-audio-trigger card"
-          data-youtube="https://www.youtube.com/watch?v=zSVRtM1x9wQ"
+          data-youtube="https://www.youtube.com/watch?v=8GQv_Erc3zs"
           tabindex="0"
           role="button"
         >
           <img src="../../assets/images/oc-gallery/brize/cover2.jpg" alt="Cover" />
-          <p>Down By The River - Borislav Slavov</p>
+          <p>A Stranger I Remain - GO!! Light Up!</p>
         </div>
         <div class="yt-audio-trigger card"
           data-youtube="https://www.youtube.com/watch?v=LOYyedjI0M0"
@@ -76,7 +88,7 @@
           <div class="dossier-title">
             <p class="dossier-kicker">BALDUR'S GATE 3</p>
             <h1>Brize Lanuq</h1>
-            <p class="subtitle">TODO</p>
+            <p class="subtitle">Héroïne drow</p>
           </div>
 
           <figure class="dossier-portrait">
@@ -106,10 +118,12 @@
           <p>
             Brize Lanuq est une drow de la Seldarine et une voyageuse qui s'est construit une vie loin du monde
             dans lequel elle est née. Occultiste liée à une entité du Grand Ancien, elle préfère généralement les routes,
-            les rencontres de passage, et les problèmes qui ne devraient pas être les siens.
+            les rencontres de passage, et les problèmes qui ne devraient pas être siens.
           </p>
           <p>
-            Malgré son indépendance farouche et son manque parfois impressionnant d'aisance sociale,
+            Malgré son indépendance farouche et son manque parfois impressionnant d'aisance sociale, Brize se montre
+            naturellement attentionnée envers ceux dans le besoin. Elle a cependant la mauvaise habitude de repartir
+            avant que quiconque ait véritablement le temps de s'en rendre compte.
           </p>
 
           <div class="quote-box">
@@ -123,15 +137,24 @@
 
           <h3>Traits</h3>
           <ul>
-            <li><strong>Qualités :</strong> Autonome, calme, attentionnée.</li>
-            <li><strong>Défauts :</strong> Solitaire, socialement clueless, parfois trop indépendante.</li>
+            <li><strong>Qualités :</strong> Autonome, calme, attentionnée, pragmatique.</li>
+            <li><strong>Défauts :</strong> Solitaire, socialement clueless, excessivement indépendante, peu communicative.</li>
           </ul>
         </section>
 
         <section class="section" id="appearance">
           <h2 class="section-title">Apparence</h2>
           <p>
-            TODO
+            Brize est une drow à la peau ébène marquée de discrètes taches de rousseur plus sombres sur les joues et l'arête du nez. Elle est de taille moyenne et de silhouette svelte. Une ancienne cicatrice barre légèrement le haut de sa joue droite, tandis qu'une seconde plus visible remonte sur le côté gauche de son menton jusqu'au milieu de sa joue. Ses yeux gris très pâles, presque blancs, sont soulignés de marques noires.
+          </p>
+          <p>
+            Brize est reconnaissable au réseau de tatouages entourant entièrement sa gorge et sa nuque, descendant jusqu'aux omoplates. À l'origine, il s'agissait d'un marquage lié à Lolth, imposé durant son enfance. Elle l'a volontairement complexifié et recouvert de nouveaux motifs avec les années jusqu'à rendre le symbole initial pratiquement impossible à distinguer.
+          </p>
+          <p>
+            Ses cheveux blancs lui tombent jusqu'aux épaules, traversés de mèches et de petites tresses teintes en rouge. Elle les a longtemps portés rabattus sur le côté gauche du visage afin de dissimuler sa cicatrice. Plus tard, elle finit par les attacher en queue-de-cheval, plus pratique mais laissant son visage découvert. Elle porte un piercing au-dessus du sourcil droit et deux boucles d'argent en forme de demi-roues à pointes offertes par une proche.
+          </p>
+          <p>
+            Brize privilégie des vêtements simples et résistants : bottes, pantalon, chemise et large manteau sombre, généralement accompagnés d'une écharpe qui dissimule en partie les tatouages de son cou. Elle ajoute souvent une cape à capuche lors de ses voyages pour masquer son visage et ses oreilles.
           </p>
 
           <div class="ttrpg-gallery">
@@ -163,33 +186,63 @@
         <section class="section" id="sheet">
           <h2 class="section-title">Fiche mécanique</h2>
 
-          <div class="data-card">
-            <h3>Build BG3</h3>
+          <div>
+            <h3>Occultiste du Grand Ancien</h3>
             <p>
-              TODO
+              Brize est une occultiste liée à une entité du Grand Ancien. Elle combat principalement
+              à distance à l'aide de <strong>Décharge occulte</strong>, tout en utilisant ses sorts
+              pour contrôler le terrain et éviter autant que possible de s'exposer inutilement.
+            </p>
+            <p>
+              Elle ne porte généralement aucune armure, privilégiant l'agilité et l'aisance de mouvement.
+              L'invocation <strong>Armure des ombres</strong> lui permet de lancer Armure de mage chaque matin,
+              offrant une protection essentielle en combat. Au fil de l'aventure, elle obtient également
+              les sorts d'<strong>Armure d'Agathys</strong>, <strong>Image miroir</strong> et 
+              <strong>Hâte</strong> alors que les combats deviennent plus dangereux.
+            </p>
+          </div>
+
+          <div class="data-card">
+            <h3>Pacte de la lame</h3>
+            <p>
+              Brize préfère garder ses ennemis à distance, mais est tout à fait capable de se
+              défendre au corps-à-corps. Son Pacte de la lame lui permet d'utiliser efficacement
+              l'arme qu'elle choisit de lier à son pacte.
+            </p>
+            <p>
+              Elle commence son aventure avec des dagues et des poignards, faciles à transporter
+              et dissimuler. Plus tard, elle récupère <strong>Nyrulna</strong>,
+              un trident qui devient son arme principale.
             </p>
           </div>
         </section>
 
         <section class="section" id="bio">
           <h2 class="section-title">Biographie</h2>
-          <p>TODO.</p>
+          <p>Brize grandit dans une cité souterraine drow des Tréfonds Obscurs, au sein d'une société liée au culte de Lolth. Durant son enfance, elle reçoit un tatouage à la gorge la marquant à vie dont elle ignore la signification.</p>
+          <p>Encore jeune, elle tente de fuir le culte à plusieurs reprises. Désespérée, elle conclut un pacte avec une entité du Grand Ancien, pacte lui permettant enfin de s'échapper au monde dans lequel elle a grandi : la surface.</p>
+          <p>Ses premières semaines à la lumière du soleil sont surtout consacrées à survivre. Peu après son arrivée, le village dans lequel elle se cache est pillé par des brigands. Elle tue alors accidentellement l'un d'entre eux  en cherchant à se protéger, sauvant les habitants en faisant fuir le reste des pillards.</p>
+          <p>Brize voyage dès alors de lieu en lieu, aidant lorsque l'occasion se présente en échange d'un repas, d'un toit ou simplement de quoi poursuivre sa route. Elle prend cependant l'habitude de ne jamais rester très longtemps au même endroit, préférant repartir avant que la présence prolongée d'une drow ne commence à susciter trop de méfiance.</p>
         </section>
 
         <section class="section" id="trivia">
           <h2 class="section-title">Anecdotes</h2>
           <ul>
-            <li>todo.</li>
+            <li>Chaque année qui passe, Brize ajoute un nouveau tatouage à ceux qui recouvrent sa gorge et sa nuque. Elle a commencé pour masquer ses marques d'origines, puis a simplement continué par habitude.</li>
+            <li>Elle se rappelle rarement de ses propres faits d'arme. Ce que certains qualifieraient d'héroïsme, elle préfère appeler de la simple "interférence", surtout lorsqu'elle se mèle d'affaires qui ne la concerne pas.</li>
+            <li>D'ordinaire solitaire, Brize ne sait pas vraiment comment être vulnérable avec autrui. Un simple changement de coiffure exposant mieux son visage est vécu comme quelque chose d'immense pour elle. Cela la rend surprenament timide dans des situations sociales détendues.</li>
+            <li>Brize est beaucoup plus douée pour offrir des cadeaux émotionnellement dévastateurs que pour exprimer des sentiments. Elle peut passer plus de temps que nécessaire à chercher le bon objet tout en soutenant qu'il s'agit simplement d'un choix pratique.</li>
+            <li>Elle achète fréquemment de petits objets et babioles "pouvant servir" en voyage. Sa définition de "pouvant servir" est suffisamment large pour inclure une quantité déraissonnable de cordes, trois potions au effets inconnus, et assez de vivres pour nourir tout un village à travers un hiver.</li>
           </ul>
+          <div class="pkmn-team">
+            <img src="../../assets/images/oc-gallery/brize/pkmn-sprite/absol.png" alt="Mega Absol Z" loading="lazy"/>
+            <img src="../../assets/images/oc-gallery/brize/pkmn-sprite/decidueye.png" alt="Archéduc" loading="lazy"/>
+            <img src="../../assets/images/oc-gallery/brize/pkmn-sprite/corviknight.png" alt="Corvaillus" loading="lazy"/>
+            <img src="../../assets/images/oc-gallery/brize/pkmn-sprite/ceruledge.png" alt="Malvalame" loading="lazy"/>
+            <img src="../../assets/images/oc-gallery/brize/pkmn-sprite/zoroark.png" alt="Zoroark d'Hisui" loading="lazy"/>
+            <img src="../../assets/images/oc-gallery/brize/pkmn-sprite/nihilego.png" alt="Zeroïd" loading="lazy"/>
+          </div>
         </section>
-
-        <section class="section" id="author-note">
-          <h2 class="section-title">Note de l’auteur</h2>
-          <p>
-            TODO
-          </p>
-        </section>
-
       </article>
     </main>
   </div>
